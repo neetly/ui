@@ -1,0 +1,49 @@
+@use "@neetly/palette";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.logoLink {
+  margin: -0.25rem -0.5rem;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  color: palette.$red-600;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navLink {
+  margin: -0.25rem -0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: palette.$neutral-variant-600;
+  transition: color 250ms;
+
+  @media (hover: hover) {
+    &:hover {
+      color: palette.$neutral-variant-800;
+    }
+  }
+
+  &.active {
+    text-decoration: underline;
+    color: palette.$neutral-variant-800;
+  }
+}

@@ -1,10 +1,10 @@
 {
   "name": "@neetly/palette",
   "version": "0.0.0",
-  "homepage": "https://github.com/neetly/design-system",
+  "homepage": "https://github.com/neetly/design",
   "repository": {
     "type": "git",
-    "url": "git@github.com:neetly/design-system.git",
+    "url": "git@github.com:neetly/design.git",
     "directory": "packages/palette"
   },
   "license": "Apache-2.0",

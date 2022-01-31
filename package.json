@@ -1,17 +1,17 @@
 {
-  "name": "@neetly/design-system",
+  "name": "@neetly/design",
   "private": true,
   "workspaces": [
     "./packages/*"
   ],
-  "homepage": "https://github.com/neetly/design-system",
+  "homepage": "https://github.com/neetly/design",
   "repository": {
     "type": "git",
-    "url": "git@github.com:neetly/design-system.git"
+    "url": "git@github.com:neetly/design.git"
   },
   "license": "Apache-2.0",
   "scripts": {
-    "start": "yarn workspace @neetly/design-system-website start",
+    "start": "yarn workspace @neetly/design-website start",
     "build": "yarn workspaces foreach --verbose run build",
     "clean": "yarn workspaces foreach --verbose run clean",
     "lint": "eslint --max-warnings 0 . && prettier --check .",

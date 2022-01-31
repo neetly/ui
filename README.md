@@ -1,3 +1,3 @@
-# Neetly / Design System
+# Neetly Design
 
-![CI](https://github.com/neetly/design-system/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/neetly/design/actions/workflows/ci.yml/badge.svg)
