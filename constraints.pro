@@ -3,7 +3,7 @@ gen_enforced_field(WorkspaceCwd, 'repository.type', 'git').
 gen_enforced_field(WorkspaceCwd, 'repository.url', 'git@github.com:neetly/design-system.git').
 gen_enforced_field(WorkspaceCwd, 'repository.directory', WorkspaceCwd) :-
   WorkspaceCwd \= '.'.
-gen_enforced_field(WorkspaceCwd, 'license', 'MIT').
+gen_enforced_field(WorkspaceCwd, 'license', 'Apache-2.0').
 
 gen_enforced_field(WorkspaceCwd, 'scripts.prepack', 'run clean && run build && cp ../../LICENSE .') :-
   WorkspaceCwd \= '.'.

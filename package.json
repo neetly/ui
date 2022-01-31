@@ -4,6 +4,12 @@
   "workspaces": [
     "./packages/*"
   ],
+  "homepage": "https://github.com/neetly/design-system",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neetly/design-system.git"
+  },
+  "license": "Apache-2.0",
   "scripts": {
     "build": "yarn workspaces foreach --verbose run build",
     "clean": "yarn workspaces foreach --verbose run clean",
@@ -21,11 +27,5 @@
     "typescript": "^4.5.5",
     "typescript-plugin-css-modules": "^3.4.0"
   },
-  "packageManager": "yarn@3.1.1",
-  "homepage": "https://github.com/neetly/design-system",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:neetly/design-system.git"
-  }
+  "packageManager": "yarn@3.1.1"
 }
