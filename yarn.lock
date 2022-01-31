@@ -2122,9 +2122,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@neetly/design-system-website@workspace:packages/website":
+"@neetly/design-website@workspace:packages/website":
   version: 0.0.0-use.local
-  resolution: "@neetly/design-system-website@workspace:packages/website"
+  resolution: "@neetly/design-website@workspace:packages/website"
   dependencies:
     "@buncho/builder": ^4.0.0
     "@neetly/palette": "workspace:packages/palette"
@@ -2138,9 +2138,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@neetly/design-system@workspace:.":
+"@neetly/design@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@neetly/design-system@workspace:."
+  resolution: "@neetly/design@workspace:."
   dependencies:
     "@buncho/eslint-config": ^4.0.0
     "@buncho/tsconfig": ^1.0.0
