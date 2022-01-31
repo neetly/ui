@@ -1,4 +1,7 @@
-- - { name: Red, hue: 25, chroma: 48 }
+- - { name: Neutral, hue: 255, chroma: 4 }
+  - { name: Neutral Variant, hue: 255, chroma: 8 }
+
+  - { name: Red, hue: 25, chroma: 48 }
   - { name: Orange, hue: 45, chroma: 48 }
   - { name: Ambar, hue: 70, chroma: 48 }
   - { name: Yellow, hue: 90, chroma: 48 }

@@ -1,8 +1,8 @@
 type Color = {
   id: string;
+  value: string;
   groupId: string;
   tone: string;
-  color: string;
 };
 
 export { type Color };

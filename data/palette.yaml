@@ -1,3 +1,87 @@
+- name: Neutral/10
+  color: "#fcfcff"
+- name: Neutral/20
+  color: "#f9f9fd"
+- name: Neutral/50
+  color: "#f0f0f4"
+- name: Neutral/100
+  color: "#e2e2e6"
+- name: Neutral/150
+  color: "#d4d4d8"
+- name: Neutral/200
+  color: "#c6c6cb"
+- name: Neutral/250
+  color: "#b7b8bd"
+- name: Neutral/300
+  color: "#aaabaf"
+- name: Neutral/350
+  color: "#9c9ea3"
+- name: Neutral/400
+  color: "#8f9195"
+- name: Neutral/450
+  color: "#828489"
+- name: Neutral/500
+  color: "#75777c"
+- name: Neutral/550
+  color: "#686b70"
+- name: Neutral/600
+  color: "#5b5e64"
+- name: Neutral/650
+  color: "#4f5258"
+- name: Neutral/700
+  color: "#43474d"
+- name: Neutral/750
+  color: "#383c42"
+- name: Neutral/800
+  color: "#2c3138"
+- name: Neutral/850
+  color: "#21262d"
+- name: Neutral/900
+  color: "#161c24"
+- name: Neutral/950
+  color: "#0a111a"
+- name: Neutral Variant/10
+  color: "#fbfcff"
+- name: Neutral Variant/20
+  color: "#f6f9ff"
+- name: Neutral Variant/50
+  color: "#edf1fb"
+- name: Neutral Variant/100
+  color: "#dee3ed"
+- name: Neutral Variant/150
+  color: "#cfd4de"
+- name: Neutral Variant/200
+  color: "#c2c7d1"
+- name: Neutral Variant/250
+  color: "#b3b9c4"
+- name: Neutral Variant/300
+  color: "#a6acb7"
+- name: Neutral Variant/350
+  color: "#989ea9"
+- name: Neutral Variant/400
+  color: "#8a919d"
+- name: Neutral Variant/450
+  color: "#7d8490"
+- name: Neutral Variant/500
+  color: "#707884"
+- name: Neutral Variant/550
+  color: "#636b77"
+- name: Neutral Variant/600
+  color: "#565f6c"
+- name: Neutral Variant/650
+  color: "#4a5361"
+- name: Neutral Variant/700
+  color: "#3d4856"
+- name: Neutral Variant/750
+  color: "#313c4b"
+- name: Neutral Variant/800
+  color: "#243141"
+- name: Neutral Variant/850
+  color: "#192738"
+- name: Neutral Variant/900
+  color: "#0a1c2f"
+- name: Neutral Variant/950
+  color: "#001127"
 - name: Red/10
   color: "#fffbf9"
 - name: Red/20

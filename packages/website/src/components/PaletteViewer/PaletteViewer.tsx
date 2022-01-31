@@ -1,4 +1,5 @@
 import { colorGroups } from "../../data/colors";
+import { formatColorGroupName } from "../../utils/formatColorGroupName";
 import { PaletteColorViewer } from "../PaletteColorViewer";
 import styles from "./PaletteViewer.module.scss";
 
@@ -7,7 +8,7 @@ const PaletteViewer = () => {
     <div className={styles.container}>
       {colorGroups.map((group) => (
         <div key={group.id} className={styles.group}>
-          <div className={styles.groupName}>{group.id}</div>
+          <div className={styles.groupName}>{formatColorGroupName(group)}</div>
           <div className={styles.groupColors}>
             {group.colors.map((color) => (
               <div key={color.id}>
