@@ -9,6 +9,7 @@
   },
   "license": "MIT",
   "main": "./lib/index.js",
+  "style": "./lib/index.scss",
   "files": [
     "./lib"
   ],

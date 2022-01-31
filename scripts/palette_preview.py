@@ -1,5 +1,5 @@
 import itertools
-from sys import stdout
+import sys
 
 from .lib.ansi_utils import *
 from .lib.color_utils import *
@@ -13,11 +13,10 @@ def get_group_name(item: dict) -> str:
 
 
 for group_name, items in itertools.groupby(palette, get_group_name):
-    stdout.write("\n")
-    stdout.write("  " + ANSI_bold + f"{group_name:>8}" + ANSI_reset + "  ")
+    sys.stdout.write("\n")
+    sys.stdout.write("  " + ANSI_bold + f"{group_name:>8}" + ANSI_reset + "  ")
     for item in items:
         sRGB = HEX_to_sRGB(item["color"])
         R, G, B = [int(value * 255.0) for value in sRGB]
-
-        stdout.write(ANSI_background(R, G, B) + "    " + ANSI_reset)
-    stdout.write("\n")
+        sys.stdout.write(ANSI_background(R, G, B) + "    " + ANSI_reset)
+    sys.stdout.write("\n")
