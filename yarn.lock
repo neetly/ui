@@ -2127,9 +2127,11 @@ __metadata:
   resolution: "@neetly/design-system-website@workspace:packages/website"
   dependencies:
     "@buncho/builder": ^4.0.0
+    "@neetly/palette": "workspace:packages/palette"
     "@neetly/router": ^1.1.0
     "@types/react": ^17.0.38
     "@types/react-dom": ^17.0.11
+    core-js: ^3.20.3
     react: 18.0.0-rc.0
     react-dom: 18.0.0-rc.0
   languageName: unknown
@@ -6785,7 +6787,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.0.4, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
+"core-js@npm:^3.0.4, core-js@npm:^3.20.3, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
   version: 3.20.3
   resolution: "core-js@npm:3.20.3"
   checksum: 2106cdfb1330abf9e27d577666fc0421feafe8c39bb5af90a63af16e9706c767a7e3a82edc21ce3ed6b9d806f3200d1cf6cc3d0597a8c0af12dbec287c781d65
