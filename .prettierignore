@@ -1,0 +1,17 @@
+# npm
+
+/node_modules/
+/packages/*/node_modules/
+
+# Yarn
+
+/.yarn/
+
+/.pnp.*
+
+# Artifacts
+
+/packages/*/tsconfig.tsbuildinfo
+/packages/*/lib/
+/packages/*/build/
+/packages/*/storybook-static/
