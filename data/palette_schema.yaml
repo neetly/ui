@@ -1,0 +1,36 @@
+- - { name: Red, hue: 25, chroma: 48 }
+  - { name: Orange, hue: 45, chroma: 48 }
+  - { name: Ambar, hue: 70, chroma: 48 }
+  - { name: Yellow, hue: 90, chroma: 48 }
+  - { name: Lime, hue: 125, chroma: 48 }
+  - { name: Green, hue: 145, chroma: 48 }
+  - { name: Teal, hue: 170, chroma: 48 }
+  - { name: Cyan, hue: 200, chroma: 48 }
+  - { name: Sky, hue: 230, chroma: 48 }
+  - { name: Blue, hue: 255, chroma: 48 }
+  - { name: Indigo, hue: 280, chroma: 48 }
+  - { name: Violet, hue: 305, chroma: 48 }
+  - { name: Purple, hue: 330, chroma: 48 }
+  - { name: Pink, hue: 355, chroma: 48 }
+
+- - { name: 10, tone: 99 }
+  - { name: 20, tone: 98 }
+  - { name: 50, tone: 95 }
+  - { name: 100, tone: 90 }
+  - { name: 150, tone: 85 }
+  - { name: 200, tone: 80 }
+  - { name: 250, tone: 75 }
+  - { name: 300, tone: 70 }
+  - { name: 350, tone: 65 }
+  - { name: 400, tone: 60 }
+  - { name: 450, tone: 55 }
+  - { name: 500, tone: 50 }
+  - { name: 550, tone: 45 }
+  - { name: 600, tone: 40 }
+  - { name: 650, tone: 35 }
+  - { name: 700, tone: 30 }
+  - { name: 750, tone: 25 }
+  - { name: 800, tone: 20 }
+  - { name: 850, tone: 15 }
+  - { name: 900, tone: 10 }
+  - { name: 950, tone: 5 }
