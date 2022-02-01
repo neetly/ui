@@ -12,7 +12,7 @@
   margin: -0.25rem -0.5rem;
   padding: 0.25rem 0.5rem;
   text-decoration: none;
-  color: palette.$red-600;
+  color: palette.$red--600;
 }
 
 .logo {
@@ -33,17 +33,17 @@
   font-size: 0.9375rem;
   line-height: 1.5rem;
   text-decoration: none;
-  color: palette.$neutral-variant-600;
+  color: palette.$neutral-variant--600;
   transition: color 250ms;
 
   @media (hover: hover) {
     &:hover {
-      color: palette.$neutral-variant-800;
+      color: palette.$neutral-variant--800;
     }
   }
 
   &.active {
     text-decoration: underline;
-    color: palette.$neutral-variant-800;
+    color: palette.$neutral-variant--800;
   }
 }

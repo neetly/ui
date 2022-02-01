@@ -7,7 +7,7 @@ palette = YAML_read("./data/palette.yaml")
 
 
 def get_id(name: str) -> str:
-    return name.replace(" ", "-").replace("/", "-").lower()
+    return name.replace(" ", "-").replace("/", "--").lower()
 
 
 def get_group_name(item: dict) -> str:

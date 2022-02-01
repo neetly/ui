@@ -4,12 +4,12 @@ import type { Color } from "../types/Color";
 import type { ColorGroup } from "../types/ColorGroup";
 
 const colors: readonly Color[] = Object.entries(palette).map(([id, value]) => {
-  const segments = id.split("-");
+  const [groupId, tone] = id.split("--");
   return {
     id,
     value,
-    groupId: segments.slice(0, -1).join("-"),
-    tone: segments.slice(-1).join("-"),
+    groupId: groupId!, // eslint-disable-line @typescript-eslint/no-non-null-assertion
+    tone: tone!, // eslint-disable-line @typescript-eslint/no-non-null-assertion
   };
 });
 
