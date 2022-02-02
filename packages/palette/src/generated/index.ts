@@ -1,6 +1,48 @@
 // This file is auto-generated.
 
 const palette = {
+  // Primary
+  "primary--10": "#fffbf9",
+  "primary--20": "#fff8f5",
+  "primary--50": "#ffede8",
+  "primary--100": "#ffdad2",
+  "primary--200": "#ffb4a7",
+  "primary--300": "#ff8a7c",
+  "primary--400": "#ec665a",
+  "primary--500": "#cf493f",
+  "primary--600": "#b32a24",
+  "primary--700": "#930004",
+  "primary--800": "#690001",
+  "primary--900": "#410000",
+
+  // Secondary
+  "secondary--10": "#fffbf9",
+  "secondary--20": "#fff8f5",
+  "secondary--50": "#ffede8",
+  "secondary--100": "#ffdad5",
+  "secondary--200": "#ebbbb5",
+  "secondary--300": "#d0a09a",
+  "secondary--400": "#b5857f",
+  "secondary--500": "#9c6b65",
+  "secondary--600": "#83514b",
+  "secondary--700": "#6b3933",
+  "secondary--800": "#53211c",
+  "secondary--900": "#3c0705",
+
+  // Tertiary
+  "tertiary--10": "#f5ffed",
+  "tertiary--20": "#eaffe1",
+  "tertiary--50": "#d8facf",
+  "tertiary--100": "#c9ecc1",
+  "tertiary--200": "#acd0a4",
+  "tertiary--300": "#8fb588",
+  "tertiary--400": "#729b6c",
+  "tertiary--500": "#568251",
+  "tertiary--600": "#396936",
+  "tertiary--700": "#18521a",
+  "tertiary--800": "#003a01",
+  "tertiary--900": "#002200",
+
   // Neutral
   "neutral--10": "#fffbfa",
   "neutral--20": "#fff8f6",

@@ -1,4 +1,7 @@
-- - { name: Neutral, hue: 25, chroma: 4 }
+- - { name: Primary, hue: 25, chroma: 48 }
+  - { name: Secondary, hue: 25, chroma: 16 }
+  - { name: Tertiary, hue: 145, chroma: 24 }
+  - { name: Neutral, hue: 25, chroma: 4 }
   - { name: Neutral Variant, hue: 25, chroma: 8 }
 
   - { name: Red, hue: 25, chroma: 48 }
