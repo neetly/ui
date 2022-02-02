@@ -7,8 +7,8 @@ const PaletteViewer = () => {
   return (
     <div className={styles.container}>
       {colorGroups.map((group) => (
-        <div key={group.id} className={styles.group}>
-          <div className={styles.groupName}>{formatColorGroupName(group)}</div>
+        <section key={group.id} className={styles.group}>
+          <h1 className={styles.groupName}>{formatColorGroupName(group)}</h1>
           <div className={styles.groupColors}>
             {group.colors.map((color) => (
               <div key={color.id}>
@@ -16,7 +16,7 @@ const PaletteViewer = () => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
       ))}
     </div>
   );

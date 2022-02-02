@@ -13,14 +13,14 @@
 }
 
 .groupName {
-  font-size: 0.8125rem;
+  margin: 0;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 1rem;
-  color: palette.$neutral-variant--800;
 }
 
 .groupColors {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 0.25rem;
 }
