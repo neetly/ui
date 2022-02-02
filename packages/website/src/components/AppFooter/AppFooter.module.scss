@@ -1,0 +1,15 @@
+@use "@neetly/palette";
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  padding: 0 2rem;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: palette.$neutral-variant--600;
+}

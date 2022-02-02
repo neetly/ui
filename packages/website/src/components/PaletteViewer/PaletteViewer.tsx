@@ -1,5 +1,9 @@
+import { VisuallyHidden } from "ariakit";
+
 import { colorGroups } from "../../data/colors";
 import { formatColorGroupName } from "../../utils/formatColorGroupName";
+import { formatColorName } from "../../utils/formatColorName";
+import { formatColorValue } from "../../utils/formatColorValue";
 import styles from "./PaletteViewer.module.scss";
 
 const PaletteViewer = () => {
@@ -14,7 +18,10 @@ const PaletteViewer = () => {
                 key={color.id}
                 className={styles.color}
                 style={{ "--color": color.value }}
-              ></button>
+                title={formatColorName(color) + "\n" + formatColorValue(color)}
+              >
+                <VisuallyHidden>{formatColorValue(color)}</VisuallyHidden>
+              </button>
             ))}
           </div>
         </section>

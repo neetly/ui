@@ -1,4 +1,5 @@
 @use "@neetly/palette";
+@use "../../styles/index.scss" as *;
 
 .container {
   display: flex;
@@ -14,9 +15,11 @@
 
 .groupName {
   margin: 0;
+  font-family: $font-headline;
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1rem;
+  color: palette.$neutral-variant--800;
 }
 
 .groupColors {
