@@ -1,6 +1,5 @@
 import { colorGroups } from "../../data/colors";
 import { formatColorGroupName } from "../../utils/formatColorGroupName";
-import { PaletteColorViewer } from "../PaletteColorViewer";
 import styles from "./PaletteViewer.module.scss";
 
 const PaletteViewer = () => {
@@ -11,9 +10,11 @@ const PaletteViewer = () => {
           <h1 className={styles.groupName}>{formatColorGroupName(group)}</h1>
           <div className={styles.groupColors}>
             {group.colors.map((color) => (
-              <div key={color.id}>
-                <PaletteColorViewer color={color} />
-              </div>
+              <button
+                key={color.id}
+                className={styles.color}
+                style={{ "--color": color.value }}
+              ></button>
             ))}
           </div>
         </section>

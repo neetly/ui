@@ -1,9 +1,0 @@
-@use "@neetly/palette";
-
-.container {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.25rem;
-  background-color: var(--color);
-  box-shadow: 0 0 0 1px palette.$neutral--100;
-}
