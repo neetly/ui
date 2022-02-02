@@ -1,5 +1,4 @@
-import { Link, NavLink } from "@neetly/router";
-import classNames from "classnames";
+import { Link } from "@neetly/router";
 
 import styles from "./AppHeader.module.scss";
 
@@ -9,16 +8,6 @@ const AppHeader = () => {
       <Link className={styles.logoLink} to="/">
         <h1 className={styles.logo}>Neetly Design</h1>
       </Link>
-      <nav className={styles.nav}>
-        <NavLink
-          className={({ isActive }) =>
-            classNames(styles.navLink, isActive && styles.active)
-          }
-          to="/palette"
-        >
-          Palette
-        </NavLink>
-      </nav>
     </header>
   );
 };
