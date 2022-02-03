@@ -3,7 +3,7 @@ import { PaletteViewer } from "../../components/PaletteViewer";
 
 const PalettePage = () => {
   return (
-    <PageLayout title="Palette">
+    <PageLayout title="Color Palette">
       <PaletteViewer />
     </PageLayout>
   );

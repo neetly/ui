@@ -1,0 +1,11 @@
+@use "@neetly/palette";
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.navLink {
+  font-size: 1.25rem;
+  color: palette.$secondary--800;
+}

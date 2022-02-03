@@ -3,9 +3,11 @@ import { Route, Routes } from "@neetly/router";
 import styles from "./App.module.scss";
 import { AppFooter } from "./components/AppFooter";
 import { AppHeader } from "./components/AppHeader";
+import { ComponentsPage } from "./pages/ComponentsPage";
 import { HomePage } from "./pages/HomePage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { PalettePage } from "./pages/PalettePage";
+import { TypographyPage } from "./pages/TypographyPage";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/palette" element={<PalettePage />} />
+          <Route path="/typography" element={<TypographyPage />} />
+          <Route path="/components" element={<ComponentsPage />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </div>

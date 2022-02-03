@@ -19,6 +19,9 @@ const PaletteViewer = () => {
                 className={styles.color}
                 style={{ "--color": color.value }}
                 title={formatColorName(color) + "\n" + formatColorValue(color)}
+                onClick={() => {
+                  void navigator.clipboard.writeText(color.value);
+                }}
               >
                 <VisuallyHidden>{formatColorValue(color)}</VisuallyHidden>
               </button>
