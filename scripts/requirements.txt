@@ -5,7 +5,7 @@ imageio==2.14.1
 mypy-extensions==0.4.3
 numpy==1.22.1
 pathspec==0.9.0
-Pillow==9.0.0
+Pillow==9.0.1
 platformdirs==2.4.1
 ruamel.yaml==0.17.20
 ruamel.yaml.clib==0.2.6
