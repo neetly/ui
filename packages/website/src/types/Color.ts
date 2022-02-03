@@ -5,4 +5,4 @@ type Color = {
   tone: string;
 };
 
-export { type Color };
+export type { Color };

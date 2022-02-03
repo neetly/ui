@@ -5,4 +5,4 @@ type ColorGroup = {
   colors: readonly Color[];
 };
 
-export { type ColorGroup };
+export type { ColorGroup };
