@@ -1,9 +1,6 @@
 import { VisuallyHidden } from "ariakit";
 
 import { colorGroups } from "../../data/colors";
-import { formatColorGroupName } from "../../utils/formatColorGroupName";
-import { formatColorName } from "../../utils/formatColorName";
-import { formatColorValue } from "../../utils/formatColorValue";
 import styles from "./PaletteViewer.module.scss";
 
 const PaletteViewer = () => {
@@ -11,26 +8,41 @@ const PaletteViewer = () => {
     <div className={styles.container}>
       {colorGroups.map((group) => (
         <section key={group.id} className={styles.group}>
-          <h1 className={styles.groupName}>{formatColorGroupName(group)}</h1>
+          <h1 className={styles.groupName}>{formatName(group.id)}</h1>
           <div className={styles.groupColors}>
             {group.colors.map((color) => (
-              <button
-                key={color.id}
-                className={styles.color}
-                style={{ "--color": color.value }}
-                title={formatColorName(color) + "\n" + formatColorValue(color)}
-                onClick={() => {
-                  void navigator.clipboard.writeText(color.value);
-                }}
-              >
-                <VisuallyHidden>{formatColorValue(color)}</VisuallyHidden>
-              </button>
+              <div key={color.id} className={styles.color}>
+                <button
+                  className={styles.colorPreview}
+                  style={{ "--color": color.value }}
+                  title={color.value}
+                  onClick={() => {
+                    void navigator.clipboard.writeText(color.value);
+                  }}
+                >
+                  <VisuallyHidden>Copy to clipboard</VisuallyHidden>
+                </button>
+                <span className={styles.colorTone}>
+                  {formatName(color.tone)}
+                </span>
+              </div>
             ))}
           </div>
         </section>
       ))}
     </div>
   );
+};
+
+const formatName = (id: string) => {
+  return id
+    .split("-")
+    .map((token) => {
+      return token.replace(/^./u, (char) => {
+        return char.toUpperCase();
+      });
+    })
+    .join(" ");
 };
 
 export { PaletteViewer };

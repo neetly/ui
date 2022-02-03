@@ -29,6 +29,11 @@
 }
 
 .color {
+  display: flex;
+  flex-direction: column;
+}
+
+.colorPreview {
   all: unset;
   cursor: pointer;
 
@@ -37,4 +42,11 @@
   border-radius: 0.25rem;
   background-color: var(--color);
   box-shadow: inset 0 0 0 1px palette.$neutral--100;
+}
+
+.colorTone {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-align: center;
+  color: palette.$neutral-variant--600;
 }
