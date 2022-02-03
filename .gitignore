@@ -18,6 +18,8 @@
 
 # Artifacts
 
+/packages/*/package.tgz
+/packages/*/LICENSE
 /packages/*/tsconfig.tsbuildinfo
 /packages/*/lib/
 /packages/*/build/
