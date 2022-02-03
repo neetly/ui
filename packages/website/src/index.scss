@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "@neetly/palette";
 @use "./styles/index.scss" as *;
 
@@ -12,4 +14,19 @@ html {
 
 body {
   margin: 0;
+}
+
+:root {
+  :focus {
+    outline: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid palette.$primary--600;
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: color.change(palette.$secondary--200, $alpha: 0.72);
+  }
 }
