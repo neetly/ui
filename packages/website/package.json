@@ -14,6 +14,7 @@
     "clean": "app clean"
   },
   "dependencies": {
+    "@neetly/icons": "workspace:packages/icons",
     "@neetly/palette": "workspace:packages/palette",
     "@neetly/router": "^1.2.0",
     "@types/react": "^17.0.39",

@@ -13,6 +13,9 @@ const HomePage = () => {
         <Link className={styles.navLink} to="/typography">
           Typography
         </Link>
+        <Link className={styles.navLink} to="/icons">
+          Icons
+        </Link>
         <Link className={styles.navLink} to="/components">
           Components
         </Link>

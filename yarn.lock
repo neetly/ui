@@ -2127,6 +2127,7 @@ __metadata:
   resolution: "@neetly/design-website@workspace:packages/website"
   dependencies:
     "@buncho/builder": ^4.0.0
+    "@neetly/icons": "workspace:packages/icons"
     "@neetly/palette": "workspace:packages/palette"
     "@neetly/router": ^1.2.0
     "@types/react": ^17.0.39

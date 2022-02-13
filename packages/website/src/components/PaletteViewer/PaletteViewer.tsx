@@ -15,7 +15,7 @@ const PaletteViewer = () => {
                 <button
                   className={styles.colorPreview}
                   style={{ "--color": color.value }}
-                  title={color.value}
+                  title={color.value.toUpperCase()}
                   onClick={() => {
                     void navigator.clipboard.writeText(color.value);
                   }}
