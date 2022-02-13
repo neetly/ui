@@ -15,7 +15,7 @@ const IconsViewer = () => {
 };
 
 const formatName = (id: string) => {
-  return id.replace(/Icon$/, "").replace(/(?<!^)[A-Z]/, " $1");
+  return id.replace(/Icon$/, "").replace(/(?<!^)[A-Z]/, " $&");
 };
 
 export { IconsViewer };
