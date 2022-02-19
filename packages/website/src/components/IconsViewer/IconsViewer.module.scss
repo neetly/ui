@@ -20,6 +20,8 @@
 }
 
 .iconName {
+  flex: 1;
+  overflow: hidden;
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1rem;
