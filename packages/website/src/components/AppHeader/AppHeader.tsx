@@ -1,8 +1,9 @@
-import { LogoIcon } from "@neetly/icons";
 import { Link } from "@neetly/router";
+import { VisuallyHidden } from "ariakit";
 
 import { APP_NAME } from "../../constants";
 import styles from "./AppHeader.module.scss";
+import LogoIcon from "./assets/LogoIcon.svg";
 
 const AppHeader = () => {
   return (
@@ -10,7 +11,7 @@ const AppHeader = () => {
       <Link className={styles.logoLink} to="/">
         <h1 className={styles.logo}>
           <LogoIcon className={styles.logoIcon} />
-          <span className={styles.logoText}>{APP_NAME}</span>
+          <VisuallyHidden>{APP_NAME}</VisuallyHidden>
         </h1>
       </Link>
     </header>
