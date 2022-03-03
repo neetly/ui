@@ -3,7 +3,7 @@ import "./index.scss";
 
 import { BrowserRouter } from "@neetly/router";
 import { StrictMode } from "react";
-import { createRoot } from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import { App } from "./App";
 
