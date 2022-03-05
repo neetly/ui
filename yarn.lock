@@ -2137,6 +2137,7 @@ __metadata:
     react: 18.0.0-rc.1
     react-dom: 18.0.0-rc.1
     typescript: ^4.6.2
+    typescript-plugin-css-modules: ^3.4.0
   languageName: unknown
   linkType: soft
 
@@ -2152,7 +2153,6 @@ __metadata:
     eslint: ^8.10.0
     prettier: ^2.5.1
     typescript: ^4.6.2
-    typescript-plugin-css-modules: ^3.4.0
   languageName: unknown
   linkType: soft
 
@@ -13113,8 +13113,8 @@ __metadata:
   linkType: hard
 
 "postcss-load-config@npm:^3.0.1":
-  version: 3.1.1
-  resolution: "postcss-load-config@npm:3.1.1"
+  version: 3.1.3
+  resolution: "postcss-load-config@npm:3.1.3"
   dependencies:
     lilconfig: ^2.0.4
     yaml: ^1.10.2
@@ -13123,7 +13123,7 @@ __metadata:
   peerDependenciesMeta:
     ts-node:
       optional: true
-  checksum: d3bf9f159881dc2bab10362d1c782efc940a00148858df51c39e061a3b269c9a364a1fc953bba084d725f989c69f46fae96d625c27176a173f59a7bdc40d66e6
+  checksum: 7d187d339f259265bf1de9efff39223b94cb2cabe4610516896a16ec96f713b9b6505b4247d870f134842f8441b442a0fdc33a782b78ae3bec6db2aed4aeafec
   languageName: node
   linkType: hard
 
@@ -14758,15 +14758,15 @@ __metadata:
   linkType: hard
 
 "sass@npm:^1.32.13, sass@npm:^1.49.0":
-  version: 1.49.0
-  resolution: "sass@npm:1.49.0"
+  version: 1.49.9
+  resolution: "sass@npm:1.49.9"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 7cd60868594fb0b6fed87bf4870ad5a7da7e3746cb5127f3ede2565380f3e30ba2de72d64e9083f2d55d0de81f756894fe6d9314c97acb704cf9fc97fbbafd0c
+  checksum: e5653e3499274c5127dcb5c9e7c5f6930378fc61764d999a5d8965782e027181ed09714f94836dec74ef55e3a858107fe6c571954c0cab0ad0be5ab8e586829c
   languageName: node
   linkType: hard
 
@@ -16143,14 +16143,14 @@ __metadata:
   linkType: hard
 
 "tsconfig-paths@npm:^3.10.1, tsconfig-paths@npm:^3.9.0":
-  version: 3.12.0
-  resolution: "tsconfig-paths@npm:3.12.0"
+  version: 3.13.0
+  resolution: "tsconfig-paths@npm:3.13.0"
   dependencies:
     "@types/json5": ^0.0.29
     json5: ^1.0.1
     minimist: ^1.2.0
     strip-bom: ^3.0.0
-  checksum: 4999ec6cd1c7cc06750a460dbc0d39fe3595a4308cb5f1d0d0a8283009cf9c0a30d5a156508c28fe3a47760508af5263ab288fc23d71e9762779674257a95d3b
+  checksum: 64f0de3c882c016cdfe34d5261087fcf0c75048c4206ee32540e36df9f99d82d2caa5872135d3b6704324f5fd7d9032131caf316c1da83c2ac465d5dfb2aafd4
   languageName: node
   linkType: hard
 
