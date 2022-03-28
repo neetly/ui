@@ -1,4 +1,4 @@
-black==22.1.0
+black==22.3.0
 click==8.0.4
 colour @ git+https://github.com/colour-science/colour.git@efdadd5cc0e8131b3245420e2ae4582eaec4f668
 imageio==2.16.1
