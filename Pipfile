@@ -1,0 +1,7 @@
+[packages]
+colour-science = "*"
+numpy = "*"
+"ruamel.yaml" = "*"
+
+[dev-packages]
+black = "*"
