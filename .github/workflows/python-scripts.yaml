@@ -1,0 +1,16 @@
+name: Python scripts
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          cache: pipenv
+      - run: pipx install pipenv
+
+      - run: pipenv install --deploy --dev
+      - run: pipenv run black --check ./scripts
