@@ -14,7 +14,7 @@ def get_group_name(item: dict) -> str:
 
 for group_name, items in itertools.groupby(palette, get_group_name):
     sys.stdout.write("\n")
-    sys.stdout.write("  " + ANSI_bold + f"{group_name:>8}" + ANSI_reset + "  ")
+    sys.stdout.write("  " + ANSI_bold + f"{group_name:>16}" + ANSI_reset + "  ")
     for item in items:
         sRGB = HEX_to_sRGB(item["color"])
         R, G, B = [int(value * 255.0) for value in sRGB]
