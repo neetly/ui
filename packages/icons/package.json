@@ -19,7 +19,7 @@
     "prepack": "run clean && run build && cp ../../LICENSE ."
   },
   "devDependencies": {
-    "@buncho/builder": "^5.0.0",
+    "@buncho/builder": "^5.0.1",
     "@svgr/cli": "^6.2.1",
     "typescript": "^4.6.3"
   }
