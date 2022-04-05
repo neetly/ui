@@ -1,6 +1,6 @@
 {
   "name": "@neetly/icons",
-  "version": "0.0.0",
+  "private": true,
   "homepage": "https://github.com/neetly/design",
   "repository": {
     "type": "git",
