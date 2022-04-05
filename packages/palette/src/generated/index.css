@@ -1,0 +1,269 @@
+/* This file is auto-generated. */
+
+:root {
+  /* Primary */
+  --palette--primary--10: #fffbf9;
+  --palette--primary--20: #fff8f5;
+  --palette--primary--50: #ffede8;
+  --palette--primary--100: #ffdad2;
+  --palette--primary--200: #ffb4a7;
+  --palette--primary--300: #ff8a7c;
+  --palette--primary--400: #ec665a;
+  --palette--primary--500: #cf493f;
+  --palette--primary--600: #b32a24;
+  --palette--primary--700: #930004;
+  --palette--primary--800: #690001;
+  --palette--primary--900: #410000;
+
+  /* Secondary */
+  --palette--secondary--10: #fffbf9;
+  --palette--secondary--20: #fff8f5;
+  --palette--secondary--50: #ffede8;
+  --palette--secondary--100: #ffdad5;
+  --palette--secondary--200: #ebbbb5;
+  --palette--secondary--300: #d0a09a;
+  --palette--secondary--400: #b5857f;
+  --palette--secondary--500: #9c6b65;
+  --palette--secondary--600: #83514b;
+  --palette--secondary--700: #6b3933;
+  --palette--secondary--800: #53211c;
+  --palette--secondary--900: #3c0705;
+
+  /* Tertiary */
+  --palette--tertiary--10: #f5ffed;
+  --palette--tertiary--20: #eaffe1;
+  --palette--tertiary--50: #d8facf;
+  --palette--tertiary--100: #c9ecc1;
+  --palette--tertiary--200: #acd0a4;
+  --palette--tertiary--300: #8fb588;
+  --palette--tertiary--400: #729b6c;
+  --palette--tertiary--500: #568251;
+  --palette--tertiary--600: #396936;
+  --palette--tertiary--700: #18521a;
+  --palette--tertiary--800: #003a01;
+  --palette--tertiary--900: #002200;
+
+  /* Neutral */
+  --palette--neutral--10: #fffbfa;
+  --palette--neutral--20: #fff8f6;
+  --palette--neutral--50: #fceeec;
+  --palette--neutral--100: #eddfdd;
+  --palette--neutral--200: #d1c3c1;
+  --palette--neutral--300: #b5a8a6;
+  --palette--neutral--400: #9b8e8c;
+  --palette--neutral--500: #827472;
+  --palette--neutral--600: #695b5a;
+  --palette--neutral--700: #514442;
+  --palette--neutral--800: #3b2d2c;
+  --palette--neutral--900: #271816;
+
+  /* Neutral Variant */
+  --palette--neutral-variant--10: #fffbf9;
+  --palette--neutral-variant--20: #fff8f5;
+  --palette--neutral-variant--50: #ffedea;
+  --palette--neutral-variant--100: #f6ddda;
+  --palette--neutral-variant--200: #dac1be;
+  --palette--neutral-variant--300: #bea5a2;
+  --palette--neutral-variant--400: #a48b88;
+  --palette--neutral-variant--500: #8a716e;
+  --palette--neutral-variant--600: #725855;
+  --palette--neutral-variant--700: #5b403d;
+  --palette--neutral-variant--800: #442926;
+  --palette--neutral-variant--900: #2f1310;
+
+  /* Red */
+  --palette--red--10: #fffbf9;
+  --palette--red--20: #fff8f5;
+  --palette--red--50: #ffede8;
+  --palette--red--100: #ffdad2;
+  --palette--red--200: #ffb4a7;
+  --palette--red--300: #ff8a7c;
+  --palette--red--400: #ec665a;
+  --palette--red--500: #cf493f;
+  --palette--red--600: #b32a24;
+  --palette--red--700: #930004;
+  --palette--red--800: #690001;
+  --palette--red--900: #410000;
+
+  /* Orange */
+  --palette--orange--10: #fffbf8;
+  --palette--orange--20: #fff8f3;
+  --palette--orange--50: #ffede2;
+  --palette--orange--100: #ffdbc7;
+  --palette--orange--200: #ffb68e;
+  --palette--orange--300: #ff8d4b;
+  --palette--orange--400: #e66e27;
+  --palette--orange--500: #c95200;
+  --palette--orange--600: #a24000;
+  --palette--orange--700: #7b2e00;
+  --palette--orange--800: #571e00;
+  --palette--orange--900: #351000;
+
+  /* Ambar */
+  --palette--ambar--10: #fffbf7;
+  --palette--ambar--20: #fff8ef;
+  --palette--ambar--50: #ffeed9;
+  --palette--ambar--100: #ffddb2;
+  --palette--ambar--200: #ffb958;
+  --palette--ambar--300: #ef9800;
+  --palette--ambar--400: #cd7f00;
+  --palette--ambar--500: #a96800;
+  --palette--ambar--600: #875200;
+  --palette--ambar--700: #673d00;
+  --palette--ambar--800: #482900;
+  --palette--ambar--900: #2c1700;
+
+  /* Yellow */
+  --palette--yellow--10: #fffcf6;
+  --palette--yellow--20: #fff9e9;
+  --palette--yellow--50: #fff0c6;
+  --palette--yellow--100: #ffe085;
+  --palette--yellow--200: #f1c029;
+  --palette--yellow--300: #d4a400;
+  --palette--yellow--400: #b58b00;
+  --palette--yellow--500: #957200;
+  --palette--yellow--600: #775a00;
+  --palette--yellow--700: #5a4300;
+  --palette--yellow--800: #3f2e00;
+  --palette--yellow--900: #261a00;
+
+  /* Lime */
+  --palette--lime--10: #fbffda;
+  --palette--lime--20: #f3ffc1;
+  --palette--lime--50: #dcfe87;
+  --palette--lime--100: #cdef77;
+  --palette--lime--200: #b0d356;
+  --palette--lime--300: #94b833;
+  --palette--lime--400: #789d00;
+  --palette--lime--500: #5f8200;
+  --palette--lime--600: #4a6700;
+  --palette--lime--700: #374e00;
+  --palette--lime--800: #243600;
+  --palette--lime--900: #131f00;
+
+  /* Green */
+  --palette--green--10: #f5ffed;
+  --palette--green--20: #eaffe1;
+  --palette--green--50: #c8ffbe;
+  --palette--green--100: #a4f69b;
+  --palette--green--200: #83da7c;
+  --palette--green--300: #61bf5e;
+  --palette--green--400: #3ca540;
+  --palette--green--500: #008b1e;
+  --palette--green--600: #006e0b;
+  --palette--green--700: #005305;
+  --palette--green--800: #003a01;
+  --palette--green--900: #002200;
+
+  /* Teal */
+  --palette--teal--10: #f1fff9;
+  --palette--teal--20: #e4fff4;
+  --palette--teal--50: #b7ffe4;
+  --palette--teal--100: #72faca;
+  --palette--teal--200: #41dfae;
+  --palette--teal--300: #00c290;
+  --palette--teal--400: #00a478;
+  --palette--teal--500: #008863;
+  --palette--teal--600: #006c4e;
+  --palette--teal--700: #005139;
+  --palette--teal--800: #003826;
+  --palette--teal--900: #002115;
+
+  /* Cyan */
+  --palette--cyan--10: #efffff;
+  --palette--cyan--20: #dfffff;
+  --palette--cyan--50: #a9ffff;
+  --palette--cyan--100: #4ff8fe;
+  --palette--cyan--200: #00dce2;
+  --palette--cyan--300: #00bec5;
+  --palette--cyan--400: #00a1a8;
+  --palette--cyan--500: #00848a;
+  --palette--cyan--600: #00696e;
+  --palette--cyan--700: #004f53;
+  --palette--cyan--800: #00373a;
+  --palette--cyan--900: #002022;
+
+  /* Sky */
+  --palette--sky--10: #f8fdff;
+  --palette--sky--20: #f2fbff;
+  --palette--sky--50: #ddf4ff;
+  --palette--sky--100: #bae9ff;
+  --palette--sky--200: #63d3ff;
+  --palette--sky--300: #00b8f1;
+  --palette--sky--400: #009ccd;
+  --palette--sky--500: #0080a9;
+  --palette--sky--600: #006688;
+  --palette--sky--700: #004d68;
+  --palette--sky--800: #003549;
+  --palette--sky--900: #001e2b;
+
+  /* Blue */
+  --palette--blue--10: #fbfcff;
+  --palette--blue--20: #f6f9ff;
+  --palette--blue--50: #e8f1ff;
+  --palette--blue--100: #cfe4ff;
+  --palette--blue--200: #9ccaff;
+  --palette--blue--300: #61b0ff;
+  --palette--blue--400: #0094fb;
+  --palette--blue--500: #0079d3;
+  --palette--blue--600: #0060aa;
+  --palette--blue--700: #004882;
+  --palette--blue--800: #00315c;
+  --palette--blue--900: #001c39;
+
+  /* Indigo */
+  --palette--indigo--10: #fdfbff;
+  --palette--indigo--20: #f9f8ff;
+  --palette--indigo--50: #eff0ff;
+  --palette--indigo--100: #dde1ff;
+  --palette--indigo--200: #b9c3ff;
+  --palette--indigo--300: #96a5ff;
+  --palette--indigo--400: #7586ff;
+  --palette--indigo--500: #5569f3;
+  --palette--indigo--600: #2f48eb;
+  --palette--indigo--700: #001be2;
+  --palette--indigo--800: #000ea5;
+  --palette--indigo--900: #00046b;
+
+  /* Violet */
+  --palette--violet--10: #fffbff;
+  --palette--violet--20: #fff7ff;
+  --palette--violet--50: #f8ecff;
+  --palette--violet--100: #eedbff;
+  --palette--violet--200: #d8b9ff;
+  --palette--violet--300: #c396ff;
+  --palette--violet--400: #a877f4;
+  --palette--violet--500: #8f58e2;
+  --palette--violet--600: #7834d5;
+  --palette--violet--700: #5d00c3;
+  --palette--violet--800: #41008c;
+  --palette--violet--900: #260059;
+
+  /* Purple */
+  --palette--purple--10: #fffbfc;
+  --palette--purple--20: #fff7fd;
+  --palette--purple--50: #ffeafe;
+  --palette--purple--100: #ffd5ff;
+  --palette--purple--200: #ffa9ff;
+  --palette--purple--300: #e68ae9;
+  --palette--purple--400: #cc6bd1;
+  --palette--purple--500: #b44cbc;
+  --palette--purple--600: #9c25a9;
+  --palette--purple--700: #7c008e;
+  --palette--purple--800: #580066;
+  --palette--purple--900: #36003f;
+
+  /* Pink */
+  --palette--pink--10: #fffbfb;
+  --palette--pink--20: #fff7fa;
+  --palette--pink--50: #ffebf3;
+  --palette--pink--100: #ffd8e8;
+  --palette--pink--200: #ffb0d3;
+  --palette--pink--300: #fe83ba;
+  --palette--pink--400: #e365a0;
+  --palette--pink--500: #c94587;
+  --palette--pink--600: #af206f;
+  --palette--pink--700: #8d0052;
+  --palette--pink--800: #640038;
+  --palette--pink--900: #3e0021;
+}
