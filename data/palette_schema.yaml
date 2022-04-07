@@ -6,7 +6,7 @@
 
   - { name: Red, hue: 25, chroma: 48 }
   - { name: Orange, hue: 45, chroma: 48 }
-  - { name: Ambar, hue: 70, chroma: 48 }
+  - { name: Amber, hue: 70, chroma: 48 }
   - { name: Yellow, hue: 90, chroma: 48 }
   - { name: Lime, hue: 125, chroma: 48 }
   - { name: Green, hue: 145, chroma: 48 }

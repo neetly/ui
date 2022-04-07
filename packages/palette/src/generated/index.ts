@@ -99,19 +99,19 @@ const palette = {
   "orange--800": "#571e00",
   "orange--900": "#351000",
 
-  // Ambar
-  "ambar--10": "#fffbf7",
-  "ambar--20": "#fff8ef",
-  "ambar--50": "#ffeed9",
-  "ambar--100": "#ffddb2",
-  "ambar--200": "#ffb958",
-  "ambar--300": "#ef9800",
-  "ambar--400": "#cd7f00",
-  "ambar--500": "#a96800",
-  "ambar--600": "#875200",
-  "ambar--700": "#673d00",
-  "ambar--800": "#482900",
-  "ambar--900": "#2c1700",
+  // Amber
+  "amber--10": "#fffbf7",
+  "amber--20": "#fff8ef",
+  "amber--50": "#ffeed9",
+  "amber--100": "#ffddb2",
+  "amber--200": "#ffb958",
+  "amber--300": "#ef9800",
+  "amber--400": "#cd7f00",
+  "amber--500": "#a96800",
+  "amber--600": "#875200",
+  "amber--700": "#673d00",
+  "amber--800": "#482900",
+  "amber--900": "#2c1700",
 
   // Yellow
   "yellow--10": "#fffcf6",

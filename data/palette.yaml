@@ -166,29 +166,29 @@
   color: "#571e00"
 - name: Orange/900
   color: "#351000"
-- name: Ambar/10
+- name: Amber/10
   color: "#fffbf7"
-- name: Ambar/20
+- name: Amber/20
   color: "#fff8ef"
-- name: Ambar/50
+- name: Amber/50
   color: "#ffeed9"
-- name: Ambar/100
+- name: Amber/100
   color: "#ffddb2"
-- name: Ambar/200
+- name: Amber/200
   color: "#ffb958"
-- name: Ambar/300
+- name: Amber/300
   color: "#ef9800"
-- name: Ambar/400
+- name: Amber/400
   color: "#cd7f00"
-- name: Ambar/500
+- name: Amber/500
   color: "#a96800"
-- name: Ambar/600
+- name: Amber/600
   color: "#875200"
-- name: Ambar/700
+- name: Amber/700
   color: "#673d00"
-- name: Ambar/800
+- name: Amber/800
   color: "#482900"
-- name: Ambar/900
+- name: Amber/900
   color: "#2c1700"
 - name: Yellow/10
   color: "#fffcf6"
