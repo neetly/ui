@@ -8,7 +8,7 @@
     "outDir": "./lib",
 
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["@buncho/builder", "react/next", "react-dom/next"],
+    "types": ["@buncho/builder"],
 
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
 
