@@ -20,7 +20,7 @@
   font-family: $font-headline;
   font-size: 0.875rem;
   font-weight: 600;
-  line-height: 1rem;
+  line-height: 1.2;
   color: palette.$neutral-variant--800;
 }
 
@@ -56,7 +56,7 @@
 .colorTone {
   font-size: 0.625rem;
   font-weight: 600;
-  line-height: 0.75rem;
+  line-height: 1.2;
   text-align: center;
   color: palette.$neutral-variant--600;
 }
