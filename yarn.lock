@@ -2157,7 +2157,7 @@ __metadata:
     "@neetly/router": ^1.3.0
     "@types/react": ^18.0.1
     "@types/react-dom": ^18.0.0
-    ariakit: 2.0.0-alpha.21
+    ariakit: 2.0.0-next.22
     core-js: ^3.21.1
     react: ^18.0.0
     react-dom: ^18.0.0
@@ -5321,25 +5321,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit-utils@npm:^0.17.0-alpha.14":
-  version: 0.17.0-alpha.14
-  resolution: "ariakit-utils@npm:0.17.0-alpha.14"
+"ariakit-utils@npm:0.17.0-next.15":
+  version: 0.17.0-next.15
+  resolution: "ariakit-utils@npm:0.17.0-next.15"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: d39040f6353929e66f6fb6265f4a97af1124858dbc3d06c41a41e652b5127ab36f774ea391c436ed19b74d8b732c61a3f03921b2c2f08d0882b1864a1aba4388
+  checksum: 7d1cddbe0316b36c129c43c28eb56fff0f0cbc9763ae551526b6928754c75e1776c73792516083e6abb3d0fa9ec4f6fac02ba0922da6c0d93b1e025c1e4c893f
   languageName: node
   linkType: hard
 
-"ariakit@npm:2.0.0-alpha.21":
-  version: 2.0.0-alpha.21
-  resolution: "ariakit@npm:2.0.0-alpha.21"
+"ariakit@npm:2.0.0-next.22":
+  version: 2.0.0-next.22
+  resolution: "ariakit@npm:2.0.0-next.22"
   dependencies:
     "@popperjs/core": ^2.11.2
-    ariakit-utils: ^0.17.0-alpha.14
+    ariakit-utils: 0.17.0-next.15
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 21b562d58e92cb18f0a71c4511255ab84467d3091809938c165e7f3bb6cbf35d615e10f0e3acb20415910fcc7718cd140681c8cce824ad36b1754aec3dc04b49
+  checksum: 10e91399e6d45e97d3a5598b1bf2783318cb8921300374e075ac14c9670bb39419966e5cbad9e0ae04e2e8cbc882444ee3c857127a3d41f0d34ff4c98b47b412
   languageName: node
   linkType: hard
 
