@@ -1,14 +1,12 @@
 @use "@neetly/palette";
 
 .footer {
-  display: flex;
-  align-items: center;
-  height: 4rem;
-  padding: 0 2rem;
+  max-width: 80rem;
+  margin: 1rem auto;
+  padding: 0 1rem;
 }
 
 .copyright {
   margin: 0;
-  font-size: 0.875rem;
   color: palette.$neutral-variant--600;
 }

@@ -1,16 +1,5 @@
-@use "@neetly/palette";
-@use "../../styles/index.scss" as *;
-
 .layout {
-  padding: 0.5rem 2rem;
-}
-
-.title {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-family: $font-headline;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1;
-  color: palette.$neutral--900;
+  max-width: 80rem;
+  margin: 1rem auto;
+  padding: 0 1rem;
 }

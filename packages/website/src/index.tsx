@@ -1,4 +1,3 @@
-import "./polyfills";
 import "./index.scss";
 
 import { BrowserRouter } from "@neetly/router";

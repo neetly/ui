@@ -1,37 +1,54 @@
+@use "sass:color";
+
 @use "@neetly/palette";
 
 .header {
-  position: sticky;
-  z-index: 100;
-  top: 0;
-  display: flex;
-  align-items: center;
-  height: 4rem;
-  padding: 0 2rem;
-  background-color: palette.$neutral--10;
+  max-width: 80rem;
+  margin: 1rem auto;
+  padding: 0 1rem;
 }
 
 .logoLink {
-  margin: -0.5rem -1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1.25rem;
-  text-decoration: none;
-  color: palette.$primary--600;
-  transition: background-color 250ms;
-
-  @media (hover: hover) {
-    &:hover {
-      background-color: palette.$neutral--50;
-    }
-  }
+  all: unset;
+  display: block;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .logo {
-  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  margin: 0 -1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+  color: palette.$primary--600;
+  transition: background-color 150ms;
+
+  @media (hover: hover) {
+    .logoLink:hover & {
+      background-color: color.change(palette.$primary--600, $alpha: 0.05);
+    }
+  }
+
+  .logoLink:active & {
+    background-color: color.change(palette.$primary--600, $alpha: 0.05);
+  }
+
+  .logoLink:focus-visible & {
+    outline: 2px solid palette.$primary--600;
+    background-color: color.change(palette.$primary--600, $alpha: 0.05);
+  }
+}
+
+.logoIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 -0.25rem;
+  fill: currentColor;
 }
 
 .logoTextIcon {
-  display: block;
   height: 1.5rem;
-  fill: palette.$primary--600;
+  fill: currentColor;
 }
