@@ -1,0 +1,24 @@
+{
+  "name": "@neetly/ui",
+  "private": true,
+  "homepage": "https://github.com/neetly/design",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neetly/design.git",
+    "directory": "packages/ui"
+  },
+  "license": "Apache-2.0",
+  "main": "./lib/index.js",
+  "files": [
+    "./lib"
+  ],
+  "scripts": {
+    "build": "lib build",
+    "clean": "lib clean",
+    "prepack": "run clean && run build && cp ../../LICENSE ."
+  },
+  "devDependencies": {
+    "@buncho/builder": "^5.0.1",
+    "typescript": "^4.6.3"
+  }
+}
