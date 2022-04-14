@@ -1,5 +1,5 @@
 import { Link } from "@neetly/router";
-import { VisuallyHidden } from "ariakit";
+import { VisuallyHidden } from "@neetly/ui";
 
 import { APP_NAME } from "../../constants";
 import styles from "./AppHeader.module.scss";

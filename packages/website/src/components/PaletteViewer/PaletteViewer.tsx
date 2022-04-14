@@ -1,4 +1,4 @@
-import { VisuallyHidden } from "ariakit";
+import { VisuallyHidden } from "@neetly/ui";
 
 import { colorGroups } from "../../data/colors";
 import styles from "./PaletteViewer.module.scss";

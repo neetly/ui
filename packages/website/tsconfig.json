@@ -19,5 +19,9 @@
     }
   },
 
-  "references": [{ "path": "../palette" }, { "path": "../icons" }]
+  "references": [
+    { "path": "../palette" },
+    { "path": "../icons" },
+    { "path": "../ui" }
+  ]
 }
