@@ -19,25 +19,13 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
-  margin: 0 -1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1.25rem;
+  margin: 0 -0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   color: palette.$primary--600;
-  transition: background-color 150ms;
-
-  @media (hover: hover) {
-    .logoLink:hover & {
-      background-color: color.change(palette.$primary--600, $alpha: 0.05);
-    }
-  }
-
-  .logoLink:active & {
-    background-color: color.change(palette.$primary--600, $alpha: 0.05);
-  }
 
   .logoLink:focus-visible & {
     outline: 2px solid palette.$primary--600;
-    background-color: color.change(palette.$primary--600, $alpha: 0.05);
   }
 }
 
