@@ -17,8 +17,26 @@
     "clean": "lib clean",
     "prepack": "run clean && run build && cp ../../LICENSE ."
   },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@buncho/builder": "^5.0.1",
+    "@types/react": "^18.0.5",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "typescript": "^4.6.3"
   }
 }
