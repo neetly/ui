@@ -12,6 +12,7 @@
   all: unset;
   display: block;
   width: fit-content;
+  user-select: none;
   cursor: pointer;
 }
 
