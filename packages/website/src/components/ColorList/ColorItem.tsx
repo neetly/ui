@@ -42,6 +42,7 @@ const ColorItem = ({ name, color }: ColorItemProps) => {
             className={styles.tooltipArrow}
             width={12}
             height={6}
+            offset={16}
           />
         </TooltipPrimitive.Content>
       </TooltipPrimitive.Root>
