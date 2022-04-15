@@ -1,7 +1,6 @@
 import { VisuallyHidden } from "@neetly/ui";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import type { ReactNode } from "react";
-import { useRef } from "react";
 
 import styles from "./ColorItem.module.scss";
 
