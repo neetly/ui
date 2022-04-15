@@ -1,7 +1,7 @@
 import { VisuallyHidden } from "@neetly/ui";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import type { ReactNode } from "react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 import styles from "./ColorItem.module.scss";
 
@@ -12,24 +12,15 @@ type ColorItemProps = {
 
 const ColorItem = ({ name, color }: ColorItemProps) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const [isTooltipOpen, setTooltipOpen] = useState(false);
-
-  const onButtonClick = () => {
-    setTooltipOpen(true);
-    void navigator.clipboard.writeText(color);
-  };
 
   return (
     <section className={styles.item} style={{ "--color": color }}>
-      <TooltipPrimitive.Root
-        open={isTooltipOpen}
-        onOpenChange={(open) => setTooltipOpen(open)}
-      >
+      <TooltipPrimitive.Root>
         <TooltipPrimitive.Trigger asChild>
           <button
             ref={buttonRef}
             className={styles.button}
-            onClick={onButtonClick}
+            onClick={() => void navigator.clipboard.writeText(color)}
           >
             <div className={styles.preview}>
               <VisuallyHidden>{color.toUpperCase()}</VisuallyHidden>
