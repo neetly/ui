@@ -4,10 +4,7 @@ import { IconItem, IconList } from "../../components/IconList";
 import { PageLayout } from "../../components/PageLayout";
 
 const icons = Object.entries(Icons).map(([name, component]) => {
-  return {
-    name: name.replace(/Icon$/, "").replace(/(?!^)(?=[A-Z])/, " "),
-    component,
-  };
+  return { name, component };
 });
 
 const IconsPage = () => {
@@ -15,11 +12,19 @@ const IconsPage = () => {
     <PageLayout title="Icons">
       <IconList>
         {icons.map((icon) => (
-          <IconItem key={icon.name} name={icon.name} icon={icon.component} />
+          <IconItem
+            key={icon.name}
+            name={formatName(icon.name)}
+            icon={icon.component}
+          />
         ))}
       </IconList>
     </PageLayout>
   );
+};
+
+const formatName = (name: string) => {
+  return name.replace(/Icon$/, "").replace(/(?<!^)(?=[A-Z])/g, " ");
 };
 
 export { IconsPage };

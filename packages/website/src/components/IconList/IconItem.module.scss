@@ -9,13 +9,19 @@
   gap: 1rem;
 }
 
+.preview {
+  display: grid;
+  place-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  background-color: color.change(palette.$primary--600, $alpha: 0.05);
+}
+
 .icon {
   width: 1.5rem;
   height: 1.5rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  background-color: color.change(palette.$primary--600, $alpha: 0.05);
-  fill: palette.$neutral-variant--800;
+  fill: palette.$secondary--800;
 }
 
 .name {

@@ -1,0 +1,36 @@
+@use "sass:color";
+
+@use "@neetly/palette";
+
+.item {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.button {
+  all: unset;
+  display: block;
+  width: 100%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.preview {
+  aspect-ratio: 1;
+  border-radius: 0.5rem;
+  background-color: var(--color);
+  box-shadow: inset 0 0 0 1px color.change(#000, $alpha: 0.1);
+
+  .button:focus-visible & {
+    outline: 2px solid palette.$primary--600;
+    outline-offset: 2px;
+  }
+}
+
+.name {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  color: palette.$neutral-variant--600;
+}
