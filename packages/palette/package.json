@@ -20,7 +20,7 @@
     "prepack": "run clean && run build && cp ../../LICENSE ."
   },
   "devDependencies": {
-    "@buncho/builder": "^5.0.1",
+    "@buncho/builder": "^5.1.0",
     "typescript": "^4.6.3"
   }
 }
