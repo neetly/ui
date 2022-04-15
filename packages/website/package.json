@@ -20,6 +20,8 @@
     "@neetly/ui": "workspace:packages/ui",
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
+    "array.prototype.groupby": "^1.1.0",
+    "array.prototype.groupbytomap": "^1.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
