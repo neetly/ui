@@ -11,7 +11,10 @@ type ColorItemProps = {
 const ColorItem = ({ name, color }: ColorItemProps) => {
   return (
     <section className={styles.item} style={{ "--color": color }}>
-      <button className={styles.button}>
+      <button
+        className={styles.button}
+        onClick={() => void navigator.clipboard.writeText(color)}
+      >
         <div className={styles.preview}>
           <VisuallyHidden>{color}</VisuallyHidden>
         </div>
