@@ -11,14 +11,11 @@ type ColorItemProps = {
 };
 
 const ColorItem = ({ name, color }: ColorItemProps) => {
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
   return (
     <section className={styles.item} style={{ "--color": color }}>
       <TooltipPrimitive.Root>
         <TooltipPrimitive.Trigger asChild>
           <button
-            ref={buttonRef}
             className={styles.button}
             onClick={() => void navigator.clipboard.writeText(color)}
           >
@@ -31,11 +28,6 @@ const ColorItem = ({ name, color }: ColorItemProps) => {
           className={styles.tooltip}
           side="top"
           sideOffset={2}
-          onPointerDownOutside={(event) => {
-            if (buttonRef.current?.contains(event.target as Node)) {
-              event.preventDefault();
-            }
-          }}
         >
           {color.toUpperCase()}
           <TooltipPrimitive.Arrow
