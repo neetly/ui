@@ -26,7 +26,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@buncho/builder": "^5.0.1",
+    "@buncho/builder": "^5.1.0",
     "typescript": "^4.6.3",
     "typescript-plugin-css-modules": "^3.4.0"
   }

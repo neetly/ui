@@ -35,7 +35,7 @@
     }
   },
   "devDependencies": {
-    "@buncho/builder": "^5.0.1",
+    "@buncho/builder": "^5.1.0",
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "react": "^18.0.0",
