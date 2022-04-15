@@ -5,11 +5,11 @@ import type { ReactNode } from "react";
 import styles from "./NavigationItem.module.scss";
 
 type NavigationItemProps = {
-  name?: ReactNode;
-  link?: string;
+  name: ReactNode;
+  link: string;
 };
 
-const NavigationItem = ({ name, link = "/" }: NavigationItemProps) => {
+const NavigationItem = ({ name, link }: NavigationItemProps) => {
   return (
     <Link className={styles.link} to={link}>
       <section className={styles.item}>

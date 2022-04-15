@@ -20,7 +20,6 @@
     "@neetly/ui": "workspace:packages/ui",
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.0",
-    "core-js": "^3.21.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

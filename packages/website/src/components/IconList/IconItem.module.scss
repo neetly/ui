@@ -1,0 +1,26 @@
+@use "sass:color";
+
+@use "@neetly/palette";
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: color.change(palette.$primary--600, $alpha: 0.05);
+  fill: palette.$neutral-variant--800;
+}
+
+.name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: palette.$neutral-variant--800;
+}

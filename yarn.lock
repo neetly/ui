@@ -2158,7 +2158,6 @@ __metadata:
     "@neetly/ui": "workspace:packages/ui"
     "@types/react": ^18.0.5
     "@types/react-dom": ^18.0.0
-    core-js: ^3.21.1
     react: ^18.0.0
     react-dom: ^18.0.0
     typescript: ^4.6.3
@@ -6988,7 +6987,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.0.4, core-js@npm:^3.21.1, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
+"core-js@npm:^3.0.4, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
   version: 3.21.1
   resolution: "core-js@npm:3.21.1"
   checksum: d68eddd831340ad5b24ac29c72fda022a43b17f194c4278b6b875a843283d316502cb4abd07f28631d6ebc4387f66aa06e2b1b3c8fd7e08096a751b5c63f6889

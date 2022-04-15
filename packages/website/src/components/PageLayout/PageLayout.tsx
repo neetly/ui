@@ -14,7 +14,12 @@ const PageLayout = ({ title, children }: PageLayoutProps) => {
     document.title = title ? `${title} - ${APP_NAME}` : APP_NAME;
   }, [title]);
 
-  return <main className={styles.layout}>{children}</main>;
+  return (
+    <main className={styles.layout}>
+      {title && <h1 className={styles.title}>{title}</h1>}
+      {children}
+    </main>
+  );
 };
 
 export { PageLayout };
