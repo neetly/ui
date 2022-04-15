@@ -14,14 +14,14 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: color.change(palette.$primary--600, $alpha: 0.05);
   transition: background-color 150ms;
 
   @media (max-width: 40rem) {
     margin: 0 -1rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 0;
   }
 
