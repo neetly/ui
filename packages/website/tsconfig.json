@@ -15,13 +15,14 @@
     // Make typescript-plugin-css-modules happy
     "baseUrl": ".",
     "paths": {
+      "@neetly/ui": ["../ui/src/index.scss"],
       "@neetly/palette": ["../palette/src/index.scss"]
     }
   },
 
   "references": [
+    { "path": "../ui" },
     { "path": "../palette" },
-    { "path": "../icons" },
-    { "path": "../ui" }
+    { "path": "../icons" }
   ]
 }

@@ -9,6 +9,7 @@
   },
   "license": "Apache-2.0",
   "main": "./lib/index.js",
+  "sass": "./lib/index.scss",
   "files": [
     "./lib"
   ],
