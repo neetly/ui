@@ -1,0 +1,26 @@
+@use "sass:map";
+
+$properties: ();
+
+@function property-name($name) {
+  @return --theme-#{$name};
+}
+
+@function property($name, $value: null) {
+  @if $value != null {
+    @return var(property-name($name), $value);
+  } @else {
+    @return var(property-name($name));
+  }
+}
+
+@function define-property($name, $value) {
+  $properties: map.set($properties, $name, $value) !global;
+  @return property($name);
+}
+
+@mixin provide-properties($overrides: ()) {
+  @each $name, $value in map.merge($properties, $overrides) {
+    #{$name}: $value;
+  }
+}
