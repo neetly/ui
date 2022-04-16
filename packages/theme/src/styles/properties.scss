@@ -21,6 +21,6 @@ $properties: ();
 
 @mixin provide-properties($overrides: ()) {
   @each $name, $value in map.merge($properties, $overrides) {
-    #{$name}: $value;
+    #{property-name($name)}: $value;
   }
 }
