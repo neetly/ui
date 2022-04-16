@@ -2,25 +2,25 @@
 
 $properties: ();
 
-@function property-name($name) {
+@function get-property-name($name) {
   @return --theme-#{$name};
 }
 
-@function property($name, $value: null) {
+@function get-property($name, $value: null) {
   @if $value != null {
-    @return var(property-name($name), $value);
+    @return var(get-property-name($name), $value);
   } @else {
-    @return var(property-name($name));
+    @return var(get-property-name($name));
   }
 }
 
 @function define-property($name, $value) {
   $properties: map.set($properties, $name, $value) !global;
-  @return property($name);
+  @return get-property($name);
 }
 
 @mixin provide-properties($overrides: ()) {
   @each $name, $value in map.merge($properties, $overrides) {
-    #{property-name($name)}: $value;
+    #{get-property-name($name)}: $value;
   }
 }
