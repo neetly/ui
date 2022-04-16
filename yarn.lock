@@ -2249,9 +2249,9 @@ __metadata:
     "@neetly/icons": "workspace:packages/icons"
     "@neetly/palette": "workspace:packages/palette"
     "@neetly/theme": "workspace:packages/theme"
-    "@radix-ui/react-visually-hidden": ^0.1.4
     "@types/react": ^18.0.5
     "@types/react-dom": ^18.0.1
+    ariakit: 2.0.0-next.22
     react: ^18.0.0
     react-dom: ^18.0.0
     typescript: ^4.6.3
@@ -2371,10 +2371,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
-  version: 2.11.2
-  resolution: "@popperjs/core@npm:2.11.2"
-  checksum: 5695bf020eda54636e16a62dc9b5fdd92beaf7b2d19f62fcef049d57c5cff92773562d80cbf760b217c3ec928da310eb24994ab6a00fd39dffa0af9b5dfc01a6
+"@popperjs/core@npm:^2.11.2, @popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
+  version: 2.11.5
+  resolution: "@popperjs/core@npm:2.11.5"
+  checksum: fd7f9dca3fb716d7426332b6ee283f88d2724c0ab342fb678865a640bad403dfb9eeebd8204a406986162f7e2b33394f104320008b74d0e9066d7322f70ea35d
   languageName: node
   linkType: hard
 
@@ -2416,17 +2416,6 @@ __metadata:
   peerDependencies:
     react: ^16.8 || ^17.0 || ^18.0
   checksum: dabe6e5328177e3d410ebddd023b249e2809edbb82cdd01d5827b03ed3c87fe61224c6b6f58162c385ca8a7583fb4aec1a148ebc4f169f6ba6fff1d46301b6fc
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-compose-refs@npm:0.1.0":
-  version: 0.1.0
-  resolution: "@radix-ui/react-compose-refs@npm:0.1.0"
-  dependencies:
-    "@babel/runtime": ^7.13.10
-  peerDependencies:
-    react: ^16.8 || ^17.0
-  checksum: d1455577b2afee141998e847890e8f5ba5cb17aa58ba699f9abe21c7948e2435bbda28f7f7efe825ca200c66bcaf095ff4b93553778d599cba3f611c97cd222e
   languageName: node
   linkType: hard
 
@@ -2527,18 +2516,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-primitive@npm:0.1.4":
-  version: 0.1.4
-  resolution: "@radix-ui/react-primitive@npm:0.1.4"
-  dependencies:
-    "@babel/runtime": ^7.13.10
-    "@radix-ui/react-slot": 0.1.2
-  peerDependencies:
-    react: ^16.8 || ^17.0
-  checksum: e7b83dc51565a7a54dfd16296e2aa1639dafe32655e3a3974d29d28497f0e9ec9cdf0ee59bc54a88b2a51eeb307781f01f6fcacb4d6dc84a8e10631ddb6142e5
-  languageName: node
-  linkType: hard
-
 "@radix-ui/react-primitive@npm:0.1.5-rc.3":
   version: 0.1.5-rc.3
   resolution: "@radix-ui/react-primitive@npm:0.1.5-rc.3"
@@ -2548,18 +2525,6 @@ __metadata:
   peerDependencies:
     react: ^16.8 || ^17.0 || ^18.0
   checksum: 7f9eb34e4f65c1c61522caf4c2e74820cc011c3a74060a2374e7ceeca022de201573412cce6feba94c0c4f14313e68a667c619af9e76c1f4ee8b7a57d94fc1a4
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-slot@npm:0.1.2":
-  version: 0.1.2
-  resolution: "@radix-ui/react-slot@npm:0.1.2"
-  dependencies:
-    "@babel/runtime": ^7.13.10
-    "@radix-ui/react-compose-refs": 0.1.0
-  peerDependencies:
-    react: ^16.8 || ^17.0
-  checksum: 216927b9b1dae28328d630f6b2c91f1a424c0b00fb4efcebb7a109fdfc5bceda5cf878dfac5baa8aa441150d4c5263f5a914f2962bbce8375972ae076e4d3b65
   languageName: node
   linkType: hard
 
@@ -2689,18 +2654,6 @@ __metadata:
   peerDependencies:
     react: ^16.8 || ^17.0 || ^18.0
   checksum: 07b2445d9afb3e853366d57bb4506ca725a2b2262227dab984c893ab664ed8e2d1cb23488d35049b558997e0aed001f48490438318d2e2f98bf979bb3af01de7
-  languageName: node
-  linkType: hard
-
-"@radix-ui/react-visually-hidden@npm:^0.1.4":
-  version: 0.1.4
-  resolution: "@radix-ui/react-visually-hidden@npm:0.1.4"
-  dependencies:
-    "@babel/runtime": ^7.13.10
-    "@radix-ui/react-primitive": 0.1.4
-  peerDependencies:
-    react: ^16.8 || ^17.0
-  checksum: f551d27534c3c214fc2c085da6dabd8301c0e0d44268c0d6388ddcb194adfd3ef937366e390e931a03df3742eca83230f4718b807ad5565bbb75c03603e69c2c
   languageName: node
   linkType: hard
 
@@ -5688,6 +5641,28 @@ __metadata:
   version: 2.0.1
   resolution: "argparse@npm:2.0.1"
   checksum: 83644b56493e89a254bae05702abf3a1101b4fa4d0ca31df1c9985275a5a5bd47b3c27b7fa0b71098d41114d8ca000e6ed90cad764b306f8a503665e4d517ced
+  languageName: node
+  linkType: hard
+
+"ariakit-utils@npm:0.17.0-next.15":
+  version: 0.17.0-next.15
+  resolution: "ariakit-utils@npm:0.17.0-next.15"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 7d1cddbe0316b36c129c43c28eb56fff0f0cbc9763ae551526b6928754c75e1776c73792516083e6abb3d0fa9ec4f6fac02ba0922da6c0d93b1e025c1e4c893f
+  languageName: node
+  linkType: hard
+
+"ariakit@npm:2.0.0-next.22":
+  version: 2.0.0-next.22
+  resolution: "ariakit@npm:2.0.0-next.22"
+  dependencies:
+    "@popperjs/core": ^2.11.2
+    ariakit-utils: 0.17.0-next.15
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10e91399e6d45e97d3a5598b1bf2783318cb8921300374e075ac14c9670bb39419966e5cbad9e0ae04e2e8cbc882444ee3c857127a3d41f0d34ff4c98b47b412
   languageName: node
   linkType: hard
 

@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@neetly/theme": "workspace:packages/theme",
-    "@radix-ui/react-visually-hidden": "^0.1.4"
+    "ariakit": "2.0.0-next.22"
   },
   "peerDependencies": {
     "@neetly/icons": "*",

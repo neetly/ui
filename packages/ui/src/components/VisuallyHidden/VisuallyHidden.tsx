@@ -1,4 +1,4 @@
-import * as VisuallyHiddenPrimitive from "@radix-ui/react-visually-hidden";
+import { VisuallyHidden as AriaVisuallyHidden } from "ariakit";
 import type { ReactNode } from "react";
 
 type VisuallyHiddenProps = {
@@ -6,9 +6,7 @@ type VisuallyHiddenProps = {
 };
 
 const VisuallyHidden = ({ children }: VisuallyHiddenProps) => {
-  return (
-    <VisuallyHiddenPrimitive.Root>{children}</VisuallyHiddenPrimitive.Root>
-  );
+  return <AriaVisuallyHidden>{children}</AriaVisuallyHidden>;
 };
 
 export { VisuallyHidden };
