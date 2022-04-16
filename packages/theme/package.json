@@ -1,0 +1,25 @@
+{
+  "name": "@neetly/theme",
+  "private": true,
+  "homepage": "https://github.com/neetly/design",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neetly/design.git",
+    "directory": "packages/theme"
+  },
+  "license": "Apache-2.0",
+  "main": "./lib/index.js",
+  "sass": "./lib/index.scss",
+  "files": [
+    "./lib"
+  ],
+  "scripts": {
+    "build": "lib build",
+    "clean": "lib clean",
+    "prepack": "run clean && run build && cp ../../LICENSE ."
+  },
+  "devDependencies": {
+    "@buncho/builder": "^5.1.0",
+    "typescript": "^4.6.3"
+  }
+}
