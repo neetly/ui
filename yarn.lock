@@ -2246,13 +2246,19 @@ __metadata:
   resolution: "@neetly/ui@workspace:packages/ui"
   dependencies:
     "@buncho/builder": ^5.1.0
+    "@neetly/icons": "workspace:packages/icons"
+    "@neetly/palette": "workspace:packages/palette"
+    "@neetly/theme": "workspace:packages/theme"
     "@radix-ui/react-visually-hidden": ^0.1.4
     "@types/react": ^18.0.5
     "@types/react-dom": ^18.0.1
     react: ^18.0.0
     react-dom: ^18.0.0
     typescript: ^4.6.3
+    typescript-plugin-css-modules: ^3.4.0
   peerDependencies:
+    "@neetly/icons": "*"
+    "@neetly/palette": "*"
     "@types/react": "*"
     "@types/react-dom": "*"
     react: "*"
