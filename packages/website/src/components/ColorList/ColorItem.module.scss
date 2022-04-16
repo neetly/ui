@@ -27,39 +27,18 @@
   }
 }
 
-@keyframes tooltipShow {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes tooltipHide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .tooltip {
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   font-size: 0.875rem;
   color: palette.$neutral--50;
   background-color: palette.$neutral--800;
-  animation: tooltipShow 150ms both;
+  opacity: 0;
+  transition: opacity 150ms;
 
-  &[data-state="closed"] {
-    animation: tooltipHide 150ms both;
+  &[data-enter] {
+    opacity: 1;
   }
-}
-
-.tooltipArrow {
-  fill: palette.$neutral--800;
 }
 
 .name {

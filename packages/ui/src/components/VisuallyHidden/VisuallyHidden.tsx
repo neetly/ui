@@ -1,4 +1,4 @@
-import { VisuallyHidden as AriaVisuallyHidden } from "ariakit";
+import * as Ariakit from "ariakit";
 import type { ReactNode } from "react";
 
 type VisuallyHiddenProps = {
@@ -6,7 +6,7 @@ type VisuallyHiddenProps = {
 };
 
 const VisuallyHidden = ({ children }: VisuallyHiddenProps) => {
-  return <AriaVisuallyHidden>{children}</AriaVisuallyHidden>;
+  return <Ariakit.VisuallyHidden>{children}</Ariakit.VisuallyHidden>;
 };
 
 export { VisuallyHidden };
