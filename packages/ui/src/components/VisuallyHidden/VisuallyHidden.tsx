@@ -1,12 +1,10 @@
 import * as Ariakit from "ariakit";
-import type { ReactNode } from "react";
+import type { HTMLAttributes } from "react";
 
-type VisuallyHiddenProps = {
-  children?: ReactNode;
-};
+type VisuallyHiddenProps = HTMLAttributes<HTMLSpanElement>;
 
-const VisuallyHidden = ({ children }: VisuallyHiddenProps) => {
-  return <Ariakit.VisuallyHidden>{children}</Ariakit.VisuallyHidden>;
+const VisuallyHidden = (props: VisuallyHiddenProps) => {
+  return <Ariakit.VisuallyHidden {...props} />;
 };
 
 export { VisuallyHidden };
