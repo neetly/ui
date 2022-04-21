@@ -18,7 +18,7 @@
     "@neetly/palette": "workspace:packages/palette",
     "@neetly/router": "^1.3.0",
     "@neetly/ui": "workspace:packages/ui",
-    "@types/react": "^18.0.5",
+    "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.1",
     "ariakit": "2.0.0-next.22",
     "array.prototype.groupby": "^1.1.0",
