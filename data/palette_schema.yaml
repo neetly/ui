@@ -1,23 +1,23 @@
-- - { name: Primary, hue: 25, chroma: 48 }
+- - { name: Primary, hue: 25, chroma: 72 }
   - { name: Secondary, hue: 25, chroma: 16 }
   - { name: Tertiary, hue: 145, chroma: 24 }
   - { name: Neutral, hue: 25, chroma: 4 }
   - { name: Neutral Variant, hue: 25, chroma: 8 }
 
-  - { name: Red, hue: 25, chroma: 48 }
-  - { name: Orange, hue: 45, chroma: 48 }
-  - { name: Amber, hue: 70, chroma: 48 }
-  - { name: Yellow, hue: 90, chroma: 48 }
-  - { name: Lime, hue: 125, chroma: 48 }
-  - { name: Green, hue: 145, chroma: 48 }
-  - { name: Teal, hue: 170, chroma: 48 }
-  - { name: Cyan, hue: 200, chroma: 48 }
-  - { name: Sky, hue: 230, chroma: 48 }
-  - { name: Blue, hue: 255, chroma: 48 }
-  - { name: Indigo, hue: 280, chroma: 48 }
-  - { name: Violet, hue: 305, chroma: 48 }
-  - { name: Purple, hue: 330, chroma: 48 }
-  - { name: Pink, hue: 355, chroma: 48 }
+  - { name: Red, hue: 25, chroma: 72 }
+  - { name: Orange, hue: 45, chroma: 72 }
+  - { name: Amber, hue: 70, chroma: 72 }
+  - { name: Yellow, hue: 90, chroma: 72 }
+  - { name: Lime, hue: 125, chroma: 72 }
+  - { name: Green, hue: 145, chroma: 72 }
+  - { name: Teal, hue: 170, chroma: 72 }
+  - { name: Cyan, hue: 200, chroma: 72 }
+  - { name: Sky, hue: 230, chroma: 72 }
+  - { name: Blue, hue: 255, chroma: 72 }
+  - { name: Indigo, hue: 280, chroma: 72 }
+  - { name: Violet, hue: 305, chroma: 72 }
+  - { name: Purple, hue: 330, chroma: 72 }
+  - { name: Pink, hue: 355, chroma: 72 }
 
 - - { name: 10, tone: 99 }
   - { name: 20, tone: 98 }

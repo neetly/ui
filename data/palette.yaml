@@ -9,19 +9,19 @@
 - name: Primary/200
   color: "#ffb4a7"
 - name: Primary/300
-  color: "#fb8c80"
+  color: "#ff8a7b"
 - name: Primary/400
-  color: "#db7368"
+  color: "#f55e52"
 - name: Primary/500
-  color: "#bb5a50"
+  color: "#d3453b"
 - name: Primary/600
-  color: "#9b423a"
+  color: "#b02d26"
 - name: Primary/700
-  color: "#7d2c25"
+  color: "#8e1212"
 - name: Primary/800
-  color: "#5f1511"
+  color: "#690001"
 - name: Primary/900
-  color: "#400102"
+  color: "#410000"
 - name: Secondary/10
   color: "#fffbf9"
 - name: Secondary/20
@@ -129,19 +129,19 @@
 - name: Red/200
   color: "#ffb4a7"
 - name: Red/300
-  color: "#fb8c80"
+  color: "#ff8a7b"
 - name: Red/400
-  color: "#db7368"
+  color: "#f55e52"
 - name: Red/500
-  color: "#bb5a50"
+  color: "#d3453b"
 - name: Red/600
-  color: "#9b423a"
+  color: "#b02d26"
 - name: Red/700
-  color: "#7d2c25"
+  color: "#8e1212"
 - name: Red/800
-  color: "#5f1511"
+  color: "#690001"
 - name: Red/900
-  color: "#400102"
+  color: "#410000"
 - name: Orange/10
   color: "#fffbf7"
 - name: Orange/20
@@ -153,15 +153,15 @@
 - name: Orange/200
   color: "#ffb68d"
 - name: Orange/300
-  color: "#f6925c"
+  color: "#ff8c47"
 - name: Orange/400
-  color: "#d67845"
+  color: "#ee6809"
 - name: Orange/500
-  color: "#b65f2e"
+  color: "#c95200"
 - name: Orange/600
-  color: "#974718"
+  color: "#a24000"
 - name: Orange/700
-  color: "#793101"
+  color: "#7b2f00"
 - name: Orange/800
   color: "#571f00"
 - name: Orange/900
@@ -177,11 +177,11 @@
 - name: Amber/200
   color: "#ffb954"
 - name: Amber/300
-  color: "#e49c38"
+  color: "#f09700"
 - name: Amber/400
-  color: "#c5821e"
+  color: "#cc8000"
 - name: Amber/500
-  color: "#a76a00"
+  color: "#a96900"
 - name: Amber/600
   color: "#875300"
 - name: Amber/700
@@ -199,11 +199,11 @@
 - name: Yellow/100
   color: "#ffe07c"
 - name: Yellow/200
-  color: "#ebc248"
+  color: "#f5bf00"
 - name: Yellow/300
-  color: "#cda72f"
+  color: "#d4a500"
 - name: Yellow/400
-  color: "#b08c10"
+  color: "#b38b00"
 - name: Yellow/500
   color: "#947200"
 - name: Yellow/600
@@ -219,21 +219,21 @@
 - name: Lime/20
   color: "#f1ffc9"
 - name: Lime/50
-  color: "#dafe8f"
+  color: "#d8ff6f"
 - name: Lime/100
-  color: "#ccef83"
+  color: "#c0f443"
 - name: Lime/200
-  color: "#b1d26a"
+  color: "#a6d725"
 - name: Lime/300
-  color: "#97b652"
+  color: "#8cba00"
 - name: Lime/400
-  color: "#7d9b3a"
+  color: "#739e00"
 - name: Lime/500
-  color: "#658122"
+  color: "#5d8300"
 - name: Lime/600
-  color: "#4d6704"
+  color: "#496800"
 - name: Lime/700
-  color: "#364e00"
+  color: "#354e00"
 - name: Lime/800
   color: "#233600"
 - name: Lime/900
@@ -243,25 +243,25 @@
 - name: Green/20
   color: "#e9ffe4"
 - name: Green/50
-  color: "#c6ffc1"
+  color: "#c5ffc0"
 - name: Green/100
-  color: "#a7f5a3"
+  color: "#7afe7e"
 - name: Green/200
-  color: "#8cd989"
+  color: "#5de065"
 - name: Green/300
-  color: "#72bc70"
+  color: "#3fc34c"
 - name: Green/400
-  color: "#59a058"
+  color: "#19a734"
 - name: Green/500
-  color: "#408641"
+  color: "#008b19"
 - name: Green/600
-  color: "#256c2a"
+  color: "#006e10"
 - name: Green/700
-  color: "#055314"
+  color: "#005308"
 - name: Green/800
   color: "#003a03"
 - name: Green/900
-  color: "#012104"
+  color: "#002201"
 - name: Teal/10
   color: "#f0fffb"
 - name: Teal/20
@@ -269,13 +269,13 @@
 - name: Teal/50
   color: "#baffe7"
 - name: Teal/100
-  color: "#7df9ce"
+  color: "#18ffc8"
 - name: Teal/200
-  color: "#5fdcb2"
+  color: "#00e1a9"
 - name: Teal/300
-  color: "#3fbf97"
+  color: "#00c291"
 - name: Teal/400
-  color: "#13a47e"
+  color: "#00a57a"
 - name: Teal/500
   color: "#008864"
 - name: Teal/600
@@ -293,15 +293,15 @@
 - name: Cyan/50
   color: "#affeff"
 - name: Cyan/100
-  color: "#65f7fd"
+  color: "#00fbff"
 - name: Cyan/200
-  color: "#40dae0"
+  color: "#00dce6"
 - name: Cyan/300
-  color: "#00bec4"
+  color: "#00bec7"
 - name: Cyan/400
-  color: "#00a1a6"
+  color: "#00a0a8"
 - name: Cyan/500
-  color: "#008489"
+  color: "#00848a"
 - name: Cyan/600
   color: "#00696e"
 - name: Cyan/700
@@ -321,9 +321,9 @@
 - name: Sky/200
   color: "#61d3ff"
 - name: Sky/300
-  color: "#3ab7e6"
+  color: "#00b8f0"
 - name: Sky/400
-  color: "#009cc9"
+  color: "#009ccc"
 - name: Sky/500
   color: "#0080a9"
 - name: Sky/600
@@ -345,13 +345,13 @@
 - name: Blue/200
   color: "#9acaff"
 - name: Blue/300
-  color: "#6baff9"
+  color: "#5eb0ff"
 - name: Blue/400
-  color: "#4f94dc"
+  color: "#0094fe"
 - name: Blue/500
-  color: "#307ac0"
+  color: "#0079d2"
 - name: Blue/600
-  color: "#0061a5"
+  color: "#0060a9"
 - name: Blue/700
   color: "#004881"
 - name: Blue/800
@@ -369,19 +369,19 @@
 - name: Indigo/200
   color: "#b7c4ff"
 - name: Indigo/300
-  color: "#96a5ff"
+  color: "#93a6ff"
 - name: Indigo/400
-  color: "#7c8be2"
+  color: "#6f88ff"
 - name: Indigo/500
-  color: "#6371c6"
+  color: "#4e66fe"
 - name: Indigo/600
-  color: "#4957aa"
+  color: "#314be4"
 - name: Indigo/700
-  color: "#313f90"
+  color: "#092ccc"
 - name: Indigo/800
-  color: "#192679"
+  color: "#0010a3"
 - name: Indigo/900
-  color: "#000965"
+  color: "#000569"
 - name: Violet/10
   color: "#fefbff"
 - name: Violet/20
@@ -393,19 +393,19 @@
 - name: Violet/200
   color: "#d6baff"
 - name: Violet/300
-  color: "#bc9bf7"
+  color: "#c198ff"
 - name: Violet/400
-  color: "#a181d9"
+  color: "#ac73ff"
 - name: Violet/500
-  color: "#8667bd"
+  color: "#9054ee"
 - name: Violet/600
-  color: "#6d4ea2"
+  color: "#7637d2"
 - name: Violet/700
-  color: "#543587"
+  color: "#5d10b8"
 - name: Violet/800
-  color: "#3d1c6f"
+  color: "#40008d"
 - name: Violet/900
-  color: "#270058"
+  color: "#26005a"
 - name: Purple/10
   color: "#fffbff"
 - name: Purple/20
@@ -413,23 +413,23 @@
 - name: Purple/50
   color: "#ffeaff"
 - name: Purple/100
-  color: "#ffd6ff"
+  color: "#ffd5ff"
 - name: Purple/200
-  color: "#f8adfb"
+  color: "#ffa9ff"
 - name: Purple/300
-  color: "#db92df"
+  color: "#f37dfd"
 - name: Purple/400
-  color: "#be78c2"
+  color: "#d462e0"
 - name: Purple/500
-  color: "#a15ea6"
+  color: "#b747c3"
 - name: Purple/600
-  color: "#86468b"
+  color: "#9a29a7"
 - name: Purple/700
-  color: "#6b2d71"
+  color: "#7d008c"
 - name: Purple/800
-  color: "#511558"
+  color: "#570066"
 - name: Purple/900
-  color: "#36003f"
+  color: "#35003f"
 - name: Pink/10
   color: "#fffbfe"
 - name: Pink/20
@@ -441,16 +441,16 @@
 - name: Pink/200
   color: "#ffafd4"
 - name: Pink/300
-  color: "#f08cb8"
+  color: "#ff81bf"
 - name: Pink/400
-  color: "#d2729d"
+  color: "#ed5aa3"
 - name: Pink/500
-  color: "#b35a83"
+  color: "#cd4089"
 - name: Pink/600
-  color: "#964169"
+  color: "#ac256f"
 - name: Pink/700
-  color: "#792a51"
+  color: "#8c0055"
 - name: Pink/800
-  color: "#5c123a"
+  color: "#640039"
 - name: Pink/900
-  color: "#3e0022"
+  color: "#3e0021"
