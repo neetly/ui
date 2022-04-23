@@ -42,8 +42,8 @@ def Lab_to_sRGB(Lab: np.ndarray) -> np.ndarray:
 
 _CAM16_parameters = {
     "XYZ_w": colour.TVS_ILLUMINANTS["CIE 1931 2 Degree Standard Observer"]["D65"],
-    "L_A": 20.0,
-    "Y_b": (200.0 / np.pi) / (20.0 / 100.0),
+    "L_A": (200.0 / np.pi) / (20.0 / 100.0),
+    "Y_b": 20.0,
 }
 
 
