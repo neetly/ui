@@ -14,6 +14,7 @@
     "./lib"
   ],
   "scripts": {
+    "start": "storybook start",
     "build": "lib build",
     "clean": "lib clean",
     "prepack": "run clean && run build && cp ../../LICENSE ."
