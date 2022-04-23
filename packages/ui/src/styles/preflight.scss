@@ -1,3 +1,5 @@
+@use "@neetly/theme" as *;
+
 @use "./properties.scss" as *;
 
 @mixin preflight($properties: (), $dark-mode-properties: ()) {

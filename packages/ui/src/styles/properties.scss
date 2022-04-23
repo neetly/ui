@@ -1,17 +1,13 @@
-@use "@neetly/theme";
-@use "@neetly/palette";
+@use "@neetly/theme" as *;
+@use "@neetly/palette" as *;
 
 @function _($name, $value, $dark-mode-value: null) {
-  @return theme.define-property($name, $value, $dark-mode-value);
+  @return define-property($name, $value, $dark-mode-value);
 }
 
 $font-ui: _(font-ui, ("Fieldwork", "Source Han Sans", sans-serif));
 $font-headline: _(font-headline, ("Fieldwork", "Source Han Sans", sans-serif));
 $font-body: _(font-body, ("Rustica", "Source Han Sans", sans-serif));
 
-$color-background: _(color-background, palette.$neutral--10);
-$color-on-background: _(color-on-background, palette.$neutral--900);
-
-@mixin provide-properties($overrides: (), $dark-mode-overrides: ()) {
-  @include theme.provide-properties($overrides, $dark-mode-overrides);
-}
+$color-background: _(color-background, $neutral--10);
+$color-on-background: _(color-on-background, $neutral--900);
