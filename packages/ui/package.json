@@ -20,13 +20,13 @@
     "prepack": "run clean && run build && cp ../../LICENSE ."
   },
   "dependencies": {
+    "@neetly/icons": "workspace:packages/icons",
+    "@neetly/palette": "workspace:packages/palette",
     "@neetly/theme": "workspace:packages/theme",
     "ariakit": "2.0.0-next.23",
     "classnames": "^2.3.1"
   },
   "peerDependencies": {
-    "@neetly/icons": "*",
-    "@neetly/palette": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
     "react": "*",
@@ -42,8 +42,6 @@
   },
   "devDependencies": {
     "@buncho/builder": "^5.1.0",
-    "@neetly/icons": "workspace:packages/icons",
-    "@neetly/palette": "workspace:packages/palette",
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.2",
     "react": "^18.0.0",

@@ -2274,8 +2274,6 @@ __metadata:
     typescript: ^4.6.3
     typescript-plugin-css-modules: ^3.4.0
   peerDependencies:
-    "@neetly/icons": "*"
-    "@neetly/palette": "*"
     "@types/react": "*"
     "@types/react-dom": "*"
     react: "*"
