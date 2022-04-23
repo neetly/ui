@@ -27,6 +27,12 @@ $color-surface-accent: _(
   color.change($primary--200, $alpha: 0.1)
 );
 
+$color-selection: _(
+  color-selection,
+  color.change($primary--200, $alpha: 0.5),
+  color.change($primary--600, $alpha: 0.5)
+);
+
 // Colors - Primary
 $color-primary: _(color-primary, $primary--600, $primary--200);
 $color-primary-accent: _(color-primary-accent, $primary--800, $primary--100);
