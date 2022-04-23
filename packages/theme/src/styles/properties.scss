@@ -6,12 +6,8 @@ $properties: ();
   @return --theme-#{$name};
 }
 
-@function get-property($name, $value: null) {
-  @if $value != null {
-    @return var(get-property-name($name), $value);
-  } @else {
-    @return var(get-property-name($name));
-  }
+@function get-property($name) {
+  @return var(get-property-name($name));
 }
 
 @function define-property($name, $value) {
