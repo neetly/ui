@@ -1,6 +1,7 @@
 @use "sass:map";
 
 $properties: ();
+$dark-mode-properties: ();
 
 @function get-property-name($name) {
   @return --theme-#{$name};
@@ -10,13 +11,30 @@ $properties: ();
   @return var(get-property-name($name));
 }
 
-@function define-property($name, $value) {
+@function define-property($name, $value, $dark-mode-value: null) {
   $properties: map.set($properties, $name, $value) !global;
+
+  @if $dark-mode-value != null {
+    $dark-mode-properties: map.set(
+      $dark-mode-properties,
+      $name,
+      $dark-mode-value
+    ) !global;
+  }
+
   @return get-property($name);
 }
 
-@mixin provide-properties($overrides: ()) {
+@mixin provide-properties($overrides: (), $dark-mode-overrides: ()) {
   @each $name, $value in map.merge($properties, $overrides) {
     #{get-property-name($name)}: $value;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @each $name,
+      $value in map.merge($dark-mode-properties, $dark-mode-overrides)
+    {
+      #{get-property-name($name)}: $value;
+    }
   }
 }

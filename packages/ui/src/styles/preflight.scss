@@ -1,8 +1,8 @@
 @use "./properties.scss" as *;
 
-@mixin preflight($properties: ()) {
+@mixin preflight($properties: (), $dark-mode-properties: ()) {
   :root {
-    @include provide-properties($properties);
+    @include provide-properties($properties, $dark-mode-properties);
   }
 
   html {

@@ -1,8 +1,8 @@
 @use "@neetly/theme";
 @use "@neetly/palette";
 
-@function _($name, $value) {
-  @return theme.define-property($name, $value);
+@function _($name, $value, $dark-mode-value: null) {
+  @return theme.define-property($name, $value, $dark-mode-value);
 }
 
 $font-ui: _(font-ui, ("Fieldwork", "Source Han Sans", sans-serif));
@@ -12,6 +12,6 @@ $font-body: _(font-body, ("Fieldwork", "Source Han Sans", sans-serif));
 $color-background: _(color-background, palette.$neutral--10);
 $color-on-background: _(color-on-background, palette.$neutral--900);
 
-@mixin provide-properties($overrides: ()) {
-  @include theme.provide-properties($overrides);
+@mixin provide-properties($overrides: (), $dark-mode-overrides: ()) {
+  @include theme.provide-properties($overrides, $dark-mode-overrides);
 }
