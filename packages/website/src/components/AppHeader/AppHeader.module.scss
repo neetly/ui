@@ -1,6 +1,4 @@
-@use "sass:color";
-
-@use "@neetly/palette";
+@use "@neetly/ui";
 
 .header {
   max-width: 80rem;
@@ -25,7 +23,7 @@
   border-radius: 0.5rem;
 
   .logoLink:focus-visible & {
-    outline: 2px solid palette.$primary--600;
+    outline: 2px solid ui.$color-primary;
   }
 }
 
@@ -33,10 +31,10 @@
   width: 1.5rem;
   height: 1.5rem;
   margin: 0 -0.25rem;
-  fill: palette.$primary--600;
+  fill: ui.$color-primary;
 }
 
 .logoTextIcon {
   height: 1.5rem;
-  fill: palette.$primary--600;
+  fill: ui.$color-primary;
 }
