@@ -20,7 +20,7 @@
     "@neetly/ui": "workspace:packages/ui",
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.2",
-    "ariakit": "2.0.0-next.22",
+    "ariakit": "2.0.0-next.23",
     "array.prototype.groupby": "^1.1.0",
     "array.prototype.groupbytomap": "^1.1.0",
     "react": "^18.0.0",
