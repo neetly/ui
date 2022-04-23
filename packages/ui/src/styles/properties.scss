@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "@neetly/theme" as *;
 @use "@neetly/palette" as *;
 
@@ -5,11 +7,32 @@
   @return define-property($name, $value, $dark-mode-value);
 }
 
+// Fonts
 $font-ui: _(font-ui, ("Fieldwork", "Source Han Sans", sans-serif));
 $font-headline: _(font-headline, ("Fieldwork", "Source Han Sans", sans-serif));
 $font-body: _(font-body, ("Rustica", "Source Han Sans", sans-serif));
 
+// Colors
 $color-background: _(color-background, $neutral--10);
 $color-on-background: _(color-on-background, $neutral--900);
 
+$color-surface: _(color-surface, color.change($primary--600, $alpha: 0.05));
+$color-surface-accent: _(
+  color-surface-accent,
+  color.change($primary--600, $alpha: 0.1)
+);
+
+// Colors - Primary
 $color-primary: _(color-primary, $primary--600);
+$color-on-primary: _(color-on-primary, $primary--10);
+$color-primary-container: _(color-primary-container, $primary--100);
+$color-on-primary-container: _(color-on-primary-container, $primary--800);
+
+$color-primary-surface: _(
+  color-primary-surface,
+  color.change($primary--600, $alpha: 0.05)
+);
+$color-primary-surface-accent: _(
+  color-primary-surface-accent,
+  color.change($primary--600, $alpha: 0.1)
+);
