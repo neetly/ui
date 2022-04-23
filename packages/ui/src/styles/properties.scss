@@ -49,6 +49,46 @@ $color-primary-surface-accent: _(
   color.change($primary--200, $alpha: 0.1)
 );
 
+// Colors - Secondary
+$color-secondary: _(color-secondary, $secondary--600, $secondary--200);
+$color-secondary-accent: _(
+  color-secondary-accent,
+  $secondary--800,
+  $secondary--100
+);
+$color-on-secondary: _(color-on-secondary, $secondary--10, $secondary--800);
+
+$color-secondary-surface: _(
+  color-secondary-surface,
+  color.change($secondary--600, $alpha: 0.05),
+  color.change($secondary--200, $alpha: 0.05)
+);
+$color-secondary-surface-accent: _(
+  color-secondary-surface-accent,
+  color.change($secondary--600, $alpha: 0.1),
+  color.change($secondary--200, $alpha: 0.1)
+);
+
+// Colors - Tertiary
+$color-tertiary: _(color-tertiary, $tertiary--600, $tertiary--200);
+$color-tertiary-accent: _(
+  color-tertiary-accent,
+  $tertiary--800,
+  $tertiary--100
+);
+$color-on-tertiary: _(color-on-tertiary, $tertiary--10, $tertiary--800);
+
+$color-tertiary-surface: _(
+  color-tertiary-surface,
+  color.change($tertiary--600, $alpha: 0.05),
+  color.change($tertiary--200, $alpha: 0.05)
+);
+$color-tertiary-surface-accent: _(
+  color-tertiary-surface-accent,
+  color.change($tertiary--600, $alpha: 0.1),
+  color.change($tertiary--200, $alpha: 0.1)
+);
+
 // Colors - Neutral
 $color-neutral: _(color-neutral, $neutral--600, $neutral--200);
 $color-neutral-accent: _(color-neutral-accent, $neutral--800, $neutral--100);
