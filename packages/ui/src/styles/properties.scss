@@ -24,6 +24,7 @@ $color-surface-accent: _(
 
 // Colors - Primary
 $color-primary: _(color-primary, $primary--600);
+$color-primary-accent: _(color-primary-accent, $primary--800);
 $color-on-primary: _(color-on-primary, $primary--10);
 $color-primary-container: _(color-primary-container, $primary--100);
 $color-on-primary-container: _(color-on-primary-container, $primary--800);
@@ -35,4 +36,15 @@ $color-primary-surface: _(
 $color-primary-surface-accent: _(
   color-primary-surface-accent,
   color.change($primary--600, $alpha: 0.1)
+);
+
+// Colors - Neutral
+$color-neutral: _(color-neutral, $neutral--600);
+$color-neutral-accent: _(color-neutral-accent, $neutral--800);
+
+// Colors - Neutral Variant
+$color-neutral-variant: _(color-neutral-variant, $neutral-variant--600);
+$color-neutral-variant-accent: _(
+  color-neutral-variant-accent,
+  $neutral-variant--800
 );

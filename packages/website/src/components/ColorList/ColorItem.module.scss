@@ -1,5 +1,6 @@
 @use "sass:color";
 
+@use "@neetly/ui";
 @use "@neetly/palette";
 
 .item {
@@ -22,7 +23,7 @@
   box-shadow: inset 0 0 0 1px color.change(#000, $alpha: 0.1);
 
   .button:focus-visible & {
-    outline: 2px solid palette.$primary--600;
+    outline: 2px solid ui.$color-primary;
     outline-offset: 2px;
   }
 }
@@ -46,5 +47,5 @@
   font-size: 0.875rem;
   font-weight: 600;
   text-align: center;
-  color: palette.$neutral-variant--600;
+  color: ui.$color-neutral-variant;
 }

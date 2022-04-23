@@ -1,4 +1,4 @@
-@use "@neetly/palette";
+@use "@neetly/ui";
 
 .footer {
   max-width: 80rem;
@@ -9,5 +9,5 @@
 .copyright {
   margin: 0;
   font-weight: 600;
-  color: palette.$neutral-variant--600;
+  color: ui.$color-neutral-variant;
 }
