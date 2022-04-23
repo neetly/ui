@@ -58,3 +58,7 @@ $color-neutral-variant-accent: _(
   $neutral-variant--800,
   $neutral-variant--100
 );
+
+// Colors - Overlay
+$color-overlay: _(color-overlay, $neutral--800);
+$color-on-overlay: _(color-on-overlay, $neutral--50);
