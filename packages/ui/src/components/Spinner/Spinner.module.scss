@@ -1,3 +1,5 @@
+@use "@neetly/ui";
+
 .spinner {
   display: grid;
   place-content: center;
@@ -6,4 +8,5 @@
 .icon {
   width: 3rem;
   height: 3rem;
+  fill: ui.$color-neutral-variant;
 }
