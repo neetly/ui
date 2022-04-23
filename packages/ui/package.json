@@ -44,7 +44,7 @@
     "@neetly/icons": "workspace:packages/icons",
     "@neetly/palette": "workspace:packages/palette",
     "@types/react": "^18.0.6",
-    "@types/react-dom": "^18.0.1",
+    "@types/react-dom": "^18.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "typescript": "^4.6.3",
