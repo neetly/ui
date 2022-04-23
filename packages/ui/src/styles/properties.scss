@@ -14,43 +14,43 @@ $font-body: _(font-body, ("Rustica", "Source Han Sans", sans-serif));
 
 // Colors
 $color-background: _(color-background, $neutral--10, $neutral--900);
-$color-on-background: _(color-on-background, $neutral--900, $neutral--50);
+$color-on-background: _(color-on-background, $neutral--900, $neutral--100);
 
 $color-surface: _(
   color-surface,
   color.change($primary--600, $alpha: 0.05),
-  color.change($primary--200, $alpha: 0.05)
+  color.change($primary--300, $alpha: 0.05)
 );
 $color-surface-accent: _(
   color-surface-accent,
   color.change($primary--600, $alpha: 0.1),
-  color.change($primary--200, $alpha: 0.1)
+  color.change($primary--300, $alpha: 0.1)
 );
 
 $color-selection: _(
   color-selection,
-  color.change($primary--200, $alpha: 0.5),
+  color.change($primary--300, $alpha: 0.5),
   color.change($primary--600, $alpha: 0.5)
 );
 
 // Colors - Primary
-$color-primary: _(color-primary, $primary--600, $primary--200);
+$color-primary: _(color-primary, $primary--600, $primary--300);
 $color-primary-accent: _(color-primary-accent, $primary--800, $primary--100);
 $color-on-primary: _(color-on-primary, $primary--10, $primary--800);
 
 $color-primary-surface: _(
   color-primary-surface,
   color.change($primary--600, $alpha: 0.05),
-  color.change($primary--200, $alpha: 0.05)
+  color.change($primary--300, $alpha: 0.05)
 );
 $color-primary-surface-accent: _(
   color-primary-surface-accent,
   color.change($primary--600, $alpha: 0.1),
-  color.change($primary--200, $alpha: 0.1)
+  color.change($primary--300, $alpha: 0.1)
 );
 
 // Colors - Secondary
-$color-secondary: _(color-secondary, $secondary--600, $secondary--200);
+$color-secondary: _(color-secondary, $secondary--600, $secondary--300);
 $color-secondary-accent: _(
   color-secondary-accent,
   $secondary--800,
@@ -61,16 +61,16 @@ $color-on-secondary: _(color-on-secondary, $secondary--10, $secondary--800);
 $color-secondary-surface: _(
   color-secondary-surface,
   color.change($secondary--600, $alpha: 0.05),
-  color.change($secondary--200, $alpha: 0.05)
+  color.change($secondary--300, $alpha: 0.05)
 );
 $color-secondary-surface-accent: _(
   color-secondary-surface-accent,
   color.change($secondary--600, $alpha: 0.1),
-  color.change($secondary--200, $alpha: 0.1)
+  color.change($secondary--300, $alpha: 0.1)
 );
 
 // Colors - Tertiary
-$color-tertiary: _(color-tertiary, $tertiary--600, $tertiary--200);
+$color-tertiary: _(color-tertiary, $tertiary--600, $tertiary--300);
 $color-tertiary-accent: _(
   color-tertiary-accent,
   $tertiary--800,
@@ -81,23 +81,23 @@ $color-on-tertiary: _(color-on-tertiary, $tertiary--10, $tertiary--800);
 $color-tertiary-surface: _(
   color-tertiary-surface,
   color.change($tertiary--600, $alpha: 0.05),
-  color.change($tertiary--200, $alpha: 0.05)
+  color.change($tertiary--300, $alpha: 0.05)
 );
 $color-tertiary-surface-accent: _(
   color-tertiary-surface-accent,
   color.change($tertiary--600, $alpha: 0.1),
-  color.change($tertiary--200, $alpha: 0.1)
+  color.change($tertiary--300, $alpha: 0.1)
 );
 
 // Colors - Neutral
-$color-neutral: _(color-neutral, $neutral--600, $neutral--200);
+$color-neutral: _(color-neutral, $neutral--600, $neutral--300);
 $color-neutral-accent: _(color-neutral-accent, $neutral--800, $neutral--100);
 
 // Colors - Neutral Variant
 $color-neutral-variant: _(
   color-neutral-variant,
   $neutral-variant--600,
-  $neutral-variant--200
+  $neutral-variant--300
 );
 $color-neutral-variant-accent: _(
   color-neutral-variant-accent,
