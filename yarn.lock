@@ -1968,6 +1968,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "@floating-ui/core@npm:0.6.2"
+  checksum: b3e1844da852fe141cfa4163026a7c5ffb4399a96105340dffdd5b76dcafea72c6221a06b4674c2b500bc776adc9d9e4ed39dba55e7d844d9507d994c0af743a
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:0.4.5":
+  version: 0.4.5
+  resolution: "@floating-ui/dom@npm:0.4.5"
+  dependencies:
+    "@floating-ui/core": ^0.6.2
+  checksum: 3024aba55fe7ee78b429a6a5d61f5719a6bb2acc79c8a33304b9d30c443efba3a5288acaf9003402e31ee97a533eda97c30a0f2c97e9e54c697df9b80a23dad8
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.0.1":
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
@@ -2155,7 +2171,7 @@ __metadata:
     "@neetly/ui": "workspace:packages/ui"
     "@types/react": ^18.0.6
     "@types/react-dom": ^18.0.2
-    ariakit: 2.0.0-next.22
+    ariakit: 2.0.0-next.23
     array.prototype.groupby: ^1.1.0
     array.prototype.groupbytomap: ^1.1.0
     react: ^18.0.0
@@ -2251,7 +2267,7 @@ __metadata:
     "@neetly/theme": "workspace:packages/theme"
     "@types/react": ^18.0.6
     "@types/react-dom": ^18.0.2
-    ariakit: 2.0.0-next.22
+    ariakit: 2.0.0-next.23
     classnames: ^2.3.1
     react: ^18.0.0
     react-dom: ^18.0.0
@@ -2372,7 +2388,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.11.2, @popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
+"@popperjs/core@npm:^2.5.4, @popperjs/core@npm:^2.6.0":
   version: 2.11.5
   resolution: "@popperjs/core@npm:2.11.5"
   checksum: fd7f9dca3fb716d7426332b6ee283f88d2724c0ab342fb678865a640bad403dfb9eeebd8204a406986162f7e2b33394f104320008b74d0e9066d7322f70ea35d
@@ -5367,25 +5383,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit-utils@npm:0.17.0-next.15":
-  version: 0.17.0-next.15
-  resolution: "ariakit-utils@npm:0.17.0-next.15"
+"ariakit-utils@npm:0.17.0-next.16":
+  version: 0.17.0-next.16
+  resolution: "ariakit-utils@npm:0.17.0-next.16"
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 7d1cddbe0316b36c129c43c28eb56fff0f0cbc9763ae551526b6928754c75e1776c73792516083e6abb3d0fa9ec4f6fac02ba0922da6c0d93b1e025c1e4c893f
+    react: ^17.0.0 || ^18.0.0
+  checksum: 0c02ba56aa6574f749cb94174d80af062f90a934ae38f9bda49ed01b81184b41c52a1abe54509a00e608316c207c9aa6680c330151f04acc635ce594c5b60349
   languageName: node
   linkType: hard
 
-"ariakit@npm:2.0.0-next.22":
-  version: 2.0.0-next.22
-  resolution: "ariakit@npm:2.0.0-next.22"
+"ariakit@npm:2.0.0-next.23":
+  version: 2.0.0-next.23
+  resolution: "ariakit@npm:2.0.0-next.23"
   dependencies:
-    "@popperjs/core": ^2.11.2
-    ariakit-utils: 0.17.0-next.15
+    "@floating-ui/dom": 0.4.5
+    ariakit-utils: 0.17.0-next.16
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 10e91399e6d45e97d3a5598b1bf2783318cb8921300374e075ac14c9670bb39419966e5cbad9e0ae04e2e8cbc882444ee3c857127a3d41f0d34ff4c98b47b412
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
+  checksum: 7660e5b395c035d47a6847c05736e6c2c0ff9380ea004f5aa3bc3bd1214f873ce42ea111fb4d1d0e12c805235b9950fc2cff31d05cfb89db7d4e1b331e310c92
   languageName: node
   linkType: hard
 
