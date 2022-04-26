@@ -1,5 +1,5 @@
-import "array.prototype.groupby/auto";
-import "array.prototype.groupbytomap/auto";
+import "core-js/modules/esnext.array.group-by";
+import "core-js/modules/esnext.array.group-by-to-map";
 
 declare global {
   interface Array<T> {
