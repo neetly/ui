@@ -2,20 +2,43 @@ import type { ComponentMeta, ComponentStory } from "@storybook/react/types-7-0";
 
 import { Button } from "./Button";
 
-export default { component: Button } as ComponentMeta<typeof Button>;
+const variants = ["default", "primary", "outline", "text"] as const;
+const colors = ["primary", "secondary", "tertiary"] as const;
 
-export const Default: ComponentStory<typeof Button> = {
+export default {
+  component: Button,
   args: {
     children: "Button",
   },
   render: (args) => {
     return (
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-        <Button {...args} />
-        <Button {...args} />
-        <Button {...args} />
-        <Button {...args} />
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, auto)",
+          justifyContent: "start",
+          gap: "1rem",
+        }}
+      >
+        {variants.map((variant) =>
+          colors.map((color) => (
+            <Button
+              key={`${variant}/${color}`}
+              variant={variant}
+              color={color}
+              {...args}
+            />
+          )),
+        )}
       </div>
     );
+  },
+} as ComponentMeta<typeof Button>;
+
+export const Default: ComponentStory<typeof Button> = {};
+
+export const Disabled: ComponentStory<typeof Button> = {
+  args: {
+    disabled: true,
   },
 };

@@ -1,0 +1,30 @@
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  &:active {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}
+
+@mixin focus-visible {
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin focus-ring($color, $offset: 2px) {
+  @include focus-visible {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+  }
+}

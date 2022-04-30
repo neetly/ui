@@ -1,0 +1,140 @@
+@use "@neetly/ui";
+
+.button {
+  all: unset;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  transition: background-color 150ms, transform 150ms;
+
+  @include ui.active {
+    transform: scale(0.95);
+    transition: background-color 150ms;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.button:where([data-variant="default"]) {
+  &:where([data-color="primary"]) {
+    color: ui.$color-primary;
+    background-color: ui.$color-primary-surface;
+    @include ui.hover {
+      background-color: ui.$color-primary-surface-accent;
+    }
+  }
+
+  &:where([data-color="secondary"]) {
+    color: ui.$color-secondary;
+    background-color: ui.$color-secondary-surface;
+    @include ui.hover {
+      background-color: ui.$color-secondary-surface-accent;
+    }
+  }
+
+  &:where([data-color="tertiary"]) {
+    color: ui.$color-tertiary;
+    background-color: ui.$color-tertiary-surface;
+    @include ui.hover {
+      background-color: ui.$color-tertiary-surface-accent;
+    }
+  }
+}
+
+.button:where([data-variant="primary"]) {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+    transition: background-color 150ms;
+  }
+
+  &:where([data-color="primary"]) {
+    color: ui.$color-on-primary;
+    background-color: ui.$color-primary;
+  }
+
+  &:where([data-color="secondary"]) {
+    color: ui.$color-on-secondary;
+    background-color: ui.$color-secondary;
+  }
+
+  &:where([data-color="tertiary"]) {
+    color: ui.$color-on-tertiary;
+    background-color: ui.$color-tertiary;
+  }
+}
+
+.button:where([data-variant="outline"]) {
+  box-shadow: inset 0 0 0 1px currentColor;
+
+  &:where([data-color="primary"]) {
+    color: ui.$color-primary;
+    @include ui.hover {
+      background-color: ui.$color-primary-surface;
+    }
+  }
+
+  &:where([data-color="secondary"]) {
+    color: ui.$color-secondary;
+    @include ui.hover {
+      background-color: ui.$color-secondary-surface;
+    }
+  }
+
+  &:where([data-color="tertiary"]) {
+    color: ui.$color-tertiary;
+    @include ui.hover {
+      background-color: ui.$color-tertiary-surface;
+    }
+  }
+}
+
+.button:where([data-variant="text"]) {
+  &:where([data-color="primary"]) {
+    color: ui.$color-primary;
+    @include ui.hover {
+      background-color: ui.$color-primary-surface;
+    }
+  }
+
+  &:where([data-color="secondary"]) {
+    color: ui.$color-secondary;
+    @include ui.hover {
+      background-color: ui.$color-secondary-surface;
+    }
+  }
+
+  &:where([data-color="tertiary"]) {
+    color: ui.$color-tertiary;
+    @include ui.hover {
+      background-color: ui.$color-tertiary-surface;
+    }
+  }
+}
+
+.button:where([data-color="primary"]) {
+  @include ui.focus-ring(ui.$color-primary);
+}
+
+.button:where([data-color="secondary"]) {
+  @include ui.focus-ring(ui.$color-secondary);
+}
+
+.button:where([data-color="tertiary"]) {
+  @include ui.focus-ring(ui.$color-tertiary);
+}
+
+.content {
+  position: relative;
+}

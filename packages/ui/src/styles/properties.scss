@@ -35,7 +35,7 @@ $color-selection: _(
 
 // Colors - Primary
 $color-primary: _(color-primary, $primary--600, $primary--300);
-$color-primary-accent: _(color-primary-accent, $primary--800, $primary--100);
+$color-primary-accent: _(color-primary-accent, $primary--700, $primary--200);
 $color-on-primary: _(color-on-primary, $primary--10, $primary--800);
 
 $color-primary-surface: _(
@@ -53,8 +53,8 @@ $color-primary-surface-accent: _(
 $color-secondary: _(color-secondary, $secondary--600, $secondary--300);
 $color-secondary-accent: _(
   color-secondary-accent,
-  $secondary--800,
-  $secondary--100
+  $secondary--700,
+  $secondary--200
 );
 $color-on-secondary: _(color-on-secondary, $secondary--10, $secondary--800);
 
@@ -73,8 +73,8 @@ $color-secondary-surface-accent: _(
 $color-tertiary: _(color-tertiary, $tertiary--600, $tertiary--300);
 $color-tertiary-accent: _(
   color-tertiary-accent,
-  $tertiary--800,
-  $tertiary--100
+  $tertiary--700,
+  $tertiary--200
 );
 $color-on-tertiary: _(color-on-tertiary, $tertiary--10, $tertiary--800);
 
