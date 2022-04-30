@@ -59,6 +59,12 @@
     transition: background-color 150ms;
   }
 
+  @include ui.hover {
+    &::before {
+      background-color: ui.$color-overlay-99;
+    }
+  }
+
   &:where([data-color="primary"]) {
     color: ui.$color-on-primary;
     background-color: ui.$color-primary;

@@ -39,6 +39,11 @@ $color-overlay-02: define-property(
   color.change($primary--600, $alpha: 0.1),
   color.change($primary--300, $alpha: 0.1)
 );
+$color-overlay-99: define-property(
+  color-overlay-99,
+  color.change(#000, $alpha: 0.1),
+  color.change(#fff, $alpha: 0.1)
+);
 
 $color-selection: define-property(
   color-selection,

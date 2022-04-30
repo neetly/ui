@@ -10,6 +10,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const Button = ({
   className,
+  type = "button",
   variant = "default",
   color = "primary",
   children,
@@ -18,6 +19,7 @@ const Button = ({
   return (
     <button
       className={classNames(styles.button, className)}
+      type={type}
       data-variant={variant}
       data-color={color}
       {...props}
