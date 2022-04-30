@@ -35,8 +35,8 @@
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   font-size: 0.875rem;
-  color: ui.$color-on-overlay;
-  background-color: ui.$color-overlay;
+  color: ui.$color-on-tooltip;
+  background-color: ui.$color-tooltip;
   opacity: 0;
   transition: opacity 150ms;
 

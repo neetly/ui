@@ -14,7 +14,7 @@
   gap: 1rem;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background-color: ui.$color-primary-surface;
+  background-color: ui.$color-primary-overlay-01;
   transition: background-color 150ms;
 
   @media (max-width: 40rem) {
@@ -25,17 +25,17 @@
 
   @media (hover: hover) {
     .link:hover & {
-      background-color: ui.$color-primary-surface-accent;
+      background-color: ui.$color-primary-overlay-02;
     }
   }
 
   .link:active & {
-    background-color: ui.$color-primary-surface-accent;
+    background-color: ui.$color-primary-overlay-02;
   }
 
   .link:focus-visible & {
     outline: 2px solid ui.$color-primary;
-    background-color: ui.$color-primary-surface-accent;
+    background-color: ui.$color-primary-overlay-02;
   }
 }
 

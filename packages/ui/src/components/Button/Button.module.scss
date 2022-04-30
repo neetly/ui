@@ -24,25 +24,25 @@
 .button:where([data-variant="default"]) {
   &:where([data-color="primary"]) {
     color: ui.$color-primary;
-    background-color: ui.$color-primary-surface;
+    background-color: ui.$color-primary-overlay-01;
     @include ui.hover {
-      background-color: ui.$color-primary-surface-accent;
+      background-color: ui.$color-primary-overlay-02;
     }
   }
 
   &:where([data-color="secondary"]) {
     color: ui.$color-secondary;
-    background-color: ui.$color-secondary-surface;
+    background-color: ui.$color-secondary-overlay-01;
     @include ui.hover {
-      background-color: ui.$color-secondary-surface-accent;
+      background-color: ui.$color-secondary-overlay-02;
     }
   }
 
   &:where([data-color="tertiary"]) {
     color: ui.$color-tertiary;
-    background-color: ui.$color-tertiary-surface;
+    background-color: ui.$color-tertiary-overlay-01;
     @include ui.hover {
-      background-color: ui.$color-tertiary-surface-accent;
+      background-color: ui.$color-tertiary-overlay-02;
     }
   }
 }
@@ -81,21 +81,21 @@
   &:where([data-color="primary"]) {
     color: ui.$color-primary;
     @include ui.hover {
-      background-color: ui.$color-primary-surface;
+      background-color: ui.$color-primary-overlay-01;
     }
   }
 
   &:where([data-color="secondary"]) {
     color: ui.$color-secondary;
     @include ui.hover {
-      background-color: ui.$color-secondary-surface;
+      background-color: ui.$color-secondary-overlay-01;
     }
   }
 
   &:where([data-color="tertiary"]) {
     color: ui.$color-tertiary;
     @include ui.hover {
-      background-color: ui.$color-tertiary-surface;
+      background-color: ui.$color-tertiary-overlay-01;
     }
   }
 }
@@ -104,21 +104,21 @@
   &:where([data-color="primary"]) {
     color: ui.$color-primary;
     @include ui.hover {
-      background-color: ui.$color-primary-surface;
+      background-color: ui.$color-primary-overlay-01;
     }
   }
 
   &:where([data-color="secondary"]) {
     color: ui.$color-secondary;
     @include ui.hover {
-      background-color: ui.$color-secondary-surface;
+      background-color: ui.$color-secondary-overlay-01;
     }
   }
 
   &:where([data-color="tertiary"]) {
     color: ui.$color-tertiary;
     @include ui.hover {
-      background-color: ui.$color-tertiary-surface;
+      background-color: ui.$color-tertiary-overlay-01;
     }
   }
 }
