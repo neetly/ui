@@ -42,3 +42,10 @@ export const Disabled: ComponentStory<typeof Button> = {
     disabled: true,
   },
 };
+
+export const Link: ComponentStory<typeof Button> = {
+  args: {
+    as: "a",
+    href: "#",
+  },
+};
