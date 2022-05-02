@@ -1,18 +1,16 @@
 import classNames from "classnames";
-import type { HTMLAttributes } from "react";
+import type { SVGAttributes } from "react";
 
 import styles from "./Spinner.module.scss";
 import { SpinnerIcon } from "./SpinnerIcon";
 
-type SpinnerProps = HTMLAttributes<HTMLDivElement>;
+type SpinnerProps = SVGAttributes<SVGSVGElement>;
 
 const Spinner = ({ className, ...props }: SpinnerProps) => {
   return (
-    <div className={classNames(styles.spinner, className)} {...props}>
-      <SpinnerIcon className={styles.icon} />
-    </div>
+    <SpinnerIcon className={classNames(styles.icon, className)} {...props} />
   );
 };
 
 export { Spinner };
-export type { SpinnerIcon };
+export type { SpinnerProps };

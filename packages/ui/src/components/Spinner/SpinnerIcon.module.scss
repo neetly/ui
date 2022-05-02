@@ -12,16 +12,8 @@
   }
 }
 
-.leftMask {
-  animation: rotation 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
-  transform-origin: center;
-}
-
-.rightMask {
-  animation: rotation 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
-  transform-origin: center;
-}
-
+.leftMask,
+.rightMask,
 .divider {
   animation: rotation 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
   transform-origin: center;
