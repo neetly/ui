@@ -1,11 +1,27 @@
 import * as Ariakit from "ariakit";
-import type { HTMLAttributes } from "react";
+import type { ComponentPropsWithRef, ElementType } from "react";
 
-type VisuallyHiddenProps = HTMLAttributes<HTMLSpanElement>;
+import type { PolymorphicProps } from "../Polymorphic";
+import { createPolymorphicComponent } from "../Polymorphic";
 
-const VisuallyHidden = (props: VisuallyHiddenProps) => {
-  return <Ariakit.VisuallyHidden {...props} />;
-};
+type VisuallyHiddenProps<Element extends ElementType> =
+  PolymorphicProps<Element>;
+
+const VisuallyHidden = createPolymorphicComponent(
+  <Element extends ElementType = "span">({
+    as,
+    ...props
+  }: VisuallyHiddenProps<Element>) => {
+    const Component = as ?? "span";
+
+    return (
+      <Ariakit.VisuallyHidden
+        as={Component}
+        {...(props as ComponentPropsWithRef<Element>)}
+      />
+    );
+  },
+);
 
 export { VisuallyHidden };
 export type { VisuallyHiddenProps };

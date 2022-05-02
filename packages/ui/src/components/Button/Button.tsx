@@ -1,33 +1,41 @@
 import classNames from "classnames";
-import type { ButtonHTMLAttributes } from "react";
+import type { ElementType } from "react";
 
+import type { PolymorphicProps } from "../Polymorphic";
+import { createPolymorphicComponent } from "../Polymorphic";
 import styles from "./Button.module.scss";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonOwnProps = {
   variant?: "default" | "primary" | "outline" | "text";
   color?: "primary" | "secondary" | "tertiary";
 };
 
-const Button = ({
-  className,
-  type = "button",
-  variant = "default",
-  color = "primary",
-  children,
-  ...props
-}: ButtonProps) => {
-  return (
-    <button
-      className={classNames(styles.button, className)}
-      type={type}
-      data-variant={variant}
-      data-color={color}
-      {...props}
-    >
-      <div className={styles.content}>{children}</div>
-    </button>
-  );
-};
+type ButtonProps<Element extends ElementType> = //
+  PolymorphicProps<Element, ButtonOwnProps>;
+
+const Button = createPolymorphicComponent(
+  <Element extends ElementType = "button">({
+    as,
+    className,
+    variant = "default",
+    color = "primary",
+    children,
+    ...props
+  }: ButtonProps<Element>) => {
+    const Component = as ?? "button";
+
+    return (
+      <Component
+        className={classNames(styles.button, className)}
+        data-variant={variant}
+        data-color={color}
+        {...props}
+      >
+        <div className={styles.content}>{children}</div>
+      </Component>
+    );
+  },
+);
 
 export { Button };
 export type { ButtonProps };
