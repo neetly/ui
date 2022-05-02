@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react/types-7-0";
+import type { MouseEvent } from "react";
 
 import { Button } from "./Button";
 
@@ -47,5 +48,8 @@ export const Link: ComponentStory<typeof Button> = {
   args: {
     as: "a",
     href: "#",
+    onClick: (event: MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault();
+    },
   },
 };
