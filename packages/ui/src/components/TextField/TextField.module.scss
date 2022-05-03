@@ -25,7 +25,7 @@
   position: relative;
   display: inline-block;
 
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -36,11 +36,10 @@
     border-radius: calc(0.5rem + 4px);
     box-shadow: inset 0 0 0 2px ui.$color-primary;
     pointer-events: none;
-    transition: visibility 150ms, opacity 150ms;
+    transition: opacity 150ms;
   }
 
-  &:not(:focus-within)::after {
-    visibility: hidden;
+  &:not(:focus-within)::before {
     opacity: 0;
   }
 }
@@ -48,6 +47,7 @@
 .textField {
   all: unset;
 
+  position: relative;
   display: block;
   box-sizing: border-box;
   width: 100%;
