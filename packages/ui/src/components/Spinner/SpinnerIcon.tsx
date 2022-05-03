@@ -10,7 +10,7 @@ const SpinnerIcon = (props: SpinnerIconProps) => {
   const rightMaskId = useId();
 
   return (
-    <svg viewBox="0 0 48 48" {...props}>
+    <svg viewBox="0 0 48 48" aria-hidden={true} {...props}>
       <mask
         id={leftMaskId}
         maskUnits="userSpaceOnUse"

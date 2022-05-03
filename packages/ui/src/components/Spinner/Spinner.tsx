@@ -1,14 +1,22 @@
 import classNames from "classnames";
-import type { SVGAttributes } from "react";
+import type { HTMLAttributes } from "react";
 
+import { VisuallyHidden } from "../VisuallyHidden";
 import styles from "./Spinner.module.scss";
 import { SpinnerIcon } from "./SpinnerIcon";
 
-type SpinnerProps = SVGAttributes<SVGSVGElement>;
+type SpinnerProps = HTMLAttributes<HTMLSpanElement>;
 
 const Spinner = ({ className, ...props }: SpinnerProps) => {
   return (
-    <SpinnerIcon className={classNames(styles.icon, className)} {...props} />
+    <span
+      className={classNames(styles.spinner, className)}
+      role="status"
+      {...props}
+    >
+      <SpinnerIcon className={styles.icon} />
+      <VisuallyHidden>Loading…</VisuallyHidden>
+    </span>
   );
 };
 
