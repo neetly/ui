@@ -22,10 +22,9 @@ const TextField = createPolymorphicComponent(
     const Component = as ?? "input";
 
     return (
-      <Component
-        className={classNames(styles.textField, className)}
-        {...props}
-      />
+      <span className={classNames(styles.textFieldWrapper, className)}>
+        <Component className={styles.textField} {...props} />
+      </span>
     );
   },
 );
