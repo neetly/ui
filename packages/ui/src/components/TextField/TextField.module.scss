@@ -1,0 +1,21 @@
+@use "@neetly/ui";
+
+.textField {
+  all: unset;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  user-select: auto;
+  background-color: ui.$color-overlay-01;
+  transition: background-color 150ms;
+
+  @include ui.hover {
+    background-color: ui.$color-overlay-02;
+  }
+
+  @include ui.focus {
+    outline: 2px solid ui.$color-primary;
+    outline-offset: 2px;
+    background-color: ui.$color-overlay-02;
+  }
+}

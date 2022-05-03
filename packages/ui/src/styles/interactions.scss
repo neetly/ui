@@ -16,6 +16,12 @@
   }
 }
 
+@mixin focus {
+  &:focus {
+    @content;
+  }
+}
+
 @mixin focus-visible {
   &:focus-visible {
     @content;
