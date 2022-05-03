@@ -34,5 +34,6 @@ export const ReadOnly: ComponentStory<typeof TextField> = {
 export const TextArea: ComponentStory<typeof TextField> = {
   args: {
     as: "textarea",
+    rows: 3,
   },
 };
