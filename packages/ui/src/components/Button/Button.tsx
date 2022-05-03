@@ -1,13 +1,15 @@
 import classNames from "classnames";
-import type { ElementType } from "react";
+import type { ElementType, ReactNode } from "react";
 
 import type { PolymorphicProps } from "../Polymorphic";
 import { createPolymorphicComponent } from "../Polymorphic";
 import styles from "./Button.module.scss";
 
 type ButtonOwnProps = {
+  className?: string;
   variant?: "default" | "primary" | "outline" | "text";
   color?: "primary" | "secondary" | "tertiary";
+  children?: ReactNode;
 };
 
 type ButtonProps<Element extends ElementType> = //
@@ -30,6 +32,7 @@ const Button = createPolymorphicComponent(
         className={classNames(styles.button, className)}
         data-variant={variant}
         data-color={color}
+        {...(Component === "button" && { type: "button" })}
         {...props}
       >
         <div className={styles.content}>{children}</div>
@@ -39,4 +42,4 @@ const Button = createPolymorphicComponent(
 );
 
 export { Button };
-export type { ButtonProps };
+export type { ButtonOwnProps, ButtonProps };

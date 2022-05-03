@@ -1,28 +1,38 @@
-import * as Ariakit from "ariakit";
-import type { ComponentPropsWithRef, ElementType } from "react";
+import classNames from "classnames";
+import type { ElementType, ReactNode } from "react";
 
 import type { PolymorphicProps } from "../Polymorphic";
 import { createPolymorphicComponent } from "../Polymorphic";
+import styles from "./VisuallyHidden.module.scss";
 
-type VisuallyHiddenProps<Element extends ElementType> =
-  PolymorphicProps<Element>;
+type VisuallyHiddenOwnProps = {
+  className?: string;
+  children?: ReactNode;
+};
+
+type VisuallyHiddenProps<Element extends ElementType> = //
+  PolymorphicProps<Element, VisuallyHiddenOwnProps>;
 
 const VisuallyHidden = createPolymorphicComponent(
   "VisuallyHidden",
   <Element extends ElementType = "span">({
     as,
+    className,
+    children,
     ...props
   }: VisuallyHiddenProps<Element>) => {
     const Component = as ?? "span";
 
     return (
-      <Ariakit.VisuallyHidden
-        as={Component}
-        {...(props as ComponentPropsWithRef<Element>)}
-      />
+      <Component
+        className={classNames(styles.visuallyHidden, className)}
+        {...props}
+      >
+        {children}
+      </Component>
     );
   },
 );
 
 export { VisuallyHidden };
-export type { VisuallyHiddenProps };
+export type { VisuallyHiddenOwnProps, VisuallyHiddenProps };
