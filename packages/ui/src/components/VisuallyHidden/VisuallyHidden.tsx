@@ -8,6 +8,7 @@ type VisuallyHiddenProps<Element extends ElementType> =
   PolymorphicProps<Element>;
 
 const VisuallyHidden = createPolymorphicComponent(
+  "VisuallyHidden",
   <Element extends ElementType = "span">({
     as,
     ...props

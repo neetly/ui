@@ -14,6 +14,7 @@ type ButtonProps<Element extends ElementType> = //
   PolymorphicProps<Element, ButtonOwnProps>;
 
 const Button = createPolymorphicComponent(
+  "Button",
   <Element extends ElementType = "button">({
     as,
     className,
