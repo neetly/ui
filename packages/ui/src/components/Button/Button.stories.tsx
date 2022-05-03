@@ -11,6 +11,9 @@ export default {
   args: {
     children: "Button",
   },
+  argTypes: {
+    onClick: { action: true },
+  },
   render: (args) => {
     return (
       <div
