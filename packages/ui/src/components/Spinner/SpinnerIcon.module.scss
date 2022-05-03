@@ -12,9 +12,36 @@
   }
 }
 
+@keyframes breath {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 .leftMask,
 .rightMask,
 .divider {
   animation: rotation 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
   transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leftMask,
+  .rightMask,
+  .divider {
+    animation: none;
+  }
+
+  .leftDot,
+  .rightDot {
+    animation: breath 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
+  }
 }

@@ -42,10 +42,12 @@ const SpinnerIcon = (props: SpinnerIconProps) => {
         />
       </mask>
       <path
+        className={styles.leftDot}
         d="M15 30a3 3 0 0 1 3 3v6a3 3 0 1 1-6 0v-6a3 3 0 0 1 3-3Z"
         mask={`url(#${leftMaskId})`}
       />
       <path
+        className={styles.rightDot}
         d="M33 6a3 3 0 0 1 3 3v6a3 3 0 1 1-6 0V9a3 3 0 0 1 3-3Z"
         mask={`url(#${rightMaskId})`}
       />
