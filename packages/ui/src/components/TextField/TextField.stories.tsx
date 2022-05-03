@@ -4,6 +4,9 @@ import { TextField } from "./TextField";
 
 export default {
   component: TextField,
+  args: {
+    placeholder: "Placeholder",
+  },
 } as ComponentMeta<typeof TextField>;
 
 export const Default: ComponentStory<typeof TextField> = {};

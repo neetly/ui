@@ -9,6 +9,10 @@
   background-color: ui.$color-overlay-01;
   transition: background-color 150ms;
 
+  &::placeholder {
+    color: ui.$color-neutral-variant-dim;
+  }
+
   @include ui.hover {
     background-color: ui.$color-overlay-02;
   }

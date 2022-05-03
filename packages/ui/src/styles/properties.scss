@@ -138,6 +138,11 @@ $color-neutral-accent: define-property(
   $neutral--800,
   $neutral--100
 );
+$color-neutral-dim: define-property(
+  color-neutral-dim,
+  color.change($neutral--600, $alpha: 0.8),
+  color.change($neutral--300, $alpha: 0.8)
+);
 
 // Colors - Neutral Variant
 $color-neutral-variant: define-property(
@@ -149,6 +154,11 @@ $color-neutral-variant-accent: define-property(
   color-neutral-variant-accent,
   $neutral-variant--800,
   $neutral-variant--100
+);
+$color-neutral-variant-dim: define-property(
+  color-neutral-variant-dim,
+  color.change($neutral-variant--600, $alpha: 0.8),
+  color.change($neutral-variant--300, $alpha: 0.8)
 );
 
 // Colors - Tooltip
