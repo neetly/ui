@@ -2,11 +2,14 @@
 
 .button {
   all: unset;
+
   position: relative;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  font-weight: 600;
+
+  @include ui.typography-ui(1rem, 600);
+
   user-select: none;
   cursor: pointer;
   transition: background-color 150ms, transform 150ms;

@@ -1,5 +1,26 @@
 @use "@neetly/ui";
 
+.container {
+  display: inline-grid;
+  user-select: none;
+
+  &[data-disabled] {
+    opacity: 0.5;
+  }
+}
+
+.label {
+  @include ui.typography-ui(0.875rem, 600);
+
+  color: ui.$color-neutral-variant;
+  transition: color 150ms, transform 150ms;
+
+  .container:focus-within & {
+    color: ui.$color-primary;
+    transform: translateY(-2px);
+  }
+}
+
 .textFieldWrapper {
   position: relative;
   display: inline-block;
@@ -26,13 +47,18 @@
 
 .textField {
   all: unset;
+
   display: block;
   box-sizing: border-box;
   width: 100%;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+
+  @include ui.typography-ui(1rem);
+
   user-select: auto;
   cursor: text;
+  color: ui.$color-on-background;
   caret-color: ui.$color-primary;
   background-color: ui.$color-overlay-01;
   transition: background-color 150ms;
@@ -50,7 +76,6 @@
   }
 
   &:disabled {
-    opacity: 0.5;
     cursor: default;
   }
 }

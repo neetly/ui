@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { ElementType } from "react";
+import type { ElementType, ReactNode } from "react";
 
 import type { PolymorphicProps } from "../Polymorphic";
 import { createPolymorphicComponent } from "../Polymorphic";
@@ -7,6 +7,8 @@ import styles from "./TextField.module.scss";
 
 type TextFieldOwnProps = {
   className?: string;
+  label?: ReactNode;
+  disabled?: boolean;
 };
 
 type TextFieldProps<Element extends ElementType> = //
@@ -17,14 +19,26 @@ const TextField = createPolymorphicComponent(
   <Element extends ElementType = "input">({
     as,
     className,
+    label,
+    disabled,
     ...props
   }: TextFieldProps<Element>) => {
     const Component = as ?? "input";
 
     return (
-      <span className={classNames(styles.textFieldWrapper, className)}>
-        <Component className={styles.textField} {...props} />
-      </span>
+      <label
+        className={classNames(styles.container, className)}
+        data-disabled={disabled ? "" : null}
+      >
+        <span className={styles.label}>{label}</span>
+        <span className={styles.textFieldWrapper}>
+          <Component
+            className={styles.textField}
+            disabled={disabled}
+            {...props}
+          />
+        </span>
+      </label>
     );
   },
 );

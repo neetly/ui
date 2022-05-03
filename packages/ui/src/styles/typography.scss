@@ -1,0 +1,8 @@
+@use "./properties.scss" as *;
+
+@mixin typography-ui($font-size, $font-weight: 400) {
+  font-family: $font-ui;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height-ui;
+}
