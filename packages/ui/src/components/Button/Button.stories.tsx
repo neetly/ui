@@ -1,3 +1,4 @@
+import { AddIcon } from "@neetly/icons";
 import type { ComponentMeta, ComponentStory } from "@storybook/react/types-7-0";
 import type { MouseEvent } from "react";
 
@@ -54,5 +55,17 @@ export const Link: ComponentStory<typeof Button> = {
     onClick: (event: MouseEvent<HTMLAnchorElement>) => {
       event.preventDefault();
     },
+  },
+};
+
+export const IconBefore: ComponentStory<typeof Button> = {
+  args: {
+    iconBefore: AddIcon,
+  },
+};
+
+export const IconAfter: ComponentStory<typeof Button> = {
+  args: {
+    iconAfter: AddIcon,
   },
 };

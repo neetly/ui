@@ -14,9 +14,9 @@ type PolymorphicProps<Element extends ElementType, OwnProps = {}> = OwnProps &
     as?: Element;
   };
 
-const createPolymorphicComponent = <Component extends FunctionComponent>(
+const createPolymorphicComponent = <ComponentType extends FunctionComponent>(
   displayName: string,
-  component: Component,
+  component: ComponentType,
 ) => {
   if (process.env.NODE_ENV === "development") {
     component.displayName = displayName;
@@ -24,15 +24,15 @@ const createPolymorphicComponent = <Component extends FunctionComponent>(
 
   return forwardRef(
     (
-      props: ComponentPropsWithoutRef<Component>,
-      forwardedRef: ForwardedRef<ComponentRef<Component>>,
+      props: ComponentPropsWithoutRef<ComponentType>,
+      forwardedRef: ForwardedRef<ComponentRef<ComponentType>>,
     ) => {
       return component({
         ref: forwardedRef,
         ...props,
       });
     },
-  ) as unknown as Component;
+  ) as unknown as ComponentType;
 };
 
 export { createPolymorphicComponent };
