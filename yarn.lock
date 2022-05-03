@@ -2188,7 +2188,7 @@ __metadata:
     "@types/react": "npm:^18.0.8"
     "@types/react-dom": "npm:^18.0.3"
     ariakit: "npm:2.0.0-next.25"
-    core-js: "npm:^3.22.3"
+    core-js: "npm:^3.22.4"
     react: "npm:^18.1.0"
     react-dom: "npm:^18.1.0"
     typescript: "npm:^4.6.4"
@@ -6998,10 +6998,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.0.4, core-js@npm:^3.22.3, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
-  version: 3.22.3
-  resolution: "core-js@npm:3.22.3"
-  checksum: 6bce597020f4307ffaac9abf611a7f73f45e4d66cd2a2632bf6671e8ddb0387aac2234767fa29f024b372755a8786d0f31af56b008cc23e24ddde39890bf3382
+"core-js@npm:^3.0.4, core-js@npm:^3.22.4, core-js@npm:^3.6.5, core-js@npm:^3.8.2":
+  version: 3.22.4
+  resolution: "core-js@npm:3.22.4"
+  checksum: 60311d6d3c57e4694e7abc17361c6421d482b6e20e70f5a645a242042e531c1314e2abd8e2b2320ec2314d704210d24bd3b830f0f0aebd124b986754c4675149
   languageName: node
   linkType: hard
 
