@@ -6,31 +6,33 @@ export default {
   component: TextField,
   args: {
     label: "Text Field",
+    defaultValue: "Text",
   },
 } as ComponentMeta<typeof TextField>;
 
-export const Default: ComponentStory<typeof TextField> = {
-  args: {
-    defaultValue: "Text",
-  },
-};
+export const Default: ComponentStory<typeof TextField> = {};
 
 export const Placeholder: ComponentStory<typeof TextField> = {
   args: {
     placeholder: "Placeholder",
+    defaultValue: "",
   },
 };
 
 export const Disabled: ComponentStory<typeof TextField> = {
   args: {
-    value: "Text",
     disabled: true,
   },
 };
 
 export const ReadOnly: ComponentStory<typeof TextField> = {
   args: {
-    value: "Text",
     readOnly: true,
+  },
+};
+
+export const TextArea: ComponentStory<typeof TextField> = {
+  args: {
+    as: "textarea",
   },
 };

@@ -4,8 +4,7 @@
   all: unset;
 
   position: relative;
-  display: inline-block;
-  padding: 0.5rem 1rem;
+  display: inline-grid;
   border-radius: 0.5rem;
 
   @include ui.typography-ui(1rem, 600);
@@ -54,11 +53,7 @@
 .button:where([data-variant="primary"]) {
   &::before {
     content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    grid-area: 1 / 1;
     border-radius: inherit;
     pointer-events: none;
     transition: background-color 150ms;
@@ -148,4 +143,7 @@
 
 .content {
   position: relative;
+  grid-area: 1 / 1;
+  padding: 0.5rem 1rem;
+  border-radius: inherit;
 }
