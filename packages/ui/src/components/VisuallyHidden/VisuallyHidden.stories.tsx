@@ -4,12 +4,13 @@ import { VisuallyHidden } from "./VisuallyHidden";
 
 export default {
   component: VisuallyHidden,
+} as ComponentMeta<typeof VisuallyHidden>;
+
+export const Default: ComponentStory<typeof VisuallyHidden> = {
   args: {
     children: "Visually Hidden",
   },
-} as ComponentMeta<typeof VisuallyHidden>;
-
-export const Default: ComponentStory<typeof VisuallyHidden> = {};
+};
 
 export const Button: ComponentStory<typeof VisuallyHidden> = {
   args: {

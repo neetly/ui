@@ -22,4 +22,8 @@
     outline-offset: 2px;
     background-color: ui.$color-overlay-02;
   }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }

@@ -1,17 +1,17 @@
 @mixin hover {
   @media (hover: hover) {
-    &:hover {
+    &:not(:disabled):hover {
       @content;
     }
   }
 
-  &:active {
+  &:not(:disabled):active {
     @content;
   }
 }
 
 @mixin active {
-  &:active {
+  &:not(:disabled):active {
     @content;
   }
 }
