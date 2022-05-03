@@ -1,5 +1,6 @@
+import type { IconProps } from "@neetly/icons";
 import classNames from "classnames";
-import type { ElementType, ReactNode } from "react";
+import type { ComponentType, ElementType, ReactNode } from "react";
 
 import type { PolymorphicProps } from "../Polymorphic";
 import { createPolymorphicComponent } from "../Polymorphic";
@@ -8,6 +9,8 @@ import styles from "./TextField.module.scss";
 type TextFieldOwnProps = {
   className?: string;
   label?: ReactNode;
+  iconBefore?: ComponentType<IconProps> | null;
+  iconAfter?: ComponentType<IconProps> | null;
   disabled?: boolean;
 };
 
@@ -20,6 +23,8 @@ const TextField = createPolymorphicComponent(
     as,
     className,
     label,
+    iconBefore: IconBefore = null,
+    iconAfter: IconAfter = null,
     disabled,
     ...props
   }: TextFieldProps<Element>) => {
@@ -31,12 +36,16 @@ const TextField = createPolymorphicComponent(
         data-disabled={disabled ? "" : null}
       >
         <span className={styles.label}>{label}</span>
-        <span className={styles.textFieldWrapper}>
+        <span className={styles.content}>
           <Component
             className={styles.textField}
+            data-icon-before={IconBefore ? "" : null}
+            data-icon-after={IconAfter ? "" : null}
             disabled={disabled}
             {...props}
           />
+          {IconBefore && <IconBefore className={styles.iconBefore} />}
+          {IconAfter && <IconAfter className={styles.iconAfter} />}
         </span>
       </label>
     );

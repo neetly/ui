@@ -141,7 +141,7 @@
   @include ui.focus-ring(ui.$color-tertiary);
 }
 
-.container {
+.content {
   position: relative;
   display: grid;
   grid-auto-flow: column;

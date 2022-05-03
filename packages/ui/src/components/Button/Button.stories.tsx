@@ -42,6 +42,18 @@ export default {
 
 export const Default: ComponentStory<typeof Button> = {};
 
+export const IconBefore: ComponentStory<typeof Button> = {
+  args: {
+    iconBefore: AddIcon,
+  },
+};
+
+export const IconAfter: ComponentStory<typeof Button> = {
+  args: {
+    iconAfter: AddIcon,
+  },
+};
+
 export const Disabled: ComponentStory<typeof Button> = {
   args: {
     disabled: true,
@@ -55,17 +67,5 @@ export const Link: ComponentStory<typeof Button> = {
     onClick: (event: MouseEvent<HTMLAnchorElement>) => {
       event.preventDefault();
     },
-  },
-};
-
-export const IconBefore: ComponentStory<typeof Button> = {
-  args: {
-    iconBefore: AddIcon,
-  },
-};
-
-export const IconAfter: ComponentStory<typeof Button> = {
-  args: {
-    iconAfter: AddIcon,
   },
 };

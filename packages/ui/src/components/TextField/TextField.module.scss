@@ -22,13 +22,14 @@
   }
 }
 
-.textFieldWrapper {
+.content {
   position: relative;
   display: grid;
+  grid-template-columns: auto 1fr auto;
 
   &::before {
     content: "";
-    grid-area: 1 / 1;
+    grid-area: 1 / 1 / 1 / 4;
     margin: -4px;
     border-radius: calc(0.5rem + 4px);
     box-shadow: inset 0 0 0 2px ui.$color-primary;
@@ -45,7 +46,7 @@
   all: unset;
 
   position: relative;
-  grid-area: 1 / 1;
+  grid-area: 1 / 1 / 1 / 4;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 
@@ -57,6 +58,14 @@
   caret-color: ui.$color-primary;
   background-color: ui.$color-overlay-01;
   transition: background-color 150ms;
+
+  &[data-icon-before] {
+    padding-left: 2.5rem;
+  }
+
+  &[data-icon-after] {
+    padding-right: 2.5rem;
+  }
 
   &::placeholder {
     color: ui.$color-neutral-variant-dim;
@@ -73,4 +82,22 @@
   &:disabled {
     cursor: default;
   }
+}
+
+.iconBefore,
+.iconAfter {
+  align-self: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: -0.25rem 0.75rem;
+  fill: ui.$color-neutral-variant;
+  pointer-events: none;
+}
+
+.iconBefore {
+  grid-area: 1 / 1;
+}
+
+.iconAfter {
+  grid-area: 1 / 3;
 }

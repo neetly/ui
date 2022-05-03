@@ -10,8 +10,8 @@ type ButtonOwnProps = {
   className?: string;
   variant?: "default" | "primary" | "outline" | "text";
   color?: "primary" | "secondary" | "tertiary";
-  iconBefore?: ComponentType<IconProps>;
-  iconAfter?: ComponentType<IconProps>;
+  iconBefore?: ComponentType<IconProps> | null;
+  iconAfter?: ComponentType<IconProps> | null;
   children?: ReactNode;
 };
 
@@ -25,8 +25,8 @@ const Button = createPolymorphicComponent(
     className,
     variant = "default",
     color = "primary",
-    iconBefore: IconBefore,
-    iconAfter: IconAfter,
+    iconBefore: IconBefore = null,
+    iconAfter: IconAfter = null,
     children,
     ...props
   }: ButtonProps<Element>) => {
@@ -40,7 +40,7 @@ const Button = createPolymorphicComponent(
         {...(Component === "button" && { type: "button" })}
         {...props}
       >
-        <span className={styles.container}>
+        <span className={styles.content}>
           {IconBefore && <IconBefore className={styles.iconBefore} />}
           <span>{children}</span>
           {IconAfter && <IconAfter className={styles.iconAfter} />}
