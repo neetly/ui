@@ -12,7 +12,13 @@ export default {
     const id = useId(); // eslint-disable-line react-hooks/rules-of-hooks
 
     return (
-      <div style={{ display: "grid", gap: "0.5rem" }}>
+      <div
+        style={{
+          display: "grid",
+          justifyItems: "start",
+          gap: "0.5rem",
+        }}
+      >
         <Radio name={id} {...args} />
         <Radio name={id} {...args} />
         <Radio name={id} {...args} />
