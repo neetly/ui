@@ -1,8 +1,21 @@
+@use "sass:map";
+
 @use "./properties.scss" as *;
 
-@mixin typography-ui($font-size, $font-weight: 400) {
+$-font-weights: (
+  regular: $font-weight-regular,
+  medium: $font-weight-medium,
+  semibold: $font-weight-semibold,
+  bold: $font-weight-bold,
+);
+
+@mixin typography-ui($font-size, $font-weight: regular) {
+  @if not map.has-key($-font-weights, $font-weight) {
+    @error "Font weight \"#{$font-weight}\" is not defined.";
+  }
+
   font-family: $font-ui;
   font-size: $font-size;
-  font-weight: $font-weight;
+  font-weight: map.get($-font-weights, $font-weight);
   line-height: $line-height-ui;
 }

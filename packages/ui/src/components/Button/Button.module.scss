@@ -7,7 +7,7 @@
   display: inline-grid;
   border-radius: 0.5rem;
 
-  @include ui.typography-ui(1rem, 600);
+  @include ui.typography-ui(1rem, semibold);
 
   user-select: none;
   cursor: pointer;

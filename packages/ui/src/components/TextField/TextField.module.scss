@@ -11,7 +11,7 @@
 }
 
 .label {
-  @include ui.typography-ui(0.875rem, 600);
+  @include ui.typography-ui(0.875rem, semibold);
 
   color: ui.$color-neutral-variant;
   transition: color 150ms, transform 150ms;
