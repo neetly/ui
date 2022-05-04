@@ -2,6 +2,9 @@
 
 .container {
   display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 0.5rem;
   user-select: none;
   cursor: pointer;
 }
@@ -12,8 +15,41 @@
 
 .content {
   display: grid;
-  width: 1rem;
-  height: 1rem;
-  margin: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
   background-color: ui.$color-primary-overlay-01;
+  transition: transform 150ms, background-color 150ms;
+}
+
+.checkbox {
+  @include ui.hover {
+    ~ .content {
+      background-color: ui.$color-primary-overlay-02;
+    }
+  }
+
+  @include ui.active {
+    ~ .content {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.container {
+  @include ui.hover {
+    .content {
+      background-color: ui.$color-primary-overlay-02;
+    }
+  }
+
+  @include ui.active {
+    .content {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.label {
+  @include ui.typography-ui(1rem, medium);
 }

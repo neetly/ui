@@ -18,6 +18,7 @@ const Checkbox = createPolymorphicComponent(
   <Element extends ElementType>({
     as,
     className,
+    label,
     ...props
   }: CheckboxProps<Element>) => {
     const Component = as ?? "input";
@@ -26,6 +27,7 @@ const Checkbox = createPolymorphicComponent(
       <label className={classNames(styles.container, className)}>
         <Component className={styles.checkbox} type="checkbox" {...props} />
         <span className={styles.content}></span>
+        <span className={styles.label}>{label}</span>
       </label>
     );
   },
