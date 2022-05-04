@@ -29,7 +29,7 @@
   transition: background-color 150ms, transform 150ms;
 }
 
-.check {
+.indicator {
   display: grid;
   border-radius: inherit;
   background-color: ui.$color-primary;
@@ -43,13 +43,13 @@
   }
 }
 
-.checkIcon {
+.indicatorIcon {
   grid-area: 1 / 1;
   fill: ui.$color-on-primary;
 }
 
 .checkbox {
-  &:not(:checked) + .content .check {
+  &:not(:checked) + .content .indicator {
     opacity: 0;
   }
 
@@ -58,7 +58,7 @@
       background-color: ui.$color-primary-overlay-02;
     }
 
-    + .content .check::before {
+    + .content .indicator::before {
       background-color: ui.$color-overlay-99;
     }
   }

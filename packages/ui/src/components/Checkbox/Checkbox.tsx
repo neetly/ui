@@ -38,8 +38,8 @@ const Checkbox = createPolymorphicComponent(
           {...props}
         />
         <span className={styles.content}>
-          <span className={styles.check}>
-            <CheckIcon className={styles.checkIcon} />
+          <span className={styles.indicator}>
+            <CheckIcon className={styles.indicatorIcon} />
           </span>
         </span>
         <span className={styles.label}>{label}</span>
