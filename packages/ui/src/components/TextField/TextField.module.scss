@@ -4,6 +4,7 @@
   display: inline-grid;
   grid-template-rows: auto 1fr;
   user-select: none;
+  transition: opacity 150ms;
 
   &[data-disabled] {
     opacity: 0.5;

@@ -7,6 +7,12 @@
   gap: 0.5rem;
   user-select: none;
   cursor: pointer;
+  transition: opacity 150ms;
+
+  &[data-disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
 }
 
 .checkbox {
@@ -19,13 +25,40 @@
   height: 1.5rem;
   border-radius: 0.5rem;
   background-color: ui.$color-primary-overlay-01;
-  transition: transform 150ms, background-color 150ms;
+  transition: background-color 150ms, transform 150ms;
+}
+
+.check {
+  display: grid;
+  border-radius: inherit;
+  background-color: ui.$color-primary;
+  transition: opacity 150ms;
+
+  &::before {
+    content: "";
+    grid-area: 1 / 1;
+    border-radius: inherit;
+    transition: background-color 150ms;
+  }
+}
+
+.checkIcon {
+  grid-area: 1 / 1;
+  fill: ui.$color-on-primary;
 }
 
 .checkbox {
+  &:not(:checked) + .content .check {
+    opacity: 0;
+  }
+
   @include ui.hover {
     + .content {
       background-color: ui.$color-primary-overlay-02;
+    }
+
+    + .content .check::before {
+      background-color: ui.$color-overlay-99;
     }
   }
 
@@ -36,19 +69,12 @@
   }
 
   &:focus-visible + .content {
-    outline: 2px solid ui.$color-primary;
-    outline-offset: 2px;
+    @include ui.focus-ring(ui.$color-primary);
   }
 }
 
 // https://bugs.chromium.org/p/chromium/issues/detail?id=1211182
-.container {
-  @include ui.hover {
-    .content {
-      background-color: ui.$color-primary-overlay-02;
-    }
-  }
-
+.container:not([data-disabled]) {
   @include ui.active {
     .content {
       transform: scale(0.95);

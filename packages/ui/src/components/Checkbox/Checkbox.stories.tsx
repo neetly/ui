@@ -10,3 +10,9 @@ export default {
 } as ComponentMeta<typeof Checkbox>;
 
 export const Default: ComponentStory<typeof Checkbox> = {};
+
+export const Disabled: ComponentStory<typeof Checkbox> = {
+  args: {
+    disabled: true,
+  },
+};
