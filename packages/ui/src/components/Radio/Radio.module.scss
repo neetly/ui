@@ -85,6 +85,16 @@
 
 // https://bugs.chromium.org/p/chromium/issues/detail?id=1211182
 .container:not([data-disabled]) {
+  @include ui.hover {
+    .content {
+      background-color: ui.$color-primary-overlay-02;
+    }
+
+    .content .indicator::before {
+      background-color: ui.$color-overlay-99;
+    }
+  }
+
   @include ui.active {
     .content {
       transform: scale(0.95);
