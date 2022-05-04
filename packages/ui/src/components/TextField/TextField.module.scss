@@ -50,11 +50,11 @@
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 
-  @include ui.typography-ui(1rem);
+  @include ui.typography-ui(1rem, medium);
 
   user-select: auto;
   cursor: text;
-  color: ui.$color-on-background;
+  color: ui.$color-neutral-variant-accent;
   caret-color: ui.$color-primary;
   background-color: ui.$color-primary-overlay-01;
   transition: background-color 150ms;

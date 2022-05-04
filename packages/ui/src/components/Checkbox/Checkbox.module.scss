@@ -24,18 +24,24 @@
 
 .checkbox {
   @include ui.hover {
-    ~ .content {
+    + .content {
       background-color: ui.$color-primary-overlay-02;
     }
   }
 
   @include ui.active {
-    ~ .content {
+    + .content {
       transform: scale(0.95);
     }
   }
+
+  &:focus-visible + .content {
+    outline: 2px solid ui.$color-primary;
+    outline-offset: 2px;
+  }
 }
 
+// https://bugs.chromium.org/p/chromium/issues/detail?id=1211182
 .container {
   @include ui.hover {
     .content {
@@ -52,4 +58,6 @@
 
 .label {
   @include ui.typography-ui(1rem, medium);
+
+  color: ui.$color-neutral-variant-accent;
 }
