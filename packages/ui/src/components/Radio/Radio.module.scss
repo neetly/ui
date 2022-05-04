@@ -75,6 +75,7 @@
   @include ui.active {
     + .content {
       transform: scale(0.95);
+      transition: none;
     }
   }
 
@@ -98,6 +99,7 @@
   @include ui.active {
     .content {
       transform: scale(0.95);
+      transition: none;
     }
   }
 }
