@@ -3,9 +3,7 @@
 @use "./typography.scss" as *;
 
 @mixin preflight($properties: (), $dark-mode-properties: ()) {
-  :root {
-    @include provide-properties($properties, $dark-mode-properties);
-  }
+  @include provide-properties($properties, $dark-mode-properties);
 
   html {
     @include typography-ui(100%);

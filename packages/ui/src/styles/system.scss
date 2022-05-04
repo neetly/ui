@@ -26,11 +26,21 @@ $-dark-mode-properties: ();
 }
 
 @mixin provide-properties($overrides: (), $dark-mode-overrides: ()) {
-  @each $name, $value in map.merge($-properties, $overrides) {
-    #{-get-property-name($name)}: $value;
+  :root {
+    @each $name, $value in map.merge($-properties, $overrides) {
+      #{-get-property-name($name)}: $value;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      @each $name,
+        $value in map.merge($-dark-mode-properties, $dark-mode-overrides)
+      {
+        #{-get-property-name($name)}: $value;
+      }
+    }
   }
 
-  @media (prefers-color-scheme: dark) {
+  [data-theme="dark"] {
     @each $name,
       $value in map.merge($-dark-mode-properties, $dark-mode-overrides)
     {
