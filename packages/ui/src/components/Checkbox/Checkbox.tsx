@@ -24,9 +24,8 @@ const Checkbox = createPolymorphicComponent(
 
     return (
       <label className={classNames(styles.container, className)}>
-        <span className={styles.content}>
-          <Component className={styles.checkbox} type="checkbox" {...props} />
-        </span>
+        <Component className={styles.checkbox} type="checkbox" {...props} />
+        <span className={styles.content}></span>
       </label>
     );
   },

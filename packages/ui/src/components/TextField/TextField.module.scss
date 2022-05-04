@@ -56,7 +56,7 @@
   cursor: text;
   color: ui.$color-on-background;
   caret-color: ui.$color-primary;
-  background-color: ui.$color-overlay-01;
+  background-color: ui.$color-primary-overlay-01;
   transition: background-color 150ms;
 
   &[data-icon-before] {
@@ -72,11 +72,11 @@
   }
 
   @include ui.hover {
-    background-color: ui.$color-overlay-02;
+    background-color: ui.$color-primary-overlay-02;
   }
 
   &:focus {
-    background-color: ui.$color-overlay-02;
+    background-color: ui.$color-primary-overlay-02;
   }
 
   &:disabled {

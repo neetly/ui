@@ -38,16 +38,6 @@ $color-on-background: define-property(
   $neutral--100
 );
 
-$color-overlay-01: define-property(
-  color-overlay-01,
-  color.change($primary--600, $alpha: 0.05),
-  color.change($primary--300, $alpha: 0.05)
-);
-$color-overlay-02: define-property(
-  color-overlay-02,
-  color.change($primary--600, $alpha: 0.1),
-  color.change($primary--300, $alpha: 0.1)
-);
 $color-overlay-99: define-property(
   color-overlay-99,
   color.change(#000, $alpha: 0.1),

@@ -1,14 +1,19 @@
+@use "@neetly/ui";
+
 .container {
   display: inline-grid;
   user-select: none;
   cursor: pointer;
 }
 
-.content {
-  display: grid;
+.checkbox {
+  @include ui.visually-hidden;
 }
 
-.checkbox {
+.content {
+  display: grid;
   width: 1rem;
   height: 1rem;
+  margin: 0.25rem;
+  background-color: ui.$color-primary-overlay-01;
 }
