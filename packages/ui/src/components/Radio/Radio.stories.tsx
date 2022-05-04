@@ -1,29 +1,29 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react/types-7-0";
 import { useId } from "react";
 
-import { Checkbox } from "./Checkbox";
+import { Radio } from "./Radio";
 
 export default {
-  component: Checkbox,
+  component: Radio,
   args: {
-    label: "Checkbox",
+    label: "Radio",
   },
   render: (args) => {
     const id = useId(); // eslint-disable-line react-hooks/rules-of-hooks
 
     return (
       <div style={{ display: "grid", gap: "0.5rem" }}>
-        <Checkbox name={id} {...args} />
-        <Checkbox name={id} {...args} />
-        <Checkbox name={id} {...args} />
+        <Radio name={id} {...args} />
+        <Radio name={id} {...args} />
+        <Radio name={id} {...args} />
       </div>
     );
   },
-} as ComponentMeta<typeof Checkbox>;
+} as ComponentMeta<typeof Radio>;
 
-export const Default: ComponentStory<typeof Checkbox> = {};
+export const Default: ComponentStory<typeof Radio> = {};
 
-export const Disabled: ComponentStory<typeof Checkbox> = {
+export const Disabled: ComponentStory<typeof Radio> = {
   args: {
     disabled: true,
   },
