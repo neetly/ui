@@ -9,13 +9,31 @@ $-font-weights: (
   bold: $font-weight-bold,
 );
 
-@mixin typography-ui($font-size, $font-weight: regular) {
-  @if not map.has-key($-font-weights, $font-weight) {
-    @error "Font weight \"#{$font-weight}\" is not defined.";
+@function -get-font-weight($name) {
+  $value: map.get($-font-weights, $name);
+  @if $value == null {
+    @error "Font weight \"#{$name}\" is not defined.";
   }
+  @return $value;
+}
 
+@mixin typography-ui($font-size, $font-weight: regular) {
   font-family: $font-ui;
   font-size: $font-size;
-  font-weight: map.get($-font-weights, $font-weight);
+  font-weight: -get-font-weight($font-weight);
   line-height: $line-height-ui;
+}
+
+@mixin typography-headline($font-size, $font-weight: regular) {
+  font-family: $font-headline;
+  font-size: $font-size;
+  font-weight: -get-font-weight($font-weight);
+  line-height: $line-height-headline;
+}
+
+@mixin typography-body($font-size, $font-weight: regular) {
+  font-family: $font-body;
+  font-size: $font-size;
+  font-weight: -get-font-weight($font-weight);
+  line-height: $line-height-body;
 }
