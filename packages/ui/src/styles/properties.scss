@@ -1,7 +1,7 @@
 @use "sass:color";
-
-@use "@neetly/theme" as *;
 @use "@neetly/palette" as *;
+
+@use "./system.scss" as *;
 
 // Fonts
 $font-ui: define-property(

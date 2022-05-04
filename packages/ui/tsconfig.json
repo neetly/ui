@@ -16,14 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@neetly/ui": ["./src/index.scss"],
-      "@neetly/theme": ["../theme/src/index.scss"],
       "@neetly/palette": ["../palette/src/index.scss"]
     }
   },
 
-  "references": [
-    { "path": "../theme" },
-    { "path": "../palette" },
-    { "path": "../icons" }
-  ]
+  "references": [{ "path": "../palette" }, { "path": "../icons" }]
 }

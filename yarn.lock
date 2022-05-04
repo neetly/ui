@@ -2263,15 +2263,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@neetly/theme@workspace:packages/theme":
-  version: 0.0.0-use.local
-  resolution: "@neetly/theme@workspace:packages/theme"
-  dependencies:
-    "@buncho/builder": "npm:^5.3.0"
-    typescript: "npm:^4.6.4"
-  languageName: unknown
-  linkType: soft
-
 "@neetly/ui@workspace:packages/ui":
   version: 0.0.0-use.local
   resolution: "@neetly/ui@workspace:packages/ui"
@@ -2279,7 +2270,6 @@ __metadata:
     "@buncho/builder": "npm:^5.3.0"
     "@neetly/icons": "workspace:packages/icons"
     "@neetly/palette": "workspace:packages/palette"
-    "@neetly/theme": "workspace:packages/theme"
     "@types/react": "npm:^18.0.8"
     "@types/react-dom": "npm:^18.0.3"
     classnames: "npm:^2.3.1"

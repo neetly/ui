@@ -8,7 +8,7 @@ $-dark-mode-properties: ();
 }
 
 @function -get-property-name($name) {
-  @return --theme-#{$name};
+  @return --ui-#{$name};
 }
 
 @function define-property($name, $value, $dark-mode-value: null) {
