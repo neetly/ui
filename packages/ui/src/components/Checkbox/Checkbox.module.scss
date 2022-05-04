@@ -1,0 +1,14 @@
+.container {
+  display: inline-grid;
+  user-select: none;
+  cursor: pointer;
+}
+
+.content {
+  display: grid;
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+}
