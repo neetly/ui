@@ -1,8 +1,5 @@
+@use "@neetly/ui";
+
 .visuallyHidden:not(:focus):not(:focus-within) {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  white-space: nowrap;
-  clip-path: inset(50%);
+  @include ui.visually-hidden;
 }
