@@ -2272,6 +2272,7 @@ __metadata:
     "@neetly/palette": "workspace:packages/palette"
     "@types/react": "npm:^18.0.8"
     "@types/react-dom": "npm:^18.0.3"
+    "@typescript/lib-dom": "npm:@types/web@^0.0.64"
     classnames: "npm:^2.3.1"
     react: "npm:^18.1.0"
     react-dom: "npm:^18.1.0"
@@ -4651,6 +4652,13 @@ __metadata:
     "@typescript-eslint/types": "npm:5.22.0"
     eslint-visitor-keys: "npm:^3.0.0"
   checksum: cc0d54dc3a36af1593f8c09f09a1040970c1675cfa099cddfbba1b93de615064d872b4494d87b9e5545cb9cf4ac381b0a5d650ca9f4aa419571402737eb2142d
+  languageName: node
+  linkType: hard
+
+"@typescript/lib-dom@npm:@types/web@^0.0.64":
+  version: 0.0.64
+  resolution: "@types/web@npm:0.0.64"
+  checksum: 644b0ba4687fa8b3eb24ea8324c3f197b7ef0e4a2d066dcc438c368bc3c2e7357a5dd7ad614197064f481b0963589e165ba078c7cac08b603b2a188e82c80dab
   languageName: node
   linkType: hard
 
