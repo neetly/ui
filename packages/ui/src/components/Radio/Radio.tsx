@@ -16,7 +16,7 @@ type RadioProps<Element extends ElementType> = //
 
 const Radio = createPolymorphicComponent(
   "Radio",
-  <Element extends ElementType>({
+  <Element extends ElementType = "input">({
     as,
     className,
     label,

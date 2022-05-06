@@ -17,7 +17,7 @@ type CheckboxProps<Element extends ElementType> = //
 
 const Checkbox = createPolymorphicComponent(
   "Checkbox",
-  <Element extends ElementType>({
+  <Element extends ElementType = "input">({
     as,
     className,
     label,
