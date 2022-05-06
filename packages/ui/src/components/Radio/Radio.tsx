@@ -1,36 +1,25 @@
 import classNames from "classnames";
-import type { ElementType } from "react";
+import type { ComponentPropsWithoutRef, ForwardedRef } from "react";
+import { forwardRef } from "react";
 
-import type { PolymorphicProps } from "../Polymorphic";
-import { createPolymorphicComponent } from "../Polymorphic";
 import styles from "./Radio.module.scss";
 
-type RadioOwnProps = {
-  className?: string;
+type RadioProps = ComponentPropsWithoutRef<"input"> & {
   label?: string;
-  disabled?: boolean;
 };
 
-type RadioProps<Element extends ElementType> = //
-  PolymorphicProps<Element, RadioOwnProps>;
-
-const Radio = createPolymorphicComponent(
-  "Radio",
-  <Element extends ElementType = "input">({
-    as,
-    className,
-    label,
-    disabled,
-    ...props
-  }: RadioProps<Element>) => {
-    const Component = as ?? "input";
-
+const Radio = forwardRef(
+  (
+    { className, label, disabled, ...props }: RadioProps,
+    forwardedRef: ForwardedRef<HTMLInputElement>,
+  ) => {
     return (
       <label
         className={classNames(styles.container, className)}
         data-disabled={disabled ? "" : null}
       >
-        <Component
+        <input
+          ref={forwardedRef}
           className={styles.radio}
           type="radio"
           disabled={disabled}
@@ -47,5 +36,9 @@ const Radio = createPolymorphicComponent(
   },
 );
 
+if (process.env.NODE_ENV === "development") {
+  Radio.displayName = "Radio";
+}
+
 export { Radio };
-export type { RadioOwnProps, RadioProps };
+export type { RadioProps };

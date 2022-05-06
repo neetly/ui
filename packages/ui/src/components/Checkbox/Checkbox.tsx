@@ -1,37 +1,26 @@
 import { CheckIcon } from "@neetly/icons";
 import classNames from "classnames";
-import type { ElementType } from "react";
+import type { ComponentPropsWithoutRef, ForwardedRef } from "react";
+import { forwardRef } from "react";
 
-import type { PolymorphicProps } from "../Polymorphic";
-import { createPolymorphicComponent } from "../Polymorphic";
 import styles from "./Checkbox.module.scss";
 
-type CheckboxOwnProps = {
-  className?: string;
+type CheckboxProps = ComponentPropsWithoutRef<"input"> & {
   label?: string;
-  disabled?: boolean;
 };
 
-type CheckboxProps<Element extends ElementType> = //
-  PolymorphicProps<Element, CheckboxOwnProps>;
-
-const Checkbox = createPolymorphicComponent(
-  "Checkbox",
-  <Element extends ElementType = "input">({
-    as,
-    className,
-    label,
-    disabled,
-    ...props
-  }: CheckboxProps<Element>) => {
-    const Component = as ?? "input";
-
+const Checkbox = forwardRef(
+  (
+    { className, label, disabled, ...props }: CheckboxProps,
+    forwardedRef: ForwardedRef<HTMLInputElement>,
+  ) => {
     return (
       <label
         className={classNames(styles.container, className)}
         data-disabled={disabled ? "" : null}
       >
-        <Component
+        <input
+          ref={forwardedRef}
           className={styles.checkbox}
           type="checkbox"
           disabled={disabled}
@@ -48,5 +37,9 @@ const Checkbox = createPolymorphicComponent(
   },
 );
 
+if (process.env.NODE_ENV === "development") {
+  Checkbox.displayName = "Checkbox";
+}
+
 export { Checkbox };
-export type { CheckboxOwnProps, CheckboxProps };
+export type { CheckboxProps };
