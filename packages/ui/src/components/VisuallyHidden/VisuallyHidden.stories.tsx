@@ -1,5 +1,6 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react/types-7-0";
 
+import { Button } from "../Button";
 import { VisuallyHidden } from "./VisuallyHidden";
 
 export default {
@@ -12,8 +13,8 @@ export const Default: ComponentStory<typeof VisuallyHidden> = {
   },
 };
 
-export const Button: ComponentStory<typeof VisuallyHidden> = {
+export const WithButton: ComponentStory<typeof VisuallyHidden> = {
   args: {
-    children: <button>Visually Hidden</button>,
+    children: <Button>Visually Hidden</Button>,
   },
 };

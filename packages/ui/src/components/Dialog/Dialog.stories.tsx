@@ -1,6 +1,7 @@
 import type { ComponentMeta, ComponentStory } from "@storybook/react/types-7-0";
 import { useState } from "react";
 
+import { Button } from "../Button";
 import { Dialog } from "./Dialog";
 
 export default {
@@ -13,7 +14,7 @@ export default {
 
     return (
       <>
-        <button onClick={() => setOpen(true)}>Open Dialog</button>
+        <Button onClick={() => setOpen(true)}>Open Dialog</Button>
         <Dialog open={isOpen} onClose={() => setOpen(false)} {...args} />
       </>
     );
