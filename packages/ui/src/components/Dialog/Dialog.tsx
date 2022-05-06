@@ -1,12 +1,17 @@
 import classNames from "classnames";
-import type { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import styles from "./Dialog.module.scss";
 
-type DialogProps = ComponentPropsWithoutRef<"dialog"> & {
+type DialogOwnProps = {
+  className?: string;
   open?: boolean;
   onClose?: () => void;
+  children?: ReactNode;
 };
+
+type DialogProps = DialogOwnProps &
+  Omit<ComponentPropsWithoutRef<"dialog">, keyof DialogOwnProps>;
 
 const Dialog = ({ className, children, ...props }: DialogProps) => {
   return (

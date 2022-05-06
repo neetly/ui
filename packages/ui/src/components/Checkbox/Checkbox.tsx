@@ -1,13 +1,18 @@
 import { CheckIcon } from "@neetly/icons";
 import classNames from "classnames";
-import type { ComponentPropsWithoutRef, ForwardedRef } from "react";
+import type { ComponentPropsWithoutRef, ForwardedRef, ReactNode } from "react";
 import { forwardRef } from "react";
 
 import styles from "./Checkbox.module.scss";
 
-type CheckboxProps = ComponentPropsWithoutRef<"input"> & {
-  label?: string;
+type CheckboxOwnProps = {
+  className?: string;
+  label?: ReactNode;
+  disabled?: boolean;
 };
+
+type CheckboxProps = CheckboxOwnProps &
+  Omit<ComponentPropsWithoutRef<"input">, keyof CheckboxOwnProps>;
 
 const Checkbox = forwardRef(
   (

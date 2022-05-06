@@ -1,12 +1,17 @@
 import classNames from "classnames";
-import type { ComponentPropsWithoutRef, ForwardedRef } from "react";
+import type { ComponentPropsWithoutRef, ForwardedRef, ReactNode } from "react";
 import { forwardRef } from "react";
 
 import styles from "./Radio.module.scss";
 
-type RadioProps = ComponentPropsWithoutRef<"input"> & {
-  label?: string;
+type RadioOwnProps = {
+  className?: string;
+  label?: ReactNode;
+  disabled?: boolean;
 };
+
+type RadioProps = RadioOwnProps &
+  Omit<ComponentPropsWithoutRef<"input">, keyof RadioOwnProps>;
 
 const Radio = forwardRef(
   (

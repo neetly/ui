@@ -9,8 +9,8 @@ import styles from "./TextField.module.scss";
 type TextFieldOwnProps = {
   className?: string;
   label?: ReactNode;
-  iconBefore?: ComponentType<IconProps> | null;
-  iconAfter?: ComponentType<IconProps> | null;
+  iconBefore?: ComponentType<IconProps>;
+  iconAfter?: ComponentType<IconProps>;
   disabled?: boolean;
 };
 
@@ -23,8 +23,8 @@ const TextField = createPolymorphicComponent(
     as,
     className,
     label,
-    iconBefore: IconBefore = null,
-    iconAfter: IconAfter = null,
+    iconBefore: IconBefore,
+    iconAfter: IconAfter,
     disabled,
     ...props
   }: TextFieldProps<Element>) => {
