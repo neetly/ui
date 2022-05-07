@@ -160,6 +160,12 @@ $color-neutral-variant-dim: define-property(
   color.change($neutral-variant--300, $alpha: 0.8)
 );
 
+// Colors - Modal
+$color-backdrop: define-property(
+  color-backdrop,
+  color.change(#000, $alpha: 0.5)
+);
+
 // Colors - Tooltip
 $color-tooltip: define-property(color-tooltip, $neutral--800);
 $color-on-tooltip: define-property(color-on-tooltip, $neutral--50);

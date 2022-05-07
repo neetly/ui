@@ -22,6 +22,7 @@
   "dependencies": {
     "@neetly/icons": "workspace:packages/icons",
     "@neetly/palette": "workspace:packages/palette",
+    "ariakit": "2.0.0-next.25",
     "classnames": "^2.3.1"
   },
   "peerDependencies": {
@@ -42,7 +43,6 @@
     "@buncho/builder": "^5.3.0",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
-    "@typescript/lib-dom": "npm:@types/web@^0.0.64",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "typescript": "^4.6.4",

@@ -1,19 +1,8 @@
+import * as Ariakit from "ariakit";
 import classNames from "classnames";
-import type {
-  ComponentPropsWithoutRef,
-  ReactNode,
-  SyntheticEvent,
-} from "react";
-import { useLayoutEffect, useRef } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
 import styles from "./Dialog.module.scss";
-
-declare module "react" {
-  interface DOMAttributes<T> {
-    onClose?: React.ReactEventHandler<T> | undefined;
-    onCancel?: React.ReactEventHandler<T> | undefined;
-  }
-}
 
 type DialogOwnProps = {
   className?: string;
@@ -23,42 +12,34 @@ type DialogOwnProps = {
 };
 
 type DialogProps = DialogOwnProps &
-  Omit<ComponentPropsWithoutRef<"dialog">, keyof DialogOwnProps>;
+  Omit<ComponentPropsWithoutRef<"div">, keyof DialogOwnProps>;
 
 const Dialog = ({
   className,
-  open = true,
+  open,
   onClose,
   children,
   ...props
 }: DialogProps) => {
-  const ref = useRef<HTMLDialogElement>(null);
+  const state = Ariakit.useDialogState({
+    visible: open,
+    setVisible: () => onClose?.(),
+    animated: true,
+  });
 
-  useLayoutEffect(() => {
-    if (ref.current) {
-      if (open && !ref.current.open) {
-        ref.current.showModal();
-      }
-      if (!open && ref.current.open) {
-        ref.current.close();
-      }
-    }
-  }, [open]);
-
-  const onCancel = (event: SyntheticEvent) => {
-    event.preventDefault();
-    onClose?.();
-  };
+  if (!state.mounted) {
+    return null;
+  }
 
   return (
-    <dialog
-      ref={ref}
+    <Ariakit.Dialog
       className={classNames(styles.dialog, className)}
-      onCancel={onCancel}
+      backdropProps={{ className: styles.backdrop }}
+      state={state}
       {...props}
     >
       {children}
-    </dialog>
+    </Ariakit.Dialog>
   );
 };
 
