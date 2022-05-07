@@ -24,8 +24,8 @@
   }
 }
 
-.button:where([data-variant="default"]) {
-  &:where([data-color="primary"]) {
+.button[data-variant="default"] {
+  &[data-color="primary"] {
     color: ui.$color-primary;
     background-color: ui.$color-primary-overlay-01;
 
@@ -34,7 +34,7 @@
     }
   }
 
-  &:where([data-color="secondary"]) {
+  &[data-color="secondary"] {
     color: ui.$color-secondary;
     background-color: ui.$color-secondary-overlay-01;
 
@@ -43,7 +43,7 @@
     }
   }
 
-  &:where([data-color="tertiary"]) {
+  &[data-color="tertiary"] {
     color: ui.$color-tertiary;
     background-color: ui.$color-tertiary-overlay-01;
 
@@ -53,7 +53,7 @@
   }
 }
 
-.button:where([data-variant="primary"]) {
+.button[data-variant="primary"] {
   &::before {
     content: "";
     grid-area: 1 / 1;
@@ -67,26 +67,26 @@
     }
   }
 
-  &:where([data-color="primary"]) {
+  &[data-color="primary"] {
     color: ui.$color-on-primary;
     background-color: ui.$color-primary;
   }
 
-  &:where([data-color="secondary"]) {
+  &[data-color="secondary"] {
     color: ui.$color-on-secondary;
     background-color: ui.$color-secondary;
   }
 
-  &:where([data-color="tertiary"]) {
+  &[data-color="tertiary"] {
     color: ui.$color-on-tertiary;
     background-color: ui.$color-tertiary;
   }
 }
 
-.button:where([data-variant="outline"]) {
+.button[data-variant="outline"] {
   box-shadow: inset 0 0 0 2px currentColor;
 
-  &:where([data-color="primary"]) {
+  &[data-color="primary"] {
     color: ui.$color-primary;
 
     @include ui.hover {
@@ -94,7 +94,7 @@
     }
   }
 
-  &:where([data-color="secondary"]) {
+  &[data-color="secondary"] {
     color: ui.$color-secondary;
 
     @include ui.hover {
@@ -102,7 +102,7 @@
     }
   }
 
-  &:where([data-color="tertiary"]) {
+  &[data-color="tertiary"] {
     color: ui.$color-tertiary;
 
     @include ui.hover {
@@ -111,8 +111,8 @@
   }
 }
 
-.button:where([data-variant="text"]) {
-  &:where([data-color="primary"]) {
+.button[data-variant="text"] {
+  &[data-color="primary"] {
     color: ui.$color-primary;
 
     @include ui.hover {
@@ -120,7 +120,7 @@
     }
   }
 
-  &:where([data-color="secondary"]) {
+  &[data-color="secondary"] {
     color: ui.$color-secondary;
 
     @include ui.hover {
@@ -128,7 +128,7 @@
     }
   }
 
-  &:where([data-color="tertiary"]) {
+  &[data-color="tertiary"] {
     color: ui.$color-tertiary;
 
     @include ui.hover {
@@ -137,15 +137,15 @@
   }
 }
 
-.button:where([data-color="primary"]):focus-visible {
+.button[data-color="primary"]:focus-visible {
   @include ui.focus-ring(ui.$color-primary);
 }
 
-.button:where([data-color="secondary"]):focus-visible {
+.button[data-color="secondary"]:focus-visible {
   @include ui.focus-ring(ui.$color-secondary);
 }
 
-.button:where([data-color="tertiary"]):focus-visible {
+.button[data-color="tertiary"]:focus-visible {
   @include ui.focus-ring(ui.$color-tertiary);
 }
 
