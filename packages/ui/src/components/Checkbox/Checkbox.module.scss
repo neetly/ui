@@ -16,6 +16,8 @@
 }
 
 .checkbox {
+  all: unset;
+
   @include ui.visually-hidden;
 }
 

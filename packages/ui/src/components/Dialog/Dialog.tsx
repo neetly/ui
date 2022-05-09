@@ -34,7 +34,7 @@ const Dialog = ({
   return (
     <Ariakit.Dialog
       className={classNames(styles.dialog, className)}
-      backdropProps={{ className: styles.backdrop }}
+      backdropProps={{ className: styles.container }}
       state={state}
       {...props}
     >

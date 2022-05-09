@@ -16,6 +16,8 @@
 }
 
 .radio {
+  all: unset;
+
   @include ui.visually-hidden;
 }
 

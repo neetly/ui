@@ -1,15 +1,32 @@
 @use "@neetly/ui";
 
-.dialog {
-  position: fixed;
-}
-
-.backdrop {
+.container {
+  display: grid;
+  grid-template-columns: minmax(auto, 30rem);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 2rem;
   background-color: ui.$color-backdrop;
   backdrop-filter: blur(2px);
   transition: opacity 150ms;
 
   &:not([data-enter]) {
     opacity: 0;
+  }
+}
+
+.dialog {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: ui.$color-background;
+  transition: transform 150ms;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:not([data-enter]) {
+    transform: scale(1.05);
   }
 }
