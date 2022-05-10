@@ -1,7 +1,9 @@
+import { CloseIcon } from "@neetly/icons";
 import * as Ariakit from "ariakit";
 import classNames from "classnames";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
+import { VisuallyHidden } from "../VisuallyHidden";
 import styles from "./Dialog.module.scss";
 
 type DialogOwnProps = {
@@ -39,6 +41,11 @@ const Dialog = ({
       {...props}
     >
       {children}
+
+      <Ariakit.DialogDismiss>
+        <CloseIcon />
+        <VisuallyHidden>Close</VisuallyHidden>
+      </Ariakit.DialogDismiss>
     </Ariakit.Dialog>
   );
 };
