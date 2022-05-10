@@ -42,6 +42,12 @@ export default {
 
 export const Default: ComponentStory<typeof Button> = {};
 
+export const Icon: ComponentStory<typeof Button> = {
+  args: {
+    icon: AddIcon,
+  },
+};
+
 export const IconBefore: ComponentStory<typeof Button> = {
   args: {
     iconBefore: AddIcon,

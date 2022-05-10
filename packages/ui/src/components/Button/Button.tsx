@@ -4,12 +4,14 @@ import type { ComponentType, ElementType, ReactNode } from "react";
 
 import type { PolymorphicProps } from "../Polymorphic";
 import { createPolymorphicComponent } from "../Polymorphic";
+import { VisuallyHidden } from "../VisuallyHidden";
 import styles from "./Button.module.scss";
 
 type ButtonOwnProps = {
   className?: string;
   variant?: "default" | "primary" | "outline" | "text";
   color?: "primary" | "secondary" | "tertiary";
+  icon?: ComponentType<IconProps>;
   iconBefore?: ComponentType<IconProps>;
   iconAfter?: ComponentType<IconProps>;
   children?: ReactNode;
@@ -25,6 +27,7 @@ const Button = createPolymorphicComponent(
     className,
     variant = "default",
     color = "primary",
+    icon: Icon,
     iconBefore: IconBefore,
     iconAfter: IconAfter,
     children,
@@ -40,11 +43,18 @@ const Button = createPolymorphicComponent(
         {...(Component === "button" && { type: "button" })}
         {...props}
       >
-        <span className={styles.content}>
-          {IconBefore && <IconBefore className={styles.iconBefore} />}
-          <span>{children}</span>
-          {IconAfter && <IconAfter className={styles.iconAfter} />}
-        </span>
+        {Icon ? (
+          <span className={styles.content}>
+            <Icon className={styles.icon} />
+            <VisuallyHidden>{children}</VisuallyHidden>
+          </span>
+        ) : (
+          <span className={styles.content}>
+            {IconBefore && <IconBefore className={styles.iconBefore} />}
+            <span>{children}</span>
+            {IconAfter && <IconAfter className={styles.iconAfter} />}
+          </span>
+        )}
       </Component>
     );
   },
