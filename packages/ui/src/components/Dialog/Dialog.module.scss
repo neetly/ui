@@ -2,9 +2,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: minmax(auto, 30rem);
-  justify-content: center;
-  align-items: center;
+  place-items: center;
   overflow: auto;
   padding: 2rem;
   background-color: ui.$color-backdrop;
@@ -18,6 +16,9 @@
 
 .dialog {
   position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 30rem;
   padding: 2rem;
   border-radius: 1rem;
   background-color: ui.$color-background;

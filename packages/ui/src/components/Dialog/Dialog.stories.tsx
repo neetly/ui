@@ -25,6 +25,6 @@ export const Default: ComponentStory<typeof Dialog> = {};
 
 export const Scrollable: ComponentStory<typeof Dialog> = {
   args: {
-    children: <div style={{ height: "200vh" }} />,
+    children: <div style={{ height: "150vh" }}>Dialog</div>,
   },
 };
