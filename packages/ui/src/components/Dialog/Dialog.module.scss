@@ -17,6 +17,7 @@
 }
 
 .dialog {
+  position: relative;
   padding: 2rem;
   border-radius: 1rem;
   background-color: ui.$color-background;
@@ -29,4 +30,10 @@
   &:not([data-enter]) {
     transform: scale(1.01);
   }
+}
+
+.closeButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
 }

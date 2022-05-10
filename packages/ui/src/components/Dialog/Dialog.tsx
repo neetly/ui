@@ -3,7 +3,7 @@ import * as Ariakit from "ariakit";
 import classNames from "classnames";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
-import { VisuallyHidden } from "../VisuallyHidden";
+import { Button } from "../Button";
 import styles from "./Dialog.module.scss";
 
 type DialogOwnProps = {
@@ -42,9 +42,14 @@ const Dialog = ({
     >
       {children}
 
-      <Ariakit.DialogDismiss>
-        <CloseIcon />
-        <VisuallyHidden>Close</VisuallyHidden>
+      <Ariakit.DialogDismiss
+        as={Button}
+        className={styles.closeButton}
+        variant="text"
+        color="secondary"
+        icon={CloseIcon}
+      >
+        Close
       </Ariakit.DialogDismiss>
     </Ariakit.Dialog>
   );
