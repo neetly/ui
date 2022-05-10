@@ -51,7 +51,7 @@ const Button = createPolymorphicComponent(
         ) : (
           <span className={styles.content}>
             {IconBefore && <IconBefore className={styles.iconBefore} />}
-            <span>{children}</span>
+            <span className={styles.label}>{children}</span>
             {IconAfter && <IconAfter className={styles.iconAfter} />}
           </span>
         )}
