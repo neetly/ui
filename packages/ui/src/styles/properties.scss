@@ -44,12 +44,6 @@ $color-overlay-99: define-property(
   color.change(#fff, $alpha: 0.1)
 );
 
-$color-selection: define-property(
-  color-selection,
-  color.change($primary--300, $alpha: 0.5),
-  color.change($primary--600, $alpha: 0.5)
-);
-
 // Colors - Primary
 $color-primary: define-property(color-primary, $primary--600, $primary--300);
 $color-primary-accent: define-property(
@@ -163,9 +157,24 @@ $color-neutral-variant-dim: define-property(
 // Colors - Modal
 $color-backdrop: define-property(
   color-backdrop,
+  color.change($neutral--900, $alpha: 0.5),
   color.change(#000, $alpha: 0.5)
 );
 
 // Colors - Tooltip
 $color-tooltip: define-property(color-tooltip, $neutral--800);
 $color-on-tooltip: define-property(color-on-tooltip, $neutral--50);
+
+// Colors - Shadow
+$color-shadow: define-property(
+  color-shadow,
+  color.change($neutral--900, $alpha: 0.1),
+  color.change(#000, $alpha: 0.1)
+);
+
+// Colors - Misc
+$color-selection: define-property(
+  color-selection,
+  color.change($primary--300, $alpha: 0.5),
+  color.change($primary--600, $alpha: 0.5)
+);

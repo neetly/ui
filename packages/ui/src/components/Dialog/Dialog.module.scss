@@ -22,6 +22,7 @@
   padding: 2rem;
   border-radius: 1rem;
   background-color: ui.$color-background;
+  box-shadow: 0 8px 24px ui.$color-shadow;
   transition: transform 150ms;
 
   &:focus {
