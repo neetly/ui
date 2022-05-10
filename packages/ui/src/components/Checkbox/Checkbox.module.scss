@@ -32,6 +32,7 @@
 }
 
 .indicator {
+  position: relative;
   display: grid;
   border-radius: inherit;
   background-color: ui.$color-primary;
@@ -39,14 +40,15 @@
 
   &::before {
     content: "";
-    grid-area: 1 / 1;
+    position: absolute;
+    inset: 0;
     border-radius: inherit;
     transition: background-color 150ms;
   }
 }
 
 .indicatorIcon {
-  grid-area: 1 / 1;
+  position: relative;
   fill: ui.$color-on-primary;
 }
 
