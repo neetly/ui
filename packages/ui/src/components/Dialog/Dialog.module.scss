@@ -16,6 +16,7 @@
 
 .dialog {
   position: relative;
+  z-index: 1000;
   box-sizing: border-box;
   width: 100%;
   max-width: 30rem;
@@ -31,6 +32,10 @@
 
   &:not([data-enter]) {
     transform: scale(1.01);
+  }
+
+  &[data-leave] {
+    pointer-events: none;
   }
 }
 
