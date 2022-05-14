@@ -12,6 +12,10 @@
   &:not([data-enter]) {
     opacity: 0;
   }
+
+  &[data-leave] {
+    pointer-events: none;
+  }
 }
 
 .dialog {
@@ -32,10 +36,6 @@
 
   &:not([data-enter]) {
     transform: scale(1.01);
-  }
-
-  &[data-leave] {
-    pointer-events: none;
   }
 }
 
