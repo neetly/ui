@@ -28,3 +28,15 @@ export const Scrollable: ComponentStory<typeof Dialog> = {
     children: <div style={{ height: "150vh" }}>Dialog</div>,
   },
 };
+
+export const NonCloseable: ComponentStory<typeof Dialog> = {
+  args: {
+    closeable: false,
+  },
+};
+
+export const NonDismissible: ComponentStory<typeof Dialog> = {
+  args: {
+    dismissible: false,
+  },
+};
