@@ -61,8 +61,8 @@ const Dialog = ({
       )}
 
       {
-        // FIXME: https://github.com/ariakit/ariakit/issues/1356
-        !closeable && !dismissible && <span data-dialog-dismiss="" />
+        // https://github.com/ariakit/ariakit/issues/1356
+        !closeable && !dismissible && <Ariakit.DialogDismiss hidden />
       }
     </Ariakit.Dialog>
   );
