@@ -30,7 +30,7 @@ const Dialog = ({
   const state = Ariakit.useDialogState({
     visible: open,
     setVisible: () => onClose?.(),
-    animated: true,
+    animated: 150,
   });
 
   if (!state.mounted) {
