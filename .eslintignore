@@ -9,6 +9,10 @@
 
 /.pnp.*
 
+# Python
+
+**/__pycache__/
+
 # Artifacts
 
 /packages/*/package.tgz

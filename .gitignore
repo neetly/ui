@@ -11,6 +11,10 @@
 
 /.pnp.*
 
+# Python
+
+**/__pycache__/
+
 # dotenv
 
 /packages/*/.env.local
