@@ -2187,7 +2187,7 @@ __metadata:
     "@neetly/ui": "workspace:packages/ui"
     "@types/react": "npm:^18.0.9"
     "@types/react-dom": "npm:^18.0.4"
-    ariakit: "npm:2.0.0-next.26"
+    ariakit: "npm:2.0.0-next.27"
     core-js: "npm:^3.22.5"
     react: "npm:^18.1.0"
     react-dom: "npm:^18.1.0"
@@ -2272,7 +2272,7 @@ __metadata:
     "@neetly/palette": "workspace:packages/palette"
     "@types/react": "npm:^18.0.9"
     "@types/react-dom": "npm:^18.0.4"
-    ariakit: "npm:2.0.0-next.26"
+    ariakit: "npm:2.0.0-next.27"
     classnames: "npm:^2.3.1"
     react: "npm:^18.1.0"
     react-dom: "npm:^18.1.0"
@@ -5395,16 +5395,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit@npm:2.0.0-next.26":
-  version: 2.0.0-next.26
-  resolution: "ariakit@npm:2.0.0-next.26"
+"ariakit@npm:2.0.0-next.27":
+  version: 2.0.0-next.27
+  resolution: "ariakit@npm:2.0.0-next.27"
   dependencies:
     "@floating-ui/dom": "npm:0.5.0"
     ariakit-utils: "npm:0.17.0-next.18"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
-  checksum: 1ff99b3e1604c88e9a32bba5088c85e4e65943aa182b6c5560088caa6a261b55b5e940dc34c37f259afbe67402adb95de1de1a091cf5faf946efd31144095b10
+  checksum: c909c4db3ca92a7d92d0d42b27c0332d3396f8e52af93d011bcb0bb67b312538b1bbdcd585b2337c9b407fc56ff4d95dfae3a2793ff7498d431f90e2ad1a4038
   languageName: node
   linkType: hard
 
