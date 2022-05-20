@@ -40,3 +40,9 @@ export const NonDismissible: ComponentStory<typeof Dialog> = {
     dismissible: false,
   },
 };
+
+export const EscapeOnly: ComponentStory<typeof Dialog> = {
+  args: {
+    dismissible: "escape-only",
+  },
+};

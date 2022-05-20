@@ -11,7 +11,7 @@ type DialogOwnProps = {
   open?: boolean;
   onClose?: () => void;
   closeable?: boolean;
-  dismissible?: boolean;
+  dismissible?: boolean | "escape-only";
   children?: ReactNode;
 };
 
@@ -42,8 +42,8 @@ const Dialog = ({
       className={classNames(styles.dialog, className)}
       backdropProps={{ className: styles.container }}
       state={state}
-      hideOnEscape={dismissible}
-      hideOnInteractOutside={dismissible}
+      hideOnEscape={dismissible !== false}
+      hideOnInteractOutside={dismissible === true}
       {...props}
     >
       {children}
