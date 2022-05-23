@@ -11,4 +11,7 @@ export { default as ExpandIcon } from "./ExpandIcon";
 export { default as FullscreenExitIcon } from "./FullscreenExitIcon";
 export { default as FullscreenIcon } from "./FullscreenIcon";
 export { default as LogoIcon } from "./LogoIcon";
+export { default as PauseIcon } from "./PauseIcon";
+export { default as PlayIcon } from "./PlayIcon";
 export { default as SearchIcon } from "./SearchIcon";
+export { default as StopIcon } from "./StopIcon";

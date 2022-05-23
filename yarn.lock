@@ -2059,6 +2059,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^5.25.0"
     eslint: "npm:^8.16.0"
     prettier: "npm:^2.6.2"
+    svgo: "npm:^2.8.0"
     typescript: "npm:^4.6.4"
   languageName: unknown
   linkType: soft
@@ -15506,7 +15507,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^2.2.0, svgo@npm:^2.5.0, svgo@npm:^2.7.0":
+"svgo@npm:^2.2.0, svgo@npm:^2.5.0, svgo@npm:^2.7.0, svgo@npm:^2.8.0":
   version: 2.8.0
   resolution: "svgo@npm:2.8.0"
   dependencies:

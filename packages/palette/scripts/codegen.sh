@@ -2,6 +2,8 @@
 
 set -eo pipefail
 
+rm -rf ./src/generated
+
 (cd ../.. && pipenv run python -m scripts.palette_codegen)
 
 yarn run --top-level eslint --max-warnings 0 --fix ./src/generated
