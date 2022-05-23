@@ -10,5 +10,8 @@ for file in ./data/icons/*; do
   mv "$file" "$(echo "$file" | tr "[:upper:]" "[:lower:]" | sed "s/ /-/g")"
 done
 
-yarn run svgo --input ./data/icons
+yarn run svgo \
+  --config ./scripts/svgo.config.js \
+  --input ./data/icons
+
 yarn run prettier --write ./data/icons
