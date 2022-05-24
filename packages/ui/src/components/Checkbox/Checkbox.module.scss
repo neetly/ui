@@ -31,7 +31,7 @@
   transition: background-color 150ms, transform 150ms;
 }
 
-.indicator {
+.checked {
   position: relative;
   display: grid;
   border-radius: inherit;
@@ -47,13 +47,13 @@
   }
 }
 
-.indicatorIcon {
+.checkedIcon {
   position: relative;
   fill: ui.$color-on-primary;
 }
 
 .checkbox {
-  &:not(:checked) + .content .indicator {
+  &:not(:checked) + .content .checked {
     opacity: 0;
   }
 
@@ -62,7 +62,7 @@
       background-color: ui.$color-primary-overlay-02;
     }
 
-    + .content .indicator::before {
+    + .content .checked::before {
       background-color: ui.$color-overlay-99;
     }
   }
@@ -86,7 +86,7 @@
       background-color: ui.$color-primary-overlay-02;
     }
 
-    .content .indicator::before {
+    .content .checked::before {
       background-color: ui.$color-overlay-99;
     }
   }

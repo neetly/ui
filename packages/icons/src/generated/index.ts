@@ -1,5 +1,8 @@
 export { default as AccountIcon } from "./AccountIcon";
 export { default as AddIcon } from "./AddIcon";
+export { default as BookmarkIcon } from "./BookmarkIcon";
+export { default as BootmarkOutlineIcon } from "./BootmarkOutlineIcon";
+export { default as CheckboxCheckedIcon } from "./CheckboxCheckedIcon";
 export { default as CheckIcon } from "./CheckIcon";
 export { default as ChevronDownIcon } from "./ChevronDownIcon";
 export { default as ChevronLeftIcon } from "./ChevronLeftIcon";
@@ -17,6 +20,7 @@ export { default as LogoIcon } from "./LogoIcon";
 export { default as MoreIcon } from "./MoreIcon";
 export { default as PauseIcon } from "./PauseIcon";
 export { default as PlayIcon } from "./PlayIcon";
+export { default as RadioCheckedIcon } from "./RadioCheckedIcon";
 export { default as SearchIcon } from "./SearchIcon";
 export { default as StarIcon } from "./StarIcon";
 export { default as StarOutlineIcon } from "./StarOutlineIcon";

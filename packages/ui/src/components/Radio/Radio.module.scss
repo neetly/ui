@@ -31,7 +31,7 @@
   transition: background-color 150ms, transform 150ms;
 }
 
-.indicator {
+.checked {
   position: relative;
   display: grid;
   border-radius: inherit;
@@ -47,22 +47,13 @@
   }
 }
 
-.indicatorIcon {
+.checkedIcon {
   position: relative;
-  display: grid;
-  place-items: center;
-
-  &::before {
-    content: "";
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: ui.$color-on-primary;
-  }
+  fill: ui.$color-on-primary;
 }
 
 .radio {
-  &:not(:checked) + .content .indicator {
+  &:not(:checked) + .content .checked {
     opacity: 0;
   }
 
@@ -71,7 +62,7 @@
       background-color: ui.$color-primary-overlay-02;
     }
 
-    + .content .indicator::before {
+    + .content .checked::before {
       background-color: ui.$color-overlay-99;
     }
   }
@@ -95,7 +86,7 @@
       background-color: ui.$color-primary-overlay-02;
     }
 
-    .content .indicator::before {
+    .content .checked::before {
       background-color: ui.$color-overlay-99;
     }
   }

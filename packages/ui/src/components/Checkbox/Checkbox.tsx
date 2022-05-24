@@ -1,4 +1,4 @@
-import { CheckIcon } from "@neetly/icons";
+import { CheckboxCheckedIcon } from "@neetly/icons";
 import classNames from "classnames";
 import type { ComponentPropsWithoutRef, ForwardedRef, ReactNode } from "react";
 import { forwardRef } from "react";
@@ -32,8 +32,8 @@ const Checkbox = forwardRef(
           {...props}
         />
         <span className={styles.content}>
-          <span className={styles.indicator}>
-            <CheckIcon className={styles.indicatorIcon} />
+          <span className={styles.checked}>
+            <CheckboxCheckedIcon className={styles.checkedIcon} />
           </span>
         </span>
         <span className={styles.label}>{label}</span>

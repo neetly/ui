@@ -1,3 +1,4 @@
+import { RadioCheckedIcon } from "@neetly/icons";
 import classNames from "classnames";
 import type { ComponentPropsWithoutRef, ForwardedRef, ReactNode } from "react";
 import { forwardRef } from "react";
@@ -31,8 +32,8 @@ const Radio = forwardRef(
           {...props}
         />
         <span className={styles.content}>
-          <span className={styles.indicator}>
-            <span className={styles.indicatorIcon} />
+          <span className={styles.checked}>
+            <RadioCheckedIcon className={styles.checkedIcon} />
           </span>
         </span>
         <span className={styles.label}>{label}</span>
