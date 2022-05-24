@@ -1,7 +1,7 @@
 export { default as AccountIcon } from "./AccountIcon";
 export { default as AddIcon } from "./AddIcon";
 export { default as BookmarkIcon } from "./BookmarkIcon";
-export { default as BootmarkOutlineIcon } from "./BootmarkOutlineIcon";
+export { default as BookmarkOutlineIcon } from "./BookmarkOutlineIcon";
 export { default as CaretDown } from "./CaretDown";
 export { default as CaretLeft } from "./CaretLeft";
 export { default as CaretRight } from "./CaretRight";
