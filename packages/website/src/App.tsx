@@ -1,13 +1,8 @@
-import { Route, Routes } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 
 import styles from "./App.module.scss";
 import { AppFooter } from "./components/AppFooter";
 import { AppHeader } from "./components/AppHeader";
-import { ComponentsPage } from "./pages/ComponentsPage";
-import { HomePage } from "./pages/HomePage";
-import { IconsPage } from "./pages/IconsPage";
-import { PalettePage } from "./pages/PalettePage";
-import { TypographyPage } from "./pages/TypographyPage";
 
 const App = () => {
   return (
@@ -16,17 +11,12 @@ const App = () => {
         <AppHeader />
       </div>
       <div className={styles.content}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/palette" element={<PalettePage />} />
-          <Route path="/typography" element={<TypographyPage />} />
-          <Route path="/icons" element={<IconsPage />} />
-          <Route path="/components" element={<ComponentsPage />} />
-        </Routes>
+        <Outlet />
       </div>
       <div>
         <AppFooter />
       </div>
+      <ScrollRestoration />
     </div>
   );
 };
