@@ -1,26 +1,4 @@
 {
   "root": true,
-  "extends": "@buncho/eslint-config/experimental",
-  "overrides": [
-    {
-      "files": ["*.{ts,tsx}"],
-      "rules": {
-        "@typescript-eslint/no-restricted-imports": [
-          "error",
-          {
-            "paths": [
-              {
-                "name": "react-router",
-                "message": "Please use @neetly/router instead."
-              },
-              {
-                "name": "react-router-dom",
-                "message": "Please use @neetly/router instead."
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ]
+  "extends": "@buncho/eslint-config/experimental"
 }

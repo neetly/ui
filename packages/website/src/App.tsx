@@ -1,4 +1,4 @@
-import { Route, Routes } from "@neetly/router";
+import { Route, Routes } from "react-router-dom";
 
 import styles from "./App.module.scss";
 import { AppFooter } from "./components/AppFooter";

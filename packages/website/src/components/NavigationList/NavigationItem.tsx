@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from "@neetly/icons";
-import { Link } from "@neetly/router";
+import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
 
 import styles from "./NavigationItem.module.scss";

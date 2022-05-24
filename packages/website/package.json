@@ -16,14 +16,14 @@
   "dependencies": {
     "@neetly/icons": "workspace:packages/icons",
     "@neetly/palette": "workspace:packages/palette",
-    "@neetly/router": "^1.3.0",
     "@neetly/ui": "workspace:packages/ui",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "ariakit": "2.0.0-next.28",
     "core-js": "^3.22.6",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-router-dom": "6.4.0-pre.2"
   },
   "devDependencies": {
     "@buncho/builder": "^5.4.0",
