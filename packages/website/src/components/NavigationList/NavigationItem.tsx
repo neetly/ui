@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from "@neetly/icons";
-import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./NavigationItem.module.scss";
 

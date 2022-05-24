@@ -1,6 +1,6 @@
 import { LogoIcon } from "@neetly/icons";
-import { Link } from "react-router-dom";
 import { VisuallyHidden } from "@neetly/ui";
+import { Link } from "react-router-dom";
 
 import styles from "./AppHeader.module.scss";
 import LogoTextIcon from "./assets/LogoTextIcon.svg";
