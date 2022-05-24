@@ -7,6 +7,7 @@ export { default as ChevronRightIcon } from "./ChevronRightIcon";
 export { default as ChevronUpIcon } from "./ChevronUpIcon";
 export { default as CloseIcon } from "./CloseIcon";
 export { default as CollapseIcon } from "./CollapseIcon";
+export { default as DownloadIcon } from "./DownloadIcon";
 export { default as ExpandIcon } from "./ExpandIcon";
 export { default as FavoriteIcon } from "./FavoriteIcon";
 export { default as FavoriteOutlineIcon } from "./FavoriteOutlineIcon";
