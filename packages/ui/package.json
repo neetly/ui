@@ -22,7 +22,7 @@
   "dependencies": {
     "@neetly/icons": "workspace:packages/icons",
     "@neetly/palette": "workspace:packages/palette",
-    "ariakit": "2.0.0-next.28",
+    "ariakit": "2.0.0-next.29",
     "classnames": "^2.3.1"
   },
   "peerDependencies": {
