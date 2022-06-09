@@ -2042,7 +2042,7 @@ __metadata:
     core-js: "npm:^3.22.8"
     react: "npm:^18.1.0"
     react-dom: "npm:^18.1.0"
-    react-router-dom: "npm:6.4.0-pre.2"
+    react-router-dom: "npm:6.4.0-pre.6"
     typescript: "npm:^4.7.3"
     typescript-plugin-css-modules: "npm:^3.4.0"
   languageName: unknown
@@ -2235,10 +2235,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "@remix-run/router@npm:0.1.0"
-  checksum: bf1def79a42208caf9b6ea122495dbe780bca328167f4ae422327585f71778e7ca318e0b060626811f896fd73e1e4279180a9cd56e67ac9a35c850fe9daec002
+"@remix-run/router@npm:0.2.0-pre.1":
+  version: 0.2.0-pre.1
+  resolution: "@remix-run/router@npm:0.2.0-pre.1"
+  checksum: 6df9d8af727d0b4bbd7ff13c4febae54d91a2543726e2e64140955fecc34a4fd0aa8044e973349db817a4d8d1594451b552db56073851a4aeb9f2c511eaae238
   languageName: node
   linkType: hard
 
@@ -13737,27 +13737,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:6.4.0-pre.2":
-  version: 6.4.0-pre.2
-  resolution: "react-router-dom@npm:6.4.0-pre.2"
+"react-router-dom@npm:6.4.0-pre.6":
+  version: 6.4.0-pre.6
+  resolution: "react-router-dom@npm:6.4.0-pre.6"
   dependencies:
-    react-router: "npm:6.4.0-pre.2"
+    react-router: "npm:6.4.0-pre.6"
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 59e0439e58d73b1b6bbacd20b81ba8f36836576d948cf8959702403ae49323d04d81013b6a528aa5dc5bbb6dcec10f91d7274cd977656bc9038a74d2e8916a64
+  checksum: 8c2875ee1fe87081594fc8b4740d1ac6dd8a0eee3766444e5a7a890c41bc43ae239af00ebfca3a3586efc6743bf6ab08524d0c120661b1ffc495246a6b71c2d5
   languageName: node
   linkType: hard
 
-"react-router@npm:6.4.0-pre.2":
-  version: 6.4.0-pre.2
-  resolution: "react-router@npm:6.4.0-pre.2"
+"react-router@npm:6.4.0-pre.6":
+  version: 6.4.0-pre.6
+  resolution: "react-router@npm:6.4.0-pre.6"
   dependencies:
-    "@remix-run/router": "npm:^0.1.0"
-    use-sync-external-store: "npm:1.1.0"
+    "@remix-run/router": "npm:0.2.0-pre.1"
   peerDependencies:
     react: ">=16.8"
-  checksum: 88a3c3a8d062e3bf38ac42d4da380009dde29845c218da8861d7277294dfe81f9fce20c40c718fe49206cfd870b054d11383f3f24c246b230158593f1e07b7de
+  checksum: 90c585398fae9379cf71f86e7f7225ab0d3591263ccb9042db2323bb6719e033a60f57109580bf6b0d8b780409544e82ebc0c02d86d48cd582114584317087af
   languageName: node
   linkType: hard
 
@@ -16311,15 +16310,6 @@ __metadata:
     punycode: "npm:1.3.2"
     querystring: "npm:0.2.0"
   checksum: faa2280706858e1223e032eee89a43c832fe95803d9917f5b48a82a92fb8eec5556811fc6acb6d7c90ced0adb36d59331a55df86a27320c21bddd24f24600d3b
-  languageName: node
-  linkType: hard
-
-"use-sync-external-store@npm:1.1.0":
-  version: 1.1.0
-  resolution: "use-sync-external-store@npm:1.1.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 35b1a391ee1f780c4ff6393f6bb432e3034d669fbe57b478a90b685e1f333b705debb56220201624ae209df669b755e2792e9cf438324b4a25ade9e9bdde06ca
   languageName: node
   linkType: hard
 
