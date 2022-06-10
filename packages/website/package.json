@@ -23,7 +23,7 @@
     "core-js": "^3.22.8",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-router-dom": "6.4.0-pre.6"
+    "react-router-dom": "6.4.0-pre.7"
   },
   "devDependencies": {
     "@buncho/builder": "^5.4.0",
