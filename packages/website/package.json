@@ -17,7 +17,7 @@
     "@neetly/icons": "workspace:packages/icons",
     "@neetly/palette": "workspace:packages/palette",
     "@neetly/ui": "workspace:packages/ui",
-    "@types/react": "^18.0.12",
+    "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "ariakit": "2.0.0-next.30",
     "core-js": "^3.23.1",
