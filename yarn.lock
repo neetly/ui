@@ -2037,7 +2037,7 @@ __metadata:
     "@neetly/palette": "workspace:packages/palette"
     "@neetly/ui": "workspace:packages/ui"
     "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
+    "@types/react-dom": "npm:^18.0.6"
     ariakit: "npm:2.0.0-next.31"
     core-js: "npm:^3.23.3"
     react: "npm:^18.2.0"
@@ -2071,7 +2071,7 @@ __metadata:
     "@buncho/builder": "npm:^5.4.0"
     "@svgr/cli": "npm:^6.2.1"
     "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
+    "@types/react-dom": "npm:^18.0.6"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^4.7.4"
@@ -2105,7 +2105,7 @@ __metadata:
     "@neetly/icons": "workspace:packages/icons"
     "@neetly/palette": "workspace:packages/palette"
     "@types/react": "npm:^18.0.14"
-    "@types/react-dom": "npm:^18.0.5"
+    "@types/react-dom": "npm:^18.0.6"
     ariakit: "npm:2.0.0-next.31"
     classnames: "npm:^2.3.1"
     react: "npm:^18.2.0"
@@ -4058,12 +4058,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^18.0.5":
-  version: 18.0.5
-  resolution: "@types/react-dom@npm:18.0.5"
+"@types/react-dom@npm:^18.0.6":
+  version: 18.0.6
+  resolution: "@types/react-dom@npm:18.0.6"
   dependencies:
     "@types/react": "npm:*"
-  checksum: ec0ed6965cd21e78be6111c1ec0090e3be31d81a54aff392f3a2cec3c0b730a7fca21fc1109e92eb8260849f9e3d4ea01f4a9f0e0793a85883b533a8b71a317d
+  checksum: aa49049d928c14bb0268bc7acca2ff5101d9191c73fcb748c0d8a546638bc8d2ce86b32ae57260b72ce5fe4bf2c64775208cf528db1e394768ed5755e261890a
   languageName: node
   linkType: hard
 
