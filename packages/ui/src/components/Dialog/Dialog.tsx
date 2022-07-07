@@ -28,8 +28,8 @@ const Dialog = ({
   ...props
 }: DialogProps) => {
   const state = Ariakit.useDialogState({
-    visible: open,
-    setVisible: () => onClose?.(),
+    open,
+    setOpen: () => onClose?.(),
     animated: 150,
   });
 
