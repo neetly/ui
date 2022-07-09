@@ -6,7 +6,7 @@ from ruamel.yaml.scalarstring import DoubleQuotedScalarString
 from .lib.hct import *
 from .lib.yaml_utils import *
 
-schema = YAML_read("./data/palette_schema.yaml")
+schema = YAML_read("./data/palette/schema.yaml")
 
 
 palette = []
@@ -32,4 +32,4 @@ for items in itertools.product(*schema):
     palette.append({"name": name, "color": DoubleQuotedScalarString(HEX)})
 
 
-YAML_write("./data/palette.yaml", palette)
+YAML_write("./data/palette/palette.yaml", palette)

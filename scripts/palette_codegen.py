@@ -3,7 +3,7 @@ import os
 
 from .lib.yaml_utils import *
 
-palette = YAML_read("./data/palette.yaml")
+palette = YAML_read("./data/palette/palette.yaml")
 
 
 def get_id(name: str) -> str:
