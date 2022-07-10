@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { spawnSync } from "child_process";
 import { clampChroma, formatHex } from "culori";
 import fs from "fs";
 
@@ -23,3 +24,7 @@ for (const role of schema.roles) {
 }
 
 fs.writeFileSync("./data/palette/palette.json", JSON.stringify(palette));
+
+spawnSync("yarn", ["prettier", "--write", "./data/palette/palette.json"], {
+  stdio: "inherit",
+});
