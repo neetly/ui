@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { spawnSync } from "child_process";
-import { clampChroma, formatHex, oklch } from "culori";
+import { clampChroma, formatHex, lch, oklch, xyz50 } from "culori";
 import fs from "fs";
 
 const schema = JSON.parse(fs.readFileSync("./data/palette/schema.json"));
@@ -9,8 +9,10 @@ const schema = JSON.parse(fs.readFileSync("./data/palette/schema.json"));
 const palette = [];
 for (const role of schema.roles) {
   for (const tone of schema.tones) {
+    const luminance = xyz50(lch({ l: tone.tone })).y ?? 0;
+
     const color = oklch({
-      l: (tone.tone / 100) * 0.85 + 0.15,
+      l: Math.cbrt(luminance),
       c: (role.chroma / 100) * 0.3,
       h: role.hue,
     });
