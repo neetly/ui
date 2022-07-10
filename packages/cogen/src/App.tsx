@@ -1,5 +1,5 @@
 import { TextField } from "@neetly/ui";
-import { clampChroma, formatHex, oklch } from "culori";
+import { clampChroma, formatHex, lch, oklch } from "culori";
 import type { ChangeEvent } from "react";
 import { useMemo, useState } from "react";
 
@@ -12,9 +12,26 @@ type ColorStop = {
 
 const App = () => {
   const [hue, setHue] = useState(0);
-  const [chroma, setChroma] = useState(0);
+  const [chroma, setChroma] = useState(50);
 
-  const colorStops = useMemo(() => {
+  const labColorStops = useMemo(() => {
+    const colorStops: ColorStop[] = [];
+    for (let offset = 0; offset <= 1; offset += 0.1) {
+      const color = lch({
+        l: offset * 100,
+        c: chroma,
+        h: hue,
+      });
+
+      colorStops.push({
+        offset,
+        color: formatHex(clampChroma(color, "lch")),
+      });
+    }
+    return colorStops;
+  }, [hue, chroma]);
+
+  const oklabColorStops = useMemo(() => {
     const colorStops: ColorStop[] = [];
     for (let offset = 0; offset <= 1; offset += 0.1) {
       const color = oklch({
@@ -55,14 +72,29 @@ const App = () => {
         />
       </div>
 
-      <div
-        className={styles.preview}
-        style={{
-          "--preview": `linear-gradient(to left, ${colorStops
-            .map(({ offset, color }) => `${color} ${offset * 100}%`)
-            .join(", ")})`,
-        }}
-      />
+      <section className={styles.preview}>
+        L*a*b*
+        <div
+          className={styles.previewImage}
+          style={{
+            "--image": `linear-gradient(to left, ${labColorStops
+              .map(({ offset, color }) => `${color} ${offset * 100}%`)
+              .join(", ")})`,
+          }}
+        />
+      </section>
+
+      <section className={styles.preview}>
+        Oklab
+        <div
+          className={styles.previewImage}
+          style={{
+            "--image": `linear-gradient(to left, ${oklabColorStops
+              .map(({ offset, color }) => `${color} ${offset * 100}%`)
+              .join(", ")})`,
+          }}
+        />
+      </section>
     </main>
   );
 };

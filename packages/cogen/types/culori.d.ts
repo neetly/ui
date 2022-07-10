@@ -6,6 +6,7 @@ declare module "culori" {
 
   type ColorLike = Color | string;
 
+  const lch: (value: { l: number; c: number; h: number }) => Color;
   const oklch: (value: { l: number; c: number; h: number }) => Color;
 
   const clampChroma: (color: ColorLike, mode?: string) => Color;
@@ -13,5 +14,5 @@ declare module "culori" {
   const formatHex: (color: ColorLike) => string;
 
   export type { Color };
-  export { clampChroma, formatHex, oklch };
+  export { clampChroma, formatHex, lch, oklch };
 }
