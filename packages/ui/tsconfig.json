@@ -8,16 +8,7 @@
     "outDir": "./lib",
 
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["@buncho/builder", "@storybook/react"],
-
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
-
-    // Make typescript-plugin-css-modules happy
-    "baseUrl": ".",
-    "paths": {
-      "@neetly/ui": ["./src/index.scss"],
-      "@neetly/palette": ["../palette/src/index.scss"]
-    }
+    "types": ["@buncho/builder", "@storybook/react"]
   },
 
   "references": [{ "path": "../palette" }, { "path": "../icons" }]
