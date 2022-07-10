@@ -14,23 +14,6 @@ const App = () => {
   const [hue, setHue] = useState(0);
   const [chroma, setChroma] = useState(50);
 
-  const labColorStops = useMemo(() => {
-    const colorStops: ColorStop[] = [];
-    for (let offset = 0; offset <= 1; offset += 0.1) {
-      const color = lch({
-        l: offset * 100,
-        c: chroma,
-        h: hue,
-      });
-
-      colorStops.push({
-        offset,
-        color: formatHex(clampChroma(color, "lch")),
-      });
-    }
-    return colorStops;
-  }, [hue, chroma]);
-
   const oklabColorStops = useMemo(() => {
     const colorStops: ColorStop[] = [];
     for (let offset = 0; offset <= 1; offset += 0.1) {
@@ -43,6 +26,23 @@ const App = () => {
       colorStops.push({
         offset,
         color: formatHex(clampChroma(color, "oklch")),
+      });
+    }
+    return colorStops;
+  }, [hue, chroma]);
+
+  const labColorStops = useMemo(() => {
+    const colorStops: ColorStop[] = [];
+    for (let offset = 0; offset <= 1; offset += 0.1) {
+      const color = lch({
+        l: offset * 100,
+        c: chroma,
+        h: hue,
+      });
+
+      colorStops.push({
+        offset,
+        color: formatHex(clampChroma(color, "lch")),
       });
     }
     return colorStops;
@@ -73,11 +73,11 @@ const App = () => {
       </div>
 
       <section className={styles.preview}>
-        L*a*b*
+        <h2 className={styles.previewName}>Oklab</h2>
         <div
           className={styles.previewImage}
           style={{
-            "--image": `linear-gradient(to left, ${labColorStops
+            "--image": `linear-gradient(to left, ${oklabColorStops
               .map(({ offset, color }) => `${color} ${offset * 100}%`)
               .join(", ")})`,
           }}
@@ -85,11 +85,11 @@ const App = () => {
       </section>
 
       <section className={styles.preview}>
-        Oklab
+        <h2 className={styles.previewName}>CIELAB</h2>
         <div
           className={styles.previewImage}
           style={{
-            "--image": `linear-gradient(to left, ${oklabColorStops
+            "--image": `linear-gradient(to left, ${labColorStops
               .map(({ offset, color }) => `${color} ${offset * 100}%`)
               .join(", ")})`,
           }}

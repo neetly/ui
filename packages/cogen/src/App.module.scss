@@ -1,5 +1,7 @@
 @use "sass:color";
 
+@use "@neetly/ui";
+
 .app {
   display: grid;
   gap: 1rem;
@@ -17,7 +19,15 @@
 
 .preview {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.25rem;
+}
+
+.previewName {
+  margin: 0;
+
+  @include ui.typography-ui(0.875rem, semibold);
+
+  color: ui.$color-neutral-variant;
 }
 
 .previewImage {
