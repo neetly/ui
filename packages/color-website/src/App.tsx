@@ -13,21 +13,18 @@ type ColorStop = {
 const App = () => {
   const [hue, setHue] = useState(0);
   const [chroma, setChroma] = useState(50);
+  const [lightness, setLightness] = useState(50);
+
+  const color = useMemo(() => {
+    return getColor(hue, chroma, lightness);
+  }, [hue, chroma, lightness]);
 
   const colorStops = useMemo(() => {
     const colorStops: ColorStop[] = [];
     for (let offset = 0; offset <= 1; offset += 0.1) {
-      const luminance = xyz50(lch({ l: offset * 100 })).y as number;
-
-      const color = oklch({
-        l: Math.cbrt(luminance),
-        c: (chroma / 100) * 0.3,
-        h: hue,
-      });
-
       colorStops.push({
         offset,
-        color: formatHex(clampChroma(color, "oklch")),
+        color: getColor(hue, chroma, offset * 100),
       });
     }
     return colorStops;
@@ -35,7 +32,7 @@ const App = () => {
 
   return (
     <main className={styles.app}>
-      <div className={styles.fields}>
+      <div className={styles.controller}>
         <TextField
           label="Hue (0–360)"
           type="number"
@@ -43,7 +40,7 @@ const App = () => {
           max={360}
           value={hue}
           onChange={(event: ChangeEvent<HTMLInputElement>) => {
-            setHue(Number(event.target.value));
+            setHue(clamp(Number(event.target.value), 0, 360));
           }}
         />
         <TextField
@@ -53,24 +50,58 @@ const App = () => {
           max={100}
           value={chroma}
           onChange={(event: ChangeEvent<HTMLInputElement>) => {
-            setChroma(Number(event.target.value));
+            setChroma(clamp(Number(event.target.value), 0, 100));
           }}
         />
+        <TextField
+          label="Lightness (0–100)"
+          type="number"
+          min={0}
+          max={100}
+          value={lightness}
+          onChange={(event: ChangeEvent<HTMLInputElement>) => {
+            setLightness(clamp(Number(event.target.value), 0, 100));
+          }}
+        />
+        <section className={styles.color}>
+          <h2 className={styles.colorLabel}>Color</h2>
+          <div className={styles.colorPreview} style={{ "--color": color }} />
+          <div className={styles.colorValue}>{color.toUpperCase()}</div>
+        </section>
       </div>
 
       <section className={styles.preview}>
-        <h2 className={styles.previewName}>Preview</h2>
+        <h2 className={styles.previewLabel}>Preview</h2>
         <div
           className={styles.previewImage}
           style={{
-            "--image": `linear-gradient(to left, ${colorStops
+            "--image": `linear-gradient(to right, ${colorStops
               .map(({ offset, color }) => `${color} ${offset * 100}%`)
               .join(", ")})`,
+            "--offset": `${lightness}%`,
           }}
         />
       </section>
     </main>
   );
+};
+
+const clamp = (value: number, min: number, max: number) => {
+  if (value < min) return min;
+  if (value > max) return max;
+  return value;
+};
+
+const getColor = (hue: number, chroma: number, lightness: number) => {
+  const luminance = xyz50(lch({ l: lightness })).y as number;
+
+  const color = oklch({
+    l: Math.cbrt(luminance),
+    c: (chroma / 100) * 0.3,
+    h: hue,
+  });
+
+  return formatHex(clampChroma(color, "oklch"));
 };
 
 export { App };
