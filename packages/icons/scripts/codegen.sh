@@ -7,7 +7,7 @@ yarn svgr \
   --typescript \
   --jsx-runtime automatic \
   --svg-props "aria-hidden={true}" \
-  --no-svgo \
+  --svgo-config ./scripts/svgo.config.js \
   --no-prettier \
   ../../data/icons \
   --out-dir ./src/generated
