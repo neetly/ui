@@ -2055,6 +2055,7 @@ __metadata:
     "@prettier/plugin-xml": "npm:^2.2.0"
     "@typescript-eslint/eslint-plugin": "npm:^5.30.5"
     "@typescript-eslint/parser": "npm:^5.30.5"
+    culori: "npm:^2.0.3"
     eslint: "npm:^8.19.0"
     prettier: "npm:^2.7.1"
     svgo: "npm:^2.8.0"
@@ -7124,6 +7125,13 @@ __metadata:
   version: 3.0.11
   resolution: "csstype@npm:3.0.11"
   checksum: ccd37e0844961770c0aeb97183f2f66418173e3ce243314594b6adbc6a33676534c686585fabfa3e824ef39e75b4b633d8626de50099d44f144c494bb2fbe75f
+  languageName: node
+  linkType: hard
+
+"culori@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "culori@npm:2.0.3"
+  checksum: 7d40cf8876595753f3d1e97aa51f3755a38f2c4c8aa650873bdf23257b2f9c730390543d4dcc311684f793e4b367e1d800c92ee28c1a609928b0e7ae94e70306
   languageName: node
   linkType: hard
 
