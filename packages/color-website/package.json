@@ -1,11 +1,11 @@
 {
-  "name": "@neetly/cogen",
+  "name": "@neetly/design-color-website",
   "private": true,
   "homepage": "https://github.com/neetly/design",
   "repository": {
     "type": "git",
     "url": "git@github.com:neetly/design.git",
-    "directory": "packages/cogen"
+    "directory": "packages/color-website"
   },
   "license": "Apache-2.0",
   "scripts": {
