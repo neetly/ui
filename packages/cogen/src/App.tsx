@@ -1,5 +1,5 @@
 import { TextField } from "@neetly/ui";
-import { clampChroma, formatHex, lch, oklch } from "culori";
+import { clampChroma, formatHex, lch, oklch, xyz50 } from "culori";
 import type { ChangeEvent } from "react";
 import { useMemo, useState } from "react";
 
@@ -14,11 +14,13 @@ const App = () => {
   const [hue, setHue] = useState(0);
   const [chroma, setChroma] = useState(50);
 
-  const oklabColorStops = useMemo(() => {
+  const colorStops = useMemo(() => {
     const colorStops: ColorStop[] = [];
     for (let offset = 0; offset <= 1; offset += 0.1) {
+      const luminance = xyz50(lch({ l: offset * 100 })).y ?? 0;
+
       const color = oklch({
-        l: offset * 0.85 + 0.15,
+        l: Math.cbrt(luminance),
         c: (chroma / 100) * 0.3,
         h: hue,
       });
@@ -26,23 +28,6 @@ const App = () => {
       colorStops.push({
         offset,
         color: formatHex(clampChroma(color, "oklch")),
-      });
-    }
-    return colorStops;
-  }, [hue, chroma]);
-
-  const labColorStops = useMemo(() => {
-    const colorStops: ColorStop[] = [];
-    for (let offset = 0; offset <= 1; offset += 0.1) {
-      const color = lch({
-        l: offset * 100,
-        c: chroma,
-        h: hue,
-      });
-
-      colorStops.push({
-        offset,
-        color: formatHex(clampChroma(color, "lch")),
       });
     }
     return colorStops;
@@ -62,9 +47,10 @@ const App = () => {
           }}
         />
         <TextField
-          label="Chroma (0–)"
+          label="Chroma (0–100)"
           type="number"
           min={0}
+          max={100}
           value={chroma}
           onChange={(event: ChangeEvent<HTMLInputElement>) => {
             setChroma(Number(event.target.value));
@@ -73,23 +59,11 @@ const App = () => {
       </div>
 
       <section className={styles.preview}>
-        <h2 className={styles.previewName}>Oklab</h2>
+        <h2 className={styles.previewName}>Preview</h2>
         <div
           className={styles.previewImage}
           style={{
-            "--image": `linear-gradient(to left, ${oklabColorStops
-              .map(({ offset, color }) => `${color} ${offset * 100}%`)
-              .join(", ")})`,
-          }}
-        />
-      </section>
-
-      <section className={styles.preview}>
-        <h2 className={styles.previewName}>CIELAB</h2>
-        <div
-          className={styles.previewImage}
-          style={{
-            "--image": `linear-gradient(to left, ${labColorStops
+            "--image": `linear-gradient(to left, ${colorStops
               .map(({ offset, color }) => `${color} ${offset * 100}%`)
               .join(", ")})`,
           }}

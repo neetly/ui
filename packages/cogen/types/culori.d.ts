@@ -1,18 +1,64 @@
 declare module "culori" {
-  type Color = {
-    mode: string;
-    [key: string]: unknown;
+  type Color<Mode extends string = string, Keys extends string = string> = {
+    mode: Mode;
+  } & {
+    [key in Keys | "alpha"]?: string extends Keys ? Mode | number : number;
   };
 
-  type ColorLike = Color | string;
+  type ColorLike<Mode extends string = string, Keys extends string = string> =
+    | Color<Mode, Keys>
+    | Mode;
 
-  const lch: (value: { l: number; c: number; h: number }) => Color;
-  const oklch: (value: { l: number; c: number; h: number }) => Color;
+  type ColorValue<Keys extends string = string> = {
+    [key in Keys | "alpha"]?: number;
+  };
 
-  const clampChroma: (color: ColorLike, mode?: string) => Color;
+  type ColorFunction<Mode extends string, Keys extends string> = (
+    color: ColorLike | ColorValue<Keys>,
+  ) => Color<Mode, Keys>;
 
+  const lab: ColorFunction<"lab", "l" | "a" | "b">;
+  const lch: ColorFunction<"lch", "l" | "c" | "h">;
+  const oklab: ColorFunction<"oklab", "l" | "a" | "b">;
+  const oklch: ColorFunction<"oklch", "l" | "c" | "h">;
+  const xyz50: ColorFunction<"xyz50", "x" | "y" | "z">;
+  const xyz65: ColorFunction<"xyz65", "x" | "y" | "z">;
+
+  const formatCss: (color: ColorLike) => string;
   const formatHex: (color: ColorLike) => string;
+  const formatHex8: (color: ColorLike) => string;
+  const formatHsl: (color: ColorLike) => string;
+  const formatRgb: (color: ColorLike) => string;
 
-  export type { Color };
-  export { clampChroma, formatHex, lch, oklch };
+  const displayable: (color: ColorLike) => boolean;
+
+  const clampRgb: <Mode extends string = string, Keys extends string = string>(
+    color: ColorLike<Mode, Keys>,
+  ) => Color<Mode, Keys>;
+
+  const clampChroma: <
+    Mode extends string = string,
+    Keys extends string = string,
+  >(
+    color: ColorLike<Mode, Keys>,
+    mode?: string,
+  ) => Color<Mode, Keys>;
+
+  export type { Color, ColorFunction, ColorLike, ColorValue };
+  export {
+    clampChroma,
+    clampRgb,
+    displayable,
+    formatCss,
+    formatHex,
+    formatHex8,
+    formatHsl,
+    formatRgb,
+    lab,
+    lch,
+    oklab,
+    oklch,
+    xyz50,
+    xyz65,
+  };
 }
