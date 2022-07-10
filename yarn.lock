@@ -2026,6 +2026,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@neetly/cogen@workspace:packages/cogen":
+  version: 0.0.0-use.local
+  resolution: "@neetly/cogen@workspace:packages/cogen"
+  dependencies:
+    "@buncho/builder": "npm:^5.5.0"
+    "@neetly/ui": "workspace:packages/ui"
+    "@types/react": "npm:^18.0.15"
+    "@types/react-dom": "npm:^18.0.6"
+    culori: "npm:^2.0.3"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^4.7.4"
+    typescript-plugin-css-modules: "npm:^3.4.0"
+  languageName: unknown
+  linkType: soft
+
 "@neetly/design-website@workspace:packages/website":
   version: 0.0.0-use.local
   resolution: "@neetly/design-website@workspace:packages/website"

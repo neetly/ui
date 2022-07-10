@@ -1,0 +1,29 @@
+{
+  "name": "@neetly/cogen",
+  "private": true,
+  "homepage": "https://github.com/neetly/design",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:neetly/design.git",
+    "directory": "packages/cogen"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "run --top-level tsc --build && app start",
+    "build": "run --top-level tsc --build && app build",
+    "clean": "app clean"
+  },
+  "dependencies": {
+    "@neetly/ui": "workspace:packages/ui",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "culori": "^2.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@buncho/builder": "^5.5.0",
+    "typescript": "^4.7.4",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
+}
