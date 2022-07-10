@@ -23,17 +23,17 @@
   ],
 
   "tones": [
-    { "id": "10", "tone": 99 },
-    { "id": "20", "tone": 98 },
-    { "id": "50", "tone": 95 },
-    { "id": "100", "tone": 90 },
-    { "id": "200", "tone": 80 },
-    { "id": "300", "tone": 70 },
-    { "id": "400", "tone": 60 },
-    { "id": "500", "tone": 50 },
-    { "id": "600", "tone": 40 },
-    { "id": "700", "tone": 30 },
-    { "id": "800", "tone": 20 },
-    { "id": "900", "tone": 10 }
+    { "id": "10", "lightness": 99 },
+    { "id": "20", "lightness": 98 },
+    { "id": "50", "lightness": 95 },
+    { "id": "100", "lightness": 90 },
+    { "id": "200", "lightness": 80 },
+    { "id": "300", "lightness": 70 },
+    { "id": "400", "lightness": 60 },
+    { "id": "500", "lightness": 50 },
+    { "id": "600", "lightness": 40 },
+    { "id": "700", "lightness": 30 },
+    { "id": "800", "lightness": 20 },
+    { "id": "900", "lightness": 10 }
   ]
 }
