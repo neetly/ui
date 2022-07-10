@@ -1,7 +1,7 @@
 {
   "extends": "@buncho/tsconfig",
 
-  "include": ["./src"],
+  "include": ["./src", "./types"],
 
   "compilerOptions": {
     "rootDir": "./src",
