@@ -17,7 +17,7 @@ const App = () => {
   const colorStops = useMemo(() => {
     const colorStops: ColorStop[] = [];
     for (let offset = 0; offset <= 1; offset += 0.1) {
-      const luminance = xyz50(lch({ l: offset * 100 })).y ?? 0;
+      const luminance = xyz50(lch({ l: offset * 100 })).y as number;
 
       const color = oklch({
         l: Math.cbrt(luminance),

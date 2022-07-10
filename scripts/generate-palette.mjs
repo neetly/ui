@@ -9,7 +9,7 @@ const schema = JSON.parse(fs.readFileSync("./data/palette/schema.json"));
 const palette = [];
 for (const role of schema.roles) {
   for (const tone of schema.tones) {
-    const luminance = xyz50(lch({ l: tone.tone })).y ?? 0;
+    const luminance = xyz50(lch({ l: tone.tone })).y;
 
     const color = oklch({
       l: Math.cbrt(luminance),
