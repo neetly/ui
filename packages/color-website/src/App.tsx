@@ -12,8 +12,8 @@ type ColorStop = {
 
 const App = () => {
   const [hue, setHue] = useState(0);
-  const [chroma, setChroma] = useState(50);
-  const [lightness, setLightness] = useState(50);
+  const [chroma, setChroma] = useState(80);
+  const [lightness, setLightness] = useState(60);
 
   const color = useMemo(() => {
     return getColor(hue, chroma, lightness);
