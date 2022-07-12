@@ -2077,7 +2077,7 @@ __metadata:
     "@neetly/ui": "workspace:packages/ui"
     "@types/react": "npm:^18.0.15"
     "@types/react-dom": "npm:^18.0.6"
-    ariakit: "npm:2.0.0-next.32"
+    ariakit: "npm:2.0.0-next.33"
     core-js: "npm:^3.23.4"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -2146,7 +2146,7 @@ __metadata:
     "@neetly/palette": "workspace:packages/palette"
     "@types/react": "npm:^18.0.15"
     "@types/react-dom": "npm:^18.0.6"
-    ariakit: "npm:2.0.0-next.32"
+    ariakit: "npm:2.0.0-next.33"
     classnames: "npm:^2.3.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
@@ -5197,25 +5197,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ariakit-utils@npm:0.17.0-next.22":
-  version: 0.17.0-next.22
-  resolution: "ariakit-utils@npm:0.17.0-next.22"
+"ariakit-utils@npm:0.17.0-next.23":
+  version: 0.17.0-next.23
+  resolution: "ariakit-utils@npm:0.17.0-next.23"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
-  checksum: ff7a2a52ae834ea134522cc84a10eb9a134dce5aef77274fcd7b75fd0ada2453d5ef971051a04c54aed0943321d7336473143ef0f0859a9d806d449ce738dc76
+  checksum: ce0e994e0bbc89295203d3a6d7a288667ccde34ce2de849bb5161a93c80ef8e99d77137ed99b489e30d55e34896ced230f26279b49fc8453cde8cb6284bcf5c2
   languageName: node
   linkType: hard
 
-"ariakit@npm:2.0.0-next.32":
-  version: 2.0.0-next.32
-  resolution: "ariakit@npm:2.0.0-next.32"
+"ariakit@npm:2.0.0-next.33":
+  version: 2.0.0-next.33
+  resolution: "ariakit@npm:2.0.0-next.33"
   dependencies:
     "@floating-ui/dom": "npm:0.5.4"
-    ariakit-utils: "npm:0.17.0-next.22"
+    ariakit-utils: "npm:0.17.0-next.23"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
     react-dom: ^17.0.0 || ^18.0.0
-  checksum: 2f4539ec2956e88258f5066293165681cccfcdfbe30346f16bedfc312b150ad900e1263d1582ba99bb6dd60373becb9a12526309f481bcd2bf5f3d8666551d22
+  checksum: 6a041832d5fab7c03b831f5f9af6d69854a48a255f5e62b85c2327357d548120968bbb24e5b2932a91c5f34ed425cf195477c46f2bf7fb19755b1e4d3ad4f535
   languageName: node
   linkType: hard
 
