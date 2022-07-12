@@ -1,6 +1,6 @@
 {
   "name": "@neetly/colorspace",
-  "version": "0.0.0",
+  "private": true,
   "homepage": "https://github.com/neetly/design",
   "repository": {
     "type": "git",
@@ -14,8 +14,7 @@
   ],
   "scripts": {
     "build": "lib build",
-    "clean": "lib clean",
-    "prepack": "run clean && run build && cp ../../LICENSE ."
+    "clean": "lib clean"
   },
   "dependencies": {
     "culori": "^2.0.3"

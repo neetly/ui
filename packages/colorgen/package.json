@@ -1,6 +1,6 @@
 {
   "name": "@neetly/colorgen",
-  "version": "0.0.0",
+  "private": true,
   "homepage": "https://github.com/neetly/design",
   "repository": {
     "type": "git",
@@ -16,8 +16,7 @@
   ],
   "scripts": {
     "build": "lib build",
-    "clean": "lib clean",
-    "prepack": "run clean && run build && cp ../../LICENSE ."
+    "clean": "lib clean"
   },
   "dependencies": {
     "@neetly/colorspace": "workspace:packages/colorspace",
