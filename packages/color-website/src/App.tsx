@@ -1,5 +1,5 @@
+import { getColor } from "@neetly/colorspace";
 import { TextField } from "@neetly/ui";
-import { clampChroma, formatHex, lch, oklch, xyz50 } from "culori";
 import type { ChangeEvent } from "react";
 import { useMemo, useState } from "react";
 
@@ -90,18 +90,6 @@ const clamp = (value: number, min: number, max: number) => {
   if (value < min) return min;
   if (value > max) return max;
   return value;
-};
-
-const getColor = (hue: number, chroma: number, lightness: number) => {
-  const luminance = xyz50(lch({ l: lightness })).y as number;
-
-  const color = oklch({
-    l: Math.cbrt(luminance),
-    c: (chroma / 100) * 0.3,
-    h: hue,
-  });
-
-  return formatHex(clampChroma(color, "oklch"));
 };
 
 export { App };

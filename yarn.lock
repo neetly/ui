@@ -2026,15 +2026,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@neetly/colorspace@workspace:packages/colorspace":
+  version: 0.0.0-use.local
+  resolution: "@neetly/colorspace@workspace:packages/colorspace"
+  dependencies:
+    "@buncho/builder": "npm:^5.5.0"
+    culori: "npm:^2.0.3"
+    typescript: "npm:^4.7.4"
+  languageName: unknown
+  linkType: soft
+
 "@neetly/design-color-website@workspace:packages/color-website":
   version: 0.0.0-use.local
   resolution: "@neetly/design-color-website@workspace:packages/color-website"
   dependencies:
     "@buncho/builder": "npm:^5.5.0"
+    "@neetly/colorspace": "workspace:packages/colorspace"
     "@neetly/ui": "workspace:packages/ui"
     "@types/react": "npm:^18.0.15"
     "@types/react-dom": "npm:^18.0.6"
-    culori: "npm:^2.0.3"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^4.7.4"
