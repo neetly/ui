@@ -24,7 +24,6 @@
 
   "tones": [
     { "id": "10", "lightness": 99 },
-    { "id": "20", "lightness": 98 },
     { "id": "50", "lightness": 95 },
     { "id": "100", "lightness": 90 },
     { "id": "200", "lightness": 80 },
