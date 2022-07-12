@@ -1593,7 +1593,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@buncho/babel-preset@npm:3.0.0":
+"@buncho/babel-preset@npm:3.0.0, @buncho/babel-preset@npm:^3.0.0":
   version: 3.0.0
   resolution: "@buncho/babel-preset@npm:3.0.0"
   dependencies:
@@ -1685,7 +1685,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@buncho/register@npm:1.1.0":
+"@buncho/register@npm:1.1.0, @buncho/register@npm:^1.1.0":
   version: 1.1.0
   resolution: "@buncho/register@npm:1.1.0"
   dependencies:
@@ -2026,6 +2026,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@neetly/colorgen@workspace:packages/colorgen":
+  version: 0.0.0-use.local
+  resolution: "@neetly/colorgen@workspace:packages/colorgen"
+  dependencies:
+    "@buncho/babel-preset": "npm:^3.0.0"
+    "@buncho/builder": "npm:^5.5.0"
+    "@buncho/register": "npm:^1.1.0"
+    "@neetly/colorspace": "workspace:packages/colorspace"
+    "@types/node": "npm:^18.0.3"
+    clipanion: "npm:^3.1.0"
+    typescript: "npm:^4.7.4"
+  bin:
+    colorgen: ./bin/index.js
+  languageName: unknown
+  linkType: soft
+
 "@neetly/colorspace@workspace:packages/colorspace":
   version: 0.0.0-use.local
   resolution: "@neetly/colorspace@workspace:packages/colorspace"
@@ -2076,10 +2092,10 @@ __metadata:
   dependencies:
     "@buncho/eslint-config": "npm:^6.0.0"
     "@buncho/tsconfig": "npm:^2.0.0"
+    "@neetly/colorgen": "workspace:packages/colorgen"
     "@prettier/plugin-xml": "npm:^2.2.0"
     "@typescript-eslint/eslint-plugin": "npm:^5.30.5"
     "@typescript-eslint/parser": "npm:^5.30.5"
-    culori: "npm:^2.0.3"
     eslint: "npm:^8.19.0"
     prettier: "npm:^2.7.1"
     svgo: "npm:^2.8.0"
@@ -4020,6 +4036,13 @@ __metadata:
   version: 16.11.36
   resolution: "@types/node@npm:16.11.36"
   checksum: aad06d669db1f0ac0c03e21128e20617e9388c4972202e5d2feb960a3dcfafb9eae66599448300cdacc60c075f5e25a393ae66414faa55433e152cf9d42043ae
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.0.3":
+  version: 18.0.3
+  resolution: "@types/node@npm:18.0.3"
+  checksum: 2b50e8bd0208dc099424eb1192415b76a6530b24bf7d28344f4be8f59ad1c45bd8788db15ef6e67873bd9e499f2ff235c698f33c5a6d1465012e620580085064
   languageName: node
   linkType: hard
 

@@ -62,3 +62,7 @@ declare module "culori" {
     xyz65,
   };
 }
+
+declare module "culori/require" {
+  export * from "culori";
+}
