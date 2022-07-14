@@ -41,6 +41,6 @@
 
 .closeButton {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  inset-block-start: 1rem;
+  inset-inline-end: 1rem;
 }

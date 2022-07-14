@@ -47,7 +47,8 @@
 
   position: relative;
   min-height: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
   border-radius: 0.5rem;
 
   @include ui.typography-ui(1rem, medium);
@@ -60,11 +61,11 @@
   transition: background-color 150ms;
 
   &[data-icon-before] {
-    padding-left: 2.5rem;
+    padding-inline-start: 2.5rem;
   }
 
   &[data-icon-after] {
-    padding-right: 2.5rem;
+    padding-inline-end: 2.5rem;
   }
 
   &::placeholder {
@@ -94,11 +95,11 @@
 }
 
 .iconBefore {
-  left: 0.5rem;
-  top: 0.5rem;
+  inset-block-start: 0.5rem;
+  inset-inline-start: 0.5rem;
 }
 
 .iconAfter {
-  right: 0.5rem;
-  top: 0.5rem;
+  inset-block-start: 0.5rem;
+  inset-inline-end: 0.5rem;
 }
