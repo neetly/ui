@@ -22,7 +22,7 @@ const Checkbox = forwardRef(
     return (
       <label
         className={classNames(styles.container, className)}
-        data-disabled={disabled ? "" : null}
+        data-disabled={disabled ? "" : undefined}
       >
         <input
           ref={forwardedRef}

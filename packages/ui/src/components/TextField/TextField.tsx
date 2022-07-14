@@ -33,14 +33,14 @@ const TextField = createPolymorphicComponent(
     return (
       <label
         className={classNames(styles.container, className)}
-        data-disabled={disabled ? "" : null}
+        data-disabled={disabled ? "" : undefined}
       >
         <span className={styles.label}>{label}</span>
         <span className={styles.content}>
           <Component
             className={styles.textField}
-            data-icon-before={IconBefore ? "" : null}
-            data-icon-after={IconAfter ? "" : null}
+            data-icon-before={IconBefore ? "" : undefined}
+            data-icon-after={IconAfter ? "" : undefined}
             disabled={disabled}
             {...props}
           />
