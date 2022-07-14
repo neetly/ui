@@ -19,6 +19,8 @@ const Checkbox = forwardRef(
     { className, label, disabled, ...props }: CheckboxProps,
     forwardedRef: ForwardedRef<HTMLInputElement>,
   ) => {
+    const hasLabel = label !== null && label !== undefined;
+
     return (
       <label
         className={classNames(styles.container, className)}
@@ -36,7 +38,7 @@ const Checkbox = forwardRef(
             <CheckboxCheckedIcon className={styles.checkedIcon} />
           </span>
         </span>
-        <span className={styles.label}>{label}</span>
+        {hasLabel && <span className={styles.label}>{label}</span>}
       </label>
     );
   },

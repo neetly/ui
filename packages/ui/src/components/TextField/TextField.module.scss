@@ -2,8 +2,9 @@
 
 .container {
   display: inline-grid;
-  grid-template-rows: auto 1fr;
-  user-select: none;
+  grid-template:
+    "label" auto
+    "content" 1fr;
   transition: opacity 150ms;
 
   &[data-disabled] {
@@ -12,6 +13,8 @@
 }
 
 .label {
+  grid-area: label;
+
   @include ui.typography-ui(0.875rem, semibold);
 
   color: ui.$color-neutral-variant;
@@ -26,6 +29,8 @@
 .content {
   position: relative;
   display: grid;
+  grid-area: content;
+  user-select: none;
 
   &::before {
     content: "";

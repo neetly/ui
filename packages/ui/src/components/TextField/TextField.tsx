@@ -36,14 +36,18 @@ const TextField = createPolymorphicComponent(
     const defaultId = useId();
     id ??= defaultId;
 
+    const hasLabel = label !== null && label !== undefined;
+
     return (
       <span
         className={classNames(styles.container, className)}
         data-disabled={disabled ? "" : undefined}
       >
-        <label className={styles.label} htmlFor={id}>
-          {label}
-        </label>
+        {hasLabel && (
+          <label className={styles.label} htmlFor={id}>
+            {label}
+          </label>
+        )}
         <span className={styles.content}>
           <Component
             id={id}

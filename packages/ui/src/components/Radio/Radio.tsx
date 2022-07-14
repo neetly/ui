@@ -19,6 +19,8 @@ const Radio = forwardRef(
     { className, label, disabled, ...props }: RadioProps,
     forwardedRef: ForwardedRef<HTMLInputElement>,
   ) => {
+    const hasLabel = label !== null && label !== undefined;
+
     return (
       <label
         className={classNames(styles.container, className)}
@@ -36,7 +38,7 @@ const Radio = forwardRef(
             <RadioCheckedIcon className={styles.checkedIcon} />
           </span>
         </span>
-        <span className={styles.label}>{label}</span>
+        {hasLabel && <span className={styles.label}>{label}</span>}
       </label>
     );
   },
