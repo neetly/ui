@@ -1,10 +1,10 @@
 {
   "name": "@neetly/colorspace",
   "private": true,
-  "homepage": "https://github.com/neetly/design",
+  "homepage": "https://github.com/neetly/ui",
   "repository": {
     "type": "git",
-    "url": "git@github.com:neetly/design.git",
+    "url": "git@github.com:neetly/ui.git",
     "directory": "packages/colorspace"
   },
   "license": "Apache-2.0",

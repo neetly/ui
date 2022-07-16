@@ -1,17 +1,17 @@
 {
-  "name": "@neetly/design",
+  "name": "@neetly/ui-repo",
   "private": true,
   "workspaces": [
     "./packages/*"
   ],
-  "homepage": "https://github.com/neetly/design",
+  "homepage": "https://github.com/neetly/ui",
   "repository": {
     "type": "git",
-    "url": "git@github.com:neetly/design.git"
+    "url": "git@github.com:neetly/ui.git"
   },
   "license": "Apache-2.0",
   "scripts": {
-    "start": "yarn workspace @neetly/design-website start",
+    "start": "yarn workspace @neetly/ui start",
     "build": "yarn workspaces foreach --verbose run build",
     "clean": "yarn workspaces foreach --verbose run clean",
     "lint": "eslint --max-warnings 0 . && prettier --check .",

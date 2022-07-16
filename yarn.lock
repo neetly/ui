@@ -2026,6 +2026,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@neetly/color-website@workspace:packages/color-website":
+  version: 0.0.0-use.local
+  resolution: "@neetly/color-website@workspace:packages/color-website"
+  dependencies:
+    "@buncho/builder": "npm:^5.5.0"
+    "@neetly/colorspace": "workspace:packages/colorspace"
+    "@neetly/ui": "workspace:packages/ui"
+    "@types/react": "npm:^18.0.15"
+    "@types/react-dom": "npm:^18.0.6"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^4.7.4"
+  languageName: unknown
+  linkType: soft
+
 "@neetly/colorgen@workspace:packages/colorgen":
   version: 0.0.0-use.local
   resolution: "@neetly/colorgen@workspace:packages/colorgen"
@@ -2052,24 +2067,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@neetly/design-color-website@workspace:packages/color-website":
+"@neetly/design-website@workspace:packages/design-website":
   version: 0.0.0-use.local
-  resolution: "@neetly/design-color-website@workspace:packages/color-website"
-  dependencies:
-    "@buncho/builder": "npm:^5.5.0"
-    "@neetly/colorspace": "workspace:packages/colorspace"
-    "@neetly/ui": "workspace:packages/ui"
-    "@types/react": "npm:^18.0.15"
-    "@types/react-dom": "npm:^18.0.6"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    typescript: "npm:^4.7.4"
-  languageName: unknown
-  linkType: soft
-
-"@neetly/design-website@workspace:packages/website":
-  version: 0.0.0-use.local
-  resolution: "@neetly/design-website@workspace:packages/website"
+  resolution: "@neetly/design-website@workspace:packages/design-website"
   dependencies:
     "@buncho/builder": "npm:^5.5.0"
     "@neetly/icons": "workspace:packages/icons"
@@ -2082,23 +2082,6 @@ __metadata:
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
     react-router-dom: "npm:6.4.0-pre.8"
-    typescript: "npm:^4.7.4"
-  languageName: unknown
-  linkType: soft
-
-"@neetly/design@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@neetly/design@workspace:."
-  dependencies:
-    "@buncho/eslint-config": "npm:^6.0.0"
-    "@buncho/tsconfig": "npm:^2.0.0"
-    "@neetly/colorgen": "workspace:packages/colorgen"
-    "@prettier/plugin-xml": "npm:^2.2.0"
-    "@typescript-eslint/eslint-plugin": "npm:^5.30.6"
-    "@typescript-eslint/parser": "npm:^5.30.6"
-    eslint: "npm:^8.19.0"
-    prettier: "npm:^2.7.1"
-    svgo: "npm:^2.8.0"
     typescript: "npm:^4.7.4"
   languageName: unknown
   linkType: soft
@@ -2133,6 +2116,23 @@ __metadata:
   dependencies:
     "@buncho/builder": "npm:^5.5.0"
     "@neetly/colorgen": "workspace:packages/colorgen"
+    typescript: "npm:^4.7.4"
+  languageName: unknown
+  linkType: soft
+
+"@neetly/ui-repo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@neetly/ui-repo@workspace:."
+  dependencies:
+    "@buncho/eslint-config": "npm:^6.0.0"
+    "@buncho/tsconfig": "npm:^2.0.0"
+    "@neetly/colorgen": "workspace:packages/colorgen"
+    "@prettier/plugin-xml": "npm:^2.2.0"
+    "@typescript-eslint/eslint-plugin": "npm:^5.30.6"
+    "@typescript-eslint/parser": "npm:^5.30.6"
+    eslint: "npm:^8.19.0"
+    prettier: "npm:^2.7.1"
+    svgo: "npm:^2.8.0"
     typescript: "npm:^4.7.4"
   languageName: unknown
   linkType: soft
