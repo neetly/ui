@@ -6,16 +6,16 @@ import { Dialog } from "./Dialog";
 
 export default {
   component: Dialog,
-  args: {
-    children: "Dialog",
-  },
-  render: (args) => {
+  render: ({ children, ...args }) => {
     const [isOpen, setOpen] = useState(false); // eslint-disable-line react-hooks/rules-of-hooks
 
     return (
       <>
         <Button onClick={() => setOpen(true)}>Open Dialog</Button>
-        <Dialog open={isOpen} onClose={() => setOpen(false)} {...args} />
+        <Dialog open={isOpen} onClose={() => setOpen(false)} {...args}>
+          <Button onClick={() => setOpen(false)}>Close Dialog</Button>
+          {children}
+        </Dialog>
       </>
     );
   },
@@ -25,7 +25,7 @@ export const Default: ComponentStory<typeof Dialog> = {};
 
 export const Scrollable: ComponentStory<typeof Dialog> = {
   args: {
-    children: <div style={{ height: "150vh" }}>Dialog</div>,
+    children: <div style={{ height: "150vh" }} />,
   },
 };
 
