@@ -62,6 +62,10 @@
     background-color: ui.$color-primary-overlay-02;
   }
 
+  &[aria-invalid="true"] {
+    color: ui.$color-error;
+  }
+
   &:disabled {
     cursor: default;
   }
