@@ -59,7 +59,6 @@ const BaseField = createPolymorphicComponent(
         <Component
           id={id}
           className={styles.content}
-          disabled={disabled}
           aria-labelledby={hasLabel ? labelId : undefined}
           aria-describedby={
             hasDescription && !hasErrorMessage ? descriptionId : undefined
@@ -68,6 +67,7 @@ const BaseField = createPolymorphicComponent(
           aria-errormessage={
             invalid && hasErrorMessage ? errorMessageId : undefined
           }
+          disabled={disabled}
           {...props}
         />
         {hasDescription && !hasErrorMessage && (

@@ -29,6 +29,12 @@ export default {
 
 export const Default: ComponentStory<typeof Checkbox> = {};
 
+export const Invalid: ComponentStory<typeof Checkbox> = {
+  args: {
+    invalid: true,
+  },
+};
+
 export const Disabled: ComponentStory<typeof Checkbox> = {
   args: {
     disabled: true,

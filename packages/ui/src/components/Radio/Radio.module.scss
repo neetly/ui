@@ -106,4 +106,9 @@
   @include ui.typography-ui(1rem, medium);
 
   color: ui.$color-neutral-variant-accent;
+  transition: color 150ms;
+
+  .container[data-invalid] & {
+    color: ui.$color-error;
+  }
 }

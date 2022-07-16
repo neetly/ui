@@ -8,6 +8,7 @@ import styles from "./Radio.module.scss";
 type RadioOwnProps = {
   className?: string;
   label?: ReactNode;
+  invalid?: boolean;
   disabled?: boolean;
 };
 
@@ -16,7 +17,7 @@ type RadioProps = RadioOwnProps &
 
 const Radio = forwardRef(
   (
-    { className, label, disabled, ...props }: RadioProps,
+    { className, label, invalid, disabled, ...props }: RadioProps,
     forwardedRef: ForwardedRef<HTMLInputElement>,
   ) => {
     const hasLabel = label !== null && label !== undefined;
@@ -24,12 +25,14 @@ const Radio = forwardRef(
     return (
       <label
         className={classNames(styles.container, className)}
+        data-invalid={invalid ? "" : undefined}
         data-disabled={disabled ? "" : undefined}
       >
         <input
           ref={forwardedRef}
           className={styles.radio}
           type="radio"
+          aria-invalid={invalid ? true : undefined}
           disabled={disabled}
           {...props}
         />

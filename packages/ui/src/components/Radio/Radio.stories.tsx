@@ -29,6 +29,12 @@ export default {
 
 export const Default: ComponentStory<typeof Radio> = {};
 
+export const Invalid: ComponentStory<typeof Radio> = {
+  args: {
+    invalid: true,
+  },
+};
+
 export const Disabled: ComponentStory<typeof Radio> = {
   args: {
     disabled: true,

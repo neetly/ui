@@ -8,6 +8,7 @@ import styles from "./Checkbox.module.scss";
 type CheckboxOwnProps = {
   className?: string;
   label?: ReactNode;
+  invalid?: boolean;
   disabled?: boolean;
 };
 
@@ -16,7 +17,7 @@ type CheckboxProps = CheckboxOwnProps &
 
 const Checkbox = forwardRef(
   (
-    { className, label, disabled, ...props }: CheckboxProps,
+    { className, label, invalid, disabled, ...props }: CheckboxProps,
     forwardedRef: ForwardedRef<HTMLInputElement>,
   ) => {
     const hasLabel = label !== null && label !== undefined;
@@ -24,12 +25,14 @@ const Checkbox = forwardRef(
     return (
       <label
         className={classNames(styles.container, className)}
+        data-invalid={invalid ? "" : undefined}
         data-disabled={disabled ? "" : undefined}
       >
         <input
           ref={forwardedRef}
           className={styles.checkbox}
           type="checkbox"
+          aria-invalid={invalid ? true : undefined}
           disabled={disabled}
           {...props}
         />
