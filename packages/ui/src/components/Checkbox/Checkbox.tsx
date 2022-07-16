@@ -1,6 +1,11 @@
 import { CheckboxCheckedIcon } from "@neetly/icons";
 import classNames from "classnames";
-import type { ComponentPropsWithoutRef, ForwardedRef, ReactNode } from "react";
+import type {
+  AriaAttributes,
+  ComponentPropsWithoutRef,
+  ForwardedRef,
+  ReactNode,
+} from "react";
 import { forwardRef } from "react";
 
 import styles from "./Checkbox.module.scss";
@@ -9,6 +14,7 @@ type CheckboxOwnProps = {
   className?: string;
   label?: ReactNode;
   invalid?: boolean;
+  "aria-invalid"?: AriaAttributes["aria-invalid"];
   disabled?: boolean;
 };
 
@@ -17,23 +23,31 @@ type CheckboxProps = CheckboxOwnProps &
 
 const Checkbox = forwardRef(
   (
-    { className, label, invalid, disabled, ...props }: CheckboxProps,
+    {
+      className,
+      label,
+      invalid: _invalid,
+      "aria-invalid": ariaInvalid = _invalid,
+      disabled: isDisabled,
+      ...props
+    }: CheckboxProps,
     forwardedRef: ForwardedRef<HTMLInputElement>,
   ) => {
     const hasLabel = label !== null && label !== undefined;
+    const isInvalid = ariaInvalid && ariaInvalid !== "false";
 
     return (
       <label
         className={classNames(styles.container, className)}
-        data-invalid={invalid ? "" : undefined}
-        data-disabled={disabled ? "" : undefined}
+        data-invalid={isInvalid ? "" : undefined}
+        data-disabled={isDisabled ? "" : undefined}
       >
         <input
           ref={forwardedRef}
           className={styles.checkbox}
           type="checkbox"
-          aria-invalid={invalid ? true : undefined}
-          disabled={disabled}
+          aria-invalid={ariaInvalid}
+          disabled={isDisabled}
           {...props}
         />
         <span className={styles.content}>

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { ElementType, ReactNode } from "react";
+import type { AriaAttributes, ElementType, ReactNode } from "react";
 import { useId } from "react";
 
 import type { PolymorphicProps } from "../Polymorphic";
@@ -12,6 +12,7 @@ type BaseFieldOwnProps = {
   label?: ReactNode;
   description?: ReactNode;
   invalid?: boolean;
+  "aria-invalid"?: AriaAttributes["aria-invalid"];
   errorMessage?: ReactNode;
   disabled?: boolean;
 };
@@ -27,9 +28,10 @@ const BaseField = createPolymorphicComponent(
     className,
     label,
     description,
-    invalid,
+    invalid: _invalid,
+    "aria-invalid": ariaInvalid = _invalid,
     errorMessage,
-    disabled,
+    disabled: isDisabled,
     ...props
   }: BaseFieldProps<Element>) => {
     const Component = as ?? "input";
@@ -43,13 +45,14 @@ const BaseField = createPolymorphicComponent(
 
     const hasLabel = label !== null && label !== undefined;
     const hasDescription = description !== null && description !== undefined;
+    const isInvalid = ariaInvalid && ariaInvalid !== "false";
     const hasErrorMessage = errorMessage !== null && errorMessage !== undefined;
 
     return (
       <span
         className={classNames(styles.container, className)}
-        data-invalid={invalid ? "" : undefined}
-        data-disabled={disabled ? "" : undefined}
+        data-invalid={isInvalid ? "" : undefined}
+        data-disabled={isDisabled ? "" : undefined}
       >
         {hasLabel && (
           <label id={labelId} className={styles.label} htmlFor={id}>
@@ -63,11 +66,11 @@ const BaseField = createPolymorphicComponent(
           aria-describedby={
             hasDescription && !hasErrorMessage ? descriptionId : undefined
           }
-          aria-invalid={invalid ? true : undefined}
+          aria-invalid={ariaInvalid}
           aria-errormessage={
-            invalid && hasErrorMessage ? errorMessageId : undefined
+            isInvalid && hasErrorMessage ? errorMessageId : undefined
           }
-          disabled={disabled}
+          disabled={isDisabled}
           {...props}
         />
         {hasDescription && !hasErrorMessage && (
@@ -75,7 +78,7 @@ const BaseField = createPolymorphicComponent(
             {description}
           </span>
         )}
-        {invalid && hasErrorMessage && (
+        {isInvalid && hasErrorMessage && (
           <span id={errorMessageId} className={styles.errorMessage}>
             {errorMessage}
           </span>

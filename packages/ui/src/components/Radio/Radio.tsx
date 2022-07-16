@@ -1,6 +1,11 @@
 import { RadioCheckedIcon } from "@neetly/icons";
 import classNames from "classnames";
-import type { ComponentPropsWithoutRef, ForwardedRef, ReactNode } from "react";
+import type {
+  AriaAttributes,
+  ComponentPropsWithoutRef,
+  ForwardedRef,
+  ReactNode,
+} from "react";
 import { forwardRef } from "react";
 
 import styles from "./Radio.module.scss";
@@ -9,6 +14,7 @@ type RadioOwnProps = {
   className?: string;
   label?: ReactNode;
   invalid?: boolean;
+  "aria-invalid"?: AriaAttributes["aria-invalid"];
   disabled?: boolean;
 };
 
@@ -17,23 +23,31 @@ type RadioProps = RadioOwnProps &
 
 const Radio = forwardRef(
   (
-    { className, label, invalid, disabled, ...props }: RadioProps,
+    {
+      className,
+      label,
+      invalid: _invalid,
+      "aria-invalid": ariaInvalid = _invalid,
+      disabled: isDisabled,
+      ...props
+    }: RadioProps,
     forwardedRef: ForwardedRef<HTMLInputElement>,
   ) => {
     const hasLabel = label !== null && label !== undefined;
+    const isInvalid = ariaInvalid && ariaInvalid !== "false";
 
     return (
       <label
         className={classNames(styles.container, className)}
-        data-invalid={invalid ? "" : undefined}
-        data-disabled={disabled ? "" : undefined}
+        data-invalid={isInvalid ? "" : undefined}
+        data-disabled={isDisabled ? "" : undefined}
       >
         <input
           ref={forwardedRef}
           className={styles.radio}
           type="radio"
-          aria-invalid={invalid ? true : undefined}
-          disabled={disabled}
+          aria-invalid={ariaInvalid}
+          disabled={isDisabled}
           {...props}
         />
         <span className={styles.content}>

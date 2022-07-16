@@ -62,7 +62,7 @@
     background-color: ui.$color-primary-overlay-02;
   }
 
-  &[aria-invalid="true"] {
+  &[aria-invalid]:not([aria-invalid="false"]) {
     color: ui.$color-error;
   }
 

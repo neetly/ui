@@ -1,6 +1,7 @@
 import type { IconProps } from "@neetly/icons";
 import classNames from "classnames";
 import type {
+  AriaAttributes,
   ComponentPropsWithoutRef,
   ComponentType,
   ForwardedRef,
@@ -13,6 +14,8 @@ type TextInputOwnProps = {
   className?: string;
   iconBefore?: ComponentType<IconProps>;
   iconAfter?: ComponentType<IconProps>;
+  invalid?: boolean;
+  "aria-invalid"?: AriaAttributes["aria-invalid"];
   disabled?: boolean;
 };
 
@@ -25,22 +28,28 @@ const TextInput = forwardRef(
       className,
       iconBefore: IconBefore,
       iconAfter: IconAfter,
-      disabled,
+      invalid: _invalid,
+      "aria-invalid": ariaInvalid = _invalid,
+      disabled: isDisabled,
       ...props
     }: TextInputProps,
     forwardedRef: ForwardedRef<HTMLInputElement>,
   ) => {
+    const isInvalid = ariaInvalid && ariaInvalid !== "false";
+
     return (
       <span
         className={classNames(styles.container, className)}
-        data-disabled={disabled ? "" : undefined}
+        data-invalid={isInvalid ? "" : undefined}
+        data-disabled={isDisabled ? "" : undefined}
       >
         <input
           ref={forwardedRef}
           className={styles.textField}
           data-icon-before={IconBefore ? "" : undefined}
           data-icon-after={IconAfter ? "" : undefined}
-          disabled={disabled}
+          aria-invalid={ariaInvalid}
+          disabled={isDisabled}
           {...props}
         />
         {IconBefore && <IconBefore className={styles.iconBefore} />}
