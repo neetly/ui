@@ -4,7 +4,7 @@ import type { MouseEvent } from "react";
 
 import { Button } from "./Button";
 
-const variants = ["default", "primary", "outline", "text"] as const;
+const variants = ["default", "primary", "outline", "plain"] as const;
 const colors = ["primary", "secondary", "tertiary"] as const;
 
 export default {
