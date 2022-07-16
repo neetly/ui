@@ -1,9 +1,12 @@
 import type { IconProps } from "@neetly/icons";
 import classNames from "classnames";
-import type { ComponentType, ElementType } from "react";
+import type {
+  ComponentPropsWithoutRef,
+  ComponentType,
+  ForwardedRef,
+} from "react";
+import { forwardRef } from "react";
 
-import type { PolymorphicProps } from "../Polymorphic";
-import { createPolymorphicComponent } from "../Polymorphic";
 import styles from "./TextInput.module.scss";
 
 type TextInputOwnProps = {
@@ -13,27 +16,27 @@ type TextInputOwnProps = {
   disabled?: boolean;
 };
 
-type TextInputProps<Element extends ElementType> = //
-  PolymorphicProps<Element, TextInputOwnProps>;
+type TextInputProps = TextInputOwnProps &
+  Omit<ComponentPropsWithoutRef<"input">, keyof TextInputOwnProps>;
 
-const TextInput = createPolymorphicComponent(
-  "TextInput",
-  <Element extends ElementType = "input">({
-    as,
-    className,
-    iconBefore: IconBefore,
-    iconAfter: IconAfter,
-    disabled,
-    ...props
-  }: TextInputProps<Element>) => {
-    const Component = as ?? "input";
-
+const TextInput = forwardRef(
+  (
+    {
+      className,
+      iconBefore: IconBefore,
+      iconAfter: IconAfter,
+      disabled,
+      ...props
+    }: TextInputProps,
+    forwardedRef: ForwardedRef<HTMLInputElement>,
+  ) => {
     return (
       <span
         className={classNames(styles.container, className)}
         data-disabled={disabled ? "" : undefined}
       >
-        <Component
+        <input
+          ref={forwardedRef}
           className={styles.textField}
           data-icon-before={IconBefore ? "" : undefined}
           data-icon-after={IconAfter ? "" : undefined}
@@ -46,6 +49,10 @@ const TextInput = createPolymorphicComponent(
     );
   },
 );
+
+if (process.env.NODE_ENV === "development") {
+  TextInput.displayName = "TextInput";
+}
 
 export { TextInput };
 export type { TextInputOwnProps, TextInputProps };
