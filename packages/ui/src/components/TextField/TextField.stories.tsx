@@ -38,6 +38,19 @@ export const Description: ComponentStory<typeof TextField> = {
   },
 };
 
+export const Invalid: ComponentStory<typeof TextField> = {
+  args: {
+    invalid: true,
+  },
+};
+
+export const ErrorMessage: ComponentStory<typeof TextField> = {
+  args: {
+    invalid: true,
+    errorMessage: "Error Message",
+  },
+};
+
 export const ReadOnly: ComponentStory<typeof TextField> = {
   args: {
     readOnly: true,

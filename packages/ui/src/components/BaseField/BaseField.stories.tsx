@@ -17,6 +17,19 @@ export const Description: ComponentStory<typeof BaseField> = {
   },
 };
 
+export const Invalid: ComponentStory<typeof BaseField> = {
+  args: {
+    invalid: true,
+  },
+};
+
+export const ErrorMessage: ComponentStory<typeof BaseField> = {
+  args: {
+    invalid: true,
+    errorMessage: "Error Message",
+  },
+};
+
 export const Disabled: ComponentStory<typeof BaseField> = {
   args: {
     disabled: true,

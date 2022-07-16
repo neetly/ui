@@ -11,6 +11,8 @@ type BaseFieldOwnProps = {
   className?: string;
   label?: ReactNode;
   description?: ReactNode;
+  invalid?: boolean;
+  errorMessage?: ReactNode;
   disabled?: boolean;
 };
 
@@ -25,6 +27,8 @@ const BaseField = createPolymorphicComponent(
     className,
     label,
     description,
+    invalid,
+    errorMessage,
     disabled,
     ...props
   }: BaseFieldProps<Element>) => {
@@ -35,13 +39,16 @@ const BaseField = createPolymorphicComponent(
 
     const labelId = useId();
     const descriptionId = useId();
+    const errorMessageId = useId();
 
     const hasLabel = label !== null && label !== undefined;
     const hasDescription = description !== null && description !== undefined;
+    const hasErrorMessage = errorMessage !== null && errorMessage !== undefined;
 
     return (
       <span
         className={classNames(styles.container, className)}
+        data-invalid={invalid ? "" : undefined}
         data-disabled={disabled ? "" : undefined}
       >
         {hasLabel && (
@@ -54,12 +61,23 @@ const BaseField = createPolymorphicComponent(
           className={styles.content}
           disabled={disabled}
           aria-labelledby={hasLabel ? labelId : undefined}
-          aria-describedby={hasDescription ? descriptionId : undefined}
+          aria-describedby={
+            hasDescription && !hasErrorMessage ? descriptionId : undefined
+          }
+          aria-invalid={invalid ? true : undefined}
+          aria-errormessage={
+            invalid && hasErrorMessage ? errorMessageId : undefined
+          }
           {...props}
         />
-        {hasDescription && (
+        {hasDescription && !hasErrorMessage && (
           <span id={descriptionId} className={styles.description}>
             {description}
+          </span>
+        )}
+        {invalid && hasErrorMessage && (
+          <span id={errorMessageId} className={styles.errorMessage}>
+            {errorMessage}
           </span>
         )}
       </span>

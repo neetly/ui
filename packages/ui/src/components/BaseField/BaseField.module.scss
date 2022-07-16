@@ -5,7 +5,8 @@
   grid-template:
     "label" auto
     "content" 1fr
-    "description" auto;
+    "description" auto
+    "errorMessage" auto;
 }
 
 .label {
@@ -19,6 +20,10 @@
   .container:focus-within & {
     color: ui.$color-primary;
     transform: translateY(-2px);
+  }
+
+  .container[data-invalid] & {
+    color: ui.$color-error;
   }
 
   .container[data-disabled] & {
@@ -37,6 +42,20 @@
   @include ui.typography-ui(0.875rem);
 
   color: ui.$color-neutral-variant;
+  transition: opacity 150ms;
+
+  .container[data-disabled] & {
+    opacity: 0.5;
+  }
+}
+
+.errorMessage {
+  grid-area: errorMessage;
+  margin-top: 0.25rem;
+
+  @include ui.typography-ui(0.875rem);
+
+  color: ui.$color-error;
   transition: opacity 150ms;
 
   .container[data-disabled] & {
