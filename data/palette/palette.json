@@ -54,6 +54,17 @@
     { "id": "neutral-variant--600", "color": "#6f5857" },
     { "id": "neutral-variant--700", "color": "#564140" },
     { "id": "neutral-variant--800", "color": "#3e2a2a" },
-    { "id": "neutral-variant--900", "color": "#281616" }
+    { "id": "neutral-variant--900", "color": "#281616" },
+    { "id": "error--10", "color": "#fffbfa" },
+    { "id": "error--50", "color": "#ffece6" },
+    { "id": "error--100", "color": "#ffd9cc" },
+    { "id": "error--200", "color": "#ffb195" },
+    { "id": "error--300", "color": "#ff8356" },
+    { "id": "error--400", "color": "#f25500" },
+    { "id": "error--500", "color": "#c94500" },
+    { "id": "error--600", "color": "#a13500" },
+    { "id": "error--700", "color": "#7b2700" },
+    { "id": "error--800", "color": "#571900" },
+    { "id": "error--900", "color": "#350c00" }
   ]
 }

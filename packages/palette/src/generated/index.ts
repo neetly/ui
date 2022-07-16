@@ -56,6 +56,17 @@ const palette = {
   "neutral-variant--700": "#564140",
   "neutral-variant--800": "#3e2a2a",
   "neutral-variant--900": "#281616",
+  "error--10": "#fffbfa",
+  "error--50": "#ffece6",
+  "error--100": "#ffd9cc",
+  "error--200": "#ffb195",
+  "error--300": "#ff8356",
+  "error--400": "#f25500",
+  "error--500": "#c94500",
+  "error--600": "#a13500",
+  "error--700": "#7b2700",
+  "error--800": "#571900",
+  "error--900": "#350c00",
 };
 
 export { palette };

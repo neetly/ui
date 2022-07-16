@@ -4,7 +4,9 @@
     { "id": "secondary", "hue": 20, "chroma": 20 },
     { "id": "tertiary", "hue": 160, "chroma": 40 },
     { "id": "neutral", "hue": 20, "chroma": 5 },
-    { "id": "neutral-variant", "hue": 20, "chroma": 10 }
+    { "id": "neutral-variant", "hue": 20, "chroma": 10 },
+
+    { "id": "error", "hue": 40, "chroma": 80 }
   ],
 
   "tones": [
