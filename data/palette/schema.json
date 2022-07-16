@@ -6,7 +6,7 @@
     { "id": "neutral", "hue": 20, "chroma": 5 },
     { "id": "neutral-variant", "hue": 20, "chroma": 10 },
 
-    { "id": "error", "hue": 40, "chroma": 80 }
+    { "id": "error", "hue": 20, "chroma": 80 }
   ],
 
   "tones": [

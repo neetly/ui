@@ -55,16 +55,16 @@
     { "id": "neutral-variant--700", "color": "#564140" },
     { "id": "neutral-variant--800", "color": "#3e2a2a" },
     { "id": "neutral-variant--900", "color": "#281616" },
-    { "id": "error--10", "color": "#fffbfa" },
-    { "id": "error--50", "color": "#ffece6" },
-    { "id": "error--100", "color": "#ffd9cc" },
-    { "id": "error--200", "color": "#ffb195" },
-    { "id": "error--300", "color": "#ff8356" },
-    { "id": "error--400", "color": "#f25500" },
-    { "id": "error--500", "color": "#c94500" },
-    { "id": "error--600", "color": "#a13500" },
-    { "id": "error--700", "color": "#7b2700" },
-    { "id": "error--800", "color": "#571900" },
-    { "id": "error--900", "color": "#350c00" }
+    { "id": "error--10", "color": "#fffbfb" },
+    { "id": "error--50", "color": "#ffebeb" },
+    { "id": "error--100", "color": "#ffd8d6" },
+    { "id": "error--200", "color": "#ffaead" },
+    { "id": "error--300", "color": "#ff7e81" },
+    { "id": "error--400", "color": "#ff3752" },
+    { "id": "error--500", "color": "#de0039" },
+    { "id": "error--600", "color": "#b2002c" },
+    { "id": "error--700", "color": "#880020" },
+    { "id": "error--800", "color": "#600013" },
+    { "id": "error--900", "color": "#3c0008" }
   ]
 }
