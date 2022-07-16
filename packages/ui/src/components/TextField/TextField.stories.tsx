@@ -43,10 +43,3 @@ export const Disabled: ComponentStory<typeof TextField> = {
     disabled: true,
   },
 };
-
-export const TextArea: ComponentStory<typeof TextField> = {
-  args: {
-    as: "textarea",
-    rows: 3,
-  },
-};
