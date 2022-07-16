@@ -11,6 +11,12 @@ export default {
 
 export const Default: ComponentStory<typeof BaseField> = {};
 
+export const Description: ComponentStory<typeof BaseField> = {
+  args: {
+    description: "Description",
+  },
+};
+
 export const Disabled: ComponentStory<typeof BaseField> = {
   args: {
     disabled: true,

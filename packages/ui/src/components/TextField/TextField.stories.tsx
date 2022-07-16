@@ -32,6 +32,12 @@ export const IconAfter: ComponentStory<typeof TextField> = {
   },
 };
 
+export const Description: ComponentStory<typeof TextField> = {
+  args: {
+    description: "Description",
+  },
+};
+
 export const ReadOnly: ComponentStory<typeof TextField> = {
   args: {
     readOnly: true,

@@ -4,7 +4,8 @@
   display: inline-grid;
   grid-template:
     "label" auto
-    "content" 1fr;
+    "content" 1fr
+    "description" auto;
 }
 
 .label {
@@ -27,4 +28,18 @@
 
 .content {
   grid-area: content;
+}
+
+.description {
+  grid-area: description;
+  margin-top: 0.25rem;
+
+  @include ui.typography-ui(0.875rem);
+
+  color: ui.$color-neutral-variant;
+  transition: opacity 150ms;
+
+  .container[data-disabled] & {
+    opacity: 0.5;
+  }
 }

@@ -10,6 +10,7 @@ type BaseFieldOwnProps = {
   id?: string;
   className?: string;
   label?: ReactNode;
+  description?: ReactNode;
   disabled?: boolean;
 };
 
@@ -23,6 +24,7 @@ const BaseField = createPolymorphicComponent(
     id,
     className,
     label,
+    description,
     disabled,
     ...props
   }: BaseFieldProps<Element>) => {
@@ -31,7 +33,11 @@ const BaseField = createPolymorphicComponent(
     const defaultId = useId();
     id ??= defaultId;
 
+    const labelId = useId();
+    const descriptionId = useId();
+
     const hasLabel = label !== null && label !== undefined;
+    const hasDescription = description !== null && description !== undefined;
 
     return (
       <span
@@ -39,7 +45,7 @@ const BaseField = createPolymorphicComponent(
         data-disabled={disabled ? "" : undefined}
       >
         {hasLabel && (
-          <label className={styles.label} htmlFor={id}>
+          <label id={labelId} className={styles.label} htmlFor={id}>
             {label}
           </label>
         )}
@@ -47,8 +53,15 @@ const BaseField = createPolymorphicComponent(
           id={id}
           className={styles.content}
           disabled={disabled}
+          aria-labelledby={hasLabel ? labelId : undefined}
+          aria-describedby={hasDescription ? descriptionId : undefined}
           {...props}
         />
+        {hasDescription && (
+          <span id={descriptionId} className={styles.description}>
+            {description}
+          </span>
+        )}
       </span>
     );
   },
