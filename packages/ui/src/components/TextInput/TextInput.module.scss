@@ -1,0 +1,88 @@
+@use "@neetly/ui";
+
+.container {
+  position: relative;
+  display: inline-grid;
+  user-select: none;
+
+  &[data-disabled] {
+    opacity: 0.5;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: calc(0.5rem + 2px);
+    box-shadow: 0 0 0 2px ui.$color-primary;
+    pointer-events: none;
+    transition: opacity 150ms;
+  }
+
+  &:not(:focus-within)::before {
+    opacity: 0;
+  }
+}
+
+.textField {
+  all: unset;
+
+  position: relative;
+  min-height: 1.5rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+
+  @include ui.typography-ui(1rem, medium);
+
+  user-select: auto;
+  cursor: text;
+  color: ui.$color-neutral-variant-accent;
+  caret-color: ui.$color-primary;
+  background-color: ui.$color-primary-overlay-01;
+  transition: background-color 150ms;
+
+  &[data-icon-before] {
+    padding-inline-start: 2.5rem;
+  }
+
+  &[data-icon-after] {
+    padding-inline-end: 2.5rem;
+  }
+
+  &::placeholder {
+    color: ui.$color-neutral-variant-dim;
+  }
+
+  @include ui.hover {
+    background-color: ui.$color-primary-overlay-02;
+  }
+
+  &:focus {
+    background-color: ui.$color-primary-overlay-02;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.iconBefore,
+.iconAfter {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-block: -0.75rem;
+  fill: ui.$color-neutral-variant-accent;
+  pointer-events: none;
+}
+
+.iconBefore {
+  inset-block-start: 50%;
+  inset-inline-start: 0.5rem;
+}
+
+.iconAfter {
+  inset-block-start: 50%;
+  inset-inline-end: 0.5rem;
+}
