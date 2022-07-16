@@ -155,6 +155,26 @@ $color-neutral-variant-dim: define-property(
   color.change($neutral-variant--300, $alpha: 0.8)
 );
 
+// Colors - Error
+$color-error: define-property(color-error, $error--600, $error--300);
+$color-error-accent: define-property(
+  color-error-accent,
+  $error--800,
+  $error--100
+);
+$color-on-error: define-property(color-on-error, $error--10, $error--800);
+
+$color-error-overlay-01: define-property(
+  color-error-overlay-01,
+  color.change($error--600, $alpha: 0.05),
+  color.change($error--300, $alpha: 0.05)
+);
+$color-error-overlay-02: define-property(
+  color-error-overlay-02,
+  color.change($error--600, $alpha: 0.1),
+  color.change($error--300, $alpha: 0.1)
+);
+
 // Colors - Modal
 $color-backdrop: define-property(
   color-backdrop,
