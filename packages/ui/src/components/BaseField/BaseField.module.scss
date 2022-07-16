@@ -1,0 +1,30 @@
+@use "@neetly/ui";
+
+.container {
+  display: inline-grid;
+  grid-template:
+    "label" auto
+    "content" 1fr;
+}
+
+.label {
+  grid-area: label;
+
+  @include ui.typography-ui(0.875rem, semibold);
+
+  color: ui.$color-neutral-variant;
+  transition: color 150ms, opacity 150ms, transform 150ms;
+
+  .container:focus-within & {
+    color: ui.$color-primary;
+    transform: translateY(-2px);
+  }
+
+  .container[data-disabled] & {
+    opacity: 0.5;
+  }
+}
+
+.content {
+  grid-area: content;
+}

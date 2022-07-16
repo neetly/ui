@@ -6,7 +6,6 @@ import { TextInput } from "./TextInput";
 export default {
   component: TextInput,
   args: {
-    label: "Text Field",
     placeholder: "Placeholder",
     defaultValue: "Text",
   },
