@@ -11,7 +11,7 @@ type DialogOwnProps = {
   open?: boolean;
   onClose?: () => void;
   closeable?: boolean;
-  dismissible?: boolean | "escape-only";
+  dismissible?: boolean;
   children?: ReactNode;
 };
 
@@ -22,8 +22,8 @@ const Dialog = ({
   className,
   open = true,
   onClose,
-  closeable = true,
-  dismissible = closeable,
+  closeable: isCloseable = true,
+  dismissible: isDismissible = isCloseable,
   children,
   ...props
 }: DialogProps) => {
@@ -42,13 +42,13 @@ const Dialog = ({
       className={classNames(styles.dialog, className)}
       backdropProps={{ className: styles.container }}
       state={state}
-      hideOnEscape={dismissible !== false}
-      hideOnInteractOutside={dismissible === true}
+      hideOnEscape={isDismissible}
+      hideOnInteractOutside={isDismissible}
       {...props}
     >
       {children}
 
-      {closeable && (
+      {isCloseable ? (
         <Ariakit.DialogDismiss
           as={Button}
           className={styles.closeButton}
@@ -58,12 +58,10 @@ const Dialog = ({
         >
           Close
         </Ariakit.DialogDismiss>
-      )}
-
-      {
+      ) : (
         // https://github.com/ariakit/ariakit/issues/1356
-        !closeable && !dismissible && <Ariakit.DialogDismiss hidden />
-      }
+        <Ariakit.DialogDismiss hidden />
+      )}
     </Ariakit.Dialog>
   );
 };

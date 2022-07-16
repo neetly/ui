@@ -50,11 +50,13 @@ const Radio = forwardRef(
           disabled={isDisabled}
           {...props}
         />
+
         <span className={styles.content}>
           <span className={styles.checked}>
             <RadioCheckedIcon className={styles.checkedIcon} />
           </span>
         </span>
+
         {hasLabel && <span className={styles.label}>{label}</span>}
       </label>
     );

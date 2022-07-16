@@ -59,6 +59,7 @@ const BaseField = createPolymorphicComponent(
             {label}
           </label>
         )}
+
         <Component
           id={id}
           className={styles.content}
@@ -73,11 +74,13 @@ const BaseField = createPolymorphicComponent(
           disabled={isDisabled}
           {...props}
         />
+
         {hasDescription && !hasErrorMessage && (
           <span id={descriptionId} className={styles.description}>
             {description}
           </span>
         )}
+
         {isInvalid && hasErrorMessage && (
           <span id={errorMessageId} className={styles.errorMessage}>
             {errorMessage}
