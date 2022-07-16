@@ -52,7 +52,7 @@ const Dialog = ({
         <Ariakit.DialogDismiss
           as={Button}
           className={styles.closeButton}
-          variant="text"
+          variant="plain"
           color="secondary"
           icon={CloseIcon}
         >

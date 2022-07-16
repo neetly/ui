@@ -9,7 +9,7 @@ import styles from "./Button.module.scss";
 
 type ButtonOwnProps = {
   className?: string;
-  variant?: "default" | "primary" | "outline" | "text";
+  variant?: "default" | "primary" | "outline" | "plain";
   color?: "primary" | "secondary" | "tertiary";
   icon?: ComponentType<IconProps>;
   iconBefore?: ComponentType<IconProps>;

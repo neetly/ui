@@ -113,7 +113,7 @@
   }
 }
 
-.button[data-variant="text"] {
+.button[data-variant="plain"] {
   &[data-color="primary"] {
     color: ui.$color-primary;
 
