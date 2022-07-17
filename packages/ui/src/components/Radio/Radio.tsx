@@ -2,8 +2,8 @@ import { RadioCheckedIcon } from "@neetly/icons";
 import classNames from "classnames";
 import type {
   AriaAttributes,
-  ComponentPropsWithoutRef,
   ForwardedRef,
+  InputHTMLAttributes,
   ReactNode,
 } from "react";
 import { forwardRef } from "react";
@@ -19,7 +19,7 @@ type RadioOwnProps = {
 };
 
 type RadioProps = RadioOwnProps &
-  Omit<ComponentPropsWithoutRef<"input">, keyof RadioOwnProps>;
+  Omit<InputHTMLAttributes<HTMLInputElement>, keyof RadioOwnProps>;
 
 const Radio = forwardRef(
   (

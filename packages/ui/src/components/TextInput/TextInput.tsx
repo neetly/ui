@@ -2,9 +2,9 @@ import type { IconProps } from "@neetly/icons";
 import classNames from "classnames";
 import type {
   AriaAttributes,
-  ComponentPropsWithoutRef,
   ComponentType,
   ForwardedRef,
+  InputHTMLAttributes,
 } from "react";
 import { forwardRef } from "react";
 
@@ -20,7 +20,7 @@ type TextInputOwnProps = {
 };
 
 type TextInputProps = TextInputOwnProps &
-  Omit<ComponentPropsWithoutRef<"input">, keyof TextInputOwnProps>;
+  Omit<InputHTMLAttributes<HTMLInputElement>, keyof TextInputOwnProps>;
 
 const TextInput = forwardRef(
   (

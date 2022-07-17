@@ -5,7 +5,12 @@ import { VisuallyHidden } from "../VisuallyHidden";
 import styles from "./Spinner.module.scss";
 import { SpinnerIcon } from "./SpinnerIcon";
 
-type SpinnerProps = HTMLAttributes<HTMLSpanElement>;
+type SpinnerOwnProps = {
+  className?: string;
+};
+
+type SpinnerProps = SpinnerOwnProps &
+  Omit<HTMLAttributes<HTMLSpanElement>, keyof SpinnerOwnProps>;
 
 const Spinner = ({ className, ...props }: SpinnerProps) => {
   return (
@@ -21,4 +26,4 @@ const Spinner = ({ className, ...props }: SpinnerProps) => {
 };
 
 export { Spinner };
-export type { SpinnerProps };
+export type { SpinnerOwnProps, SpinnerProps };

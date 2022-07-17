@@ -1,7 +1,7 @@
 import { CloseIcon } from "@neetly/icons";
 import * as Ariakit from "ariakit";
 import classNames from "classnames";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
 import { Button } from "../Button";
 import styles from "./Dialog.module.scss";
@@ -16,7 +16,7 @@ type DialogOwnProps = {
 };
 
 type DialogProps = DialogOwnProps &
-  Omit<ComponentPropsWithoutRef<"div">, keyof DialogOwnProps>;
+  Omit<HTMLAttributes<HTMLDivElement>, keyof DialogOwnProps>;
 
 const Dialog = ({
   className,

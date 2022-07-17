@@ -2,8 +2,8 @@ import { CheckboxCheckedIcon } from "@neetly/icons";
 import classNames from "classnames";
 import type {
   AriaAttributes,
-  ComponentPropsWithoutRef,
   ForwardedRef,
+  InputHTMLAttributes,
   ReactNode,
 } from "react";
 import { forwardRef } from "react";
@@ -19,7 +19,7 @@ type CheckboxOwnProps = {
 };
 
 type CheckboxProps = CheckboxOwnProps &
-  Omit<ComponentPropsWithoutRef<"input">, keyof CheckboxOwnProps>;
+  Omit<InputHTMLAttributes<HTMLInputElement>, keyof CheckboxOwnProps>;
 
 const Checkbox = forwardRef(
   (
