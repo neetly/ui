@@ -72,12 +72,12 @@ $color-on-primary: define-property(
 $color-primary-overlay-01: define-property(
   color-primary-overlay-01,
   color.change($primary--600, $alpha: 0.05),
-  color.change($primary--300, $alpha: 0.05)
+  color.change($primary--300, $alpha: 0.1)
 );
 $color-primary-overlay-02: define-property(
   color-primary-overlay-02,
   color.change($primary--600, $alpha: 0.1),
-  color.change($primary--300, $alpha: 0.1)
+  color.change($primary--300, $alpha: 0.2)
 );
 
 // Color - Secondary
@@ -105,12 +105,12 @@ $color-on-secondary: define-property(
 $color-secondary-overlay-01: define-property(
   color-secondary-overlay-01,
   color.change($secondary--600, $alpha: 0.05),
-  color.change($secondary--300, $alpha: 0.05)
+  color.change($secondary--300, $alpha: 0.1)
 );
 $color-secondary-overlay-02: define-property(
   color-secondary-overlay-02,
   color.change($secondary--600, $alpha: 0.1),
-  color.change($secondary--300, $alpha: 0.1)
+  color.change($secondary--300, $alpha: 0.2)
 );
 
 // Color - Tertiary
@@ -138,12 +138,12 @@ $color-on-tertiary: define-property(
 $color-tertiary-overlay-01: define-property(
   color-tertiary-overlay-01,
   color.change($tertiary--600, $alpha: 0.05),
-  color.change($tertiary--300, $alpha: 0.05)
+  color.change($tertiary--300, $alpha: 0.1)
 );
 $color-tertiary-overlay-02: define-property(
   color-tertiary-overlay-02,
   color.change($tertiary--600, $alpha: 0.1),
-  color.change($tertiary--300, $alpha: 0.1)
+  color.change($tertiary--300, $alpha: 0.2)
 );
 
 // Color - Neutral
@@ -167,12 +167,12 @@ $color-on-neutral: define-property(
 $color-neutral-overlay-01: define-property(
   color-neutral-overlay-01,
   color.change($neutral--600, $alpha: 0.05),
-  color.change($neutral--300, $alpha: 0.05)
+  color.change($neutral--300, $alpha: 0.1)
 );
 $color-neutral-overlay-02: define-property(
   color-neutral-overlay-02,
   color.change($neutral--600, $alpha: 0.1),
-  color.change($neutral--300, $alpha: 0.1)
+  color.change($neutral--300, $alpha: 0.2)
 );
 
 // Color - Neutral Variant
@@ -200,12 +200,12 @@ $color-on-neutral-variant: define-property(
 $color-neutral-variant-overlay-01: define-property(
   color-neutral-variant-overlay-01,
   color.change($neutral-variant--600, $alpha: 0.05),
-  color.change($neutral-variant--300, $alpha: 0.05)
+  color.change($neutral-variant--300, $alpha: 0.1)
 );
 $color-neutral-variant-overlay-02: define-property(
   color-neutral-variant-overlay-02,
   color.change($neutral-variant--600, $alpha: 0.1),
-  color.change($neutral-variant--300, $alpha: 0.1)
+  color.change($neutral-variant--300, $alpha: 0.2)
 );
 
 // Color - Error
@@ -225,12 +225,12 @@ $color-on-error: define-property(color-on-error, $error--10, $error--800);
 $color-error-overlay-01: define-property(
   color-error-overlay-01,
   color.change($error--600, $alpha: 0.05),
-  color.change($error--300, $alpha: 0.05)
+  color.change($error--300, $alpha: 0.1)
 );
 $color-error-overlay-02: define-property(
   color-error-overlay-02,
   color.change($error--600, $alpha: 0.1),
-  color.change($error--300, $alpha: 0.1)
+  color.change($error--300, $alpha: 0.2)
 );
 
 // Color - Shadow / Backdrop
