@@ -15,7 +15,7 @@ export default {
       <div
         style={{
           display: "grid",
-          justifyItems: "start",
+          justifyContent: "start",
           gap: "0.5rem",
         }}
       >
