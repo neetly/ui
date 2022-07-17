@@ -17,16 +17,16 @@
   color: ui.$color-neutral-variant;
   transition: color 150ms, opacity 150ms, transform 150ms;
 
-  .container:focus-within & {
+  .field:focus-within & {
     color: ui.$color-primary;
     transform: translateY(-2px);
   }
 
-  .container[data-invalid] & {
+  .field[data-invalid] & {
     color: ui.$color-error;
   }
 
-  .container[data-disabled] & {
+  .field[data-disabled] & {
     opacity: 0.5;
   }
 }
@@ -44,7 +44,7 @@
   color: ui.$color-neutral-variant;
   transition: opacity 150ms;
 
-  .container[data-disabled] & {
+  .field[data-disabled] & {
     opacity: 0.5;
   }
 }
@@ -58,7 +58,7 @@
   color: ui.$color-error;
   transition: opacity 150ms;
 
-  .container[data-disabled] & {
+  .field[data-disabled] & {
     opacity: 0.5;
   }
 }
