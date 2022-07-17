@@ -237,12 +237,12 @@ $color-error-overlay-02: define-property(
 $color-shadow: define-property(
   color-shadow,
   color.change($neutral--900, $alpha: 0.1),
-  color.change(#000, $alpha: 0.1)
+  color.change(#000, $alpha: 0.2)
 );
 $color-backdrop: define-property(
   color-backdrop,
   color.change($neutral--900, $alpha: 0.5),
-  color.change(#000, $alpha: 0.5)
+  color.change(#000, $alpha: 0.75)
 );
 
 // Color - Tooltip
