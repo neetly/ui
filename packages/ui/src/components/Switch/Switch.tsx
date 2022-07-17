@@ -50,6 +50,8 @@ const Switch = forwardRef(
           {...props}
         />
 
+        <span className={styles.content}></span>
+
         {hasLabel && <span className={styles.label}>{label}</span>}
       </label>
     );

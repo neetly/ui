@@ -1,0 +1,38 @@
+@use "@neetly/ui";
+
+.container {
+  display: inline-grid;
+  grid-template: "content label" / auto 1fr;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 150ms;
+
+  &[data-disabled] {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.switch {
+  all: unset;
+
+  @include ui.visually-hidden;
+}
+
+.content {
+  grid-area: content;
+}
+
+.label {
+  grid-area: label;
+  margin-inline-start: 0.5rem;
+
+  @include ui.typography-ui(1rem, medium);
+
+  color: ui.$color-neutral-variant-accent;
+  transition: color 150ms;
+
+  .container[data-invalid] & {
+    color: ui.$color-error;
+  }
+}
