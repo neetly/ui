@@ -14,11 +14,7 @@ type SpinnerProps = SpinnerOwnProps &
 
 const Spinner = ({ className, ...props }: SpinnerProps) => {
   return (
-    <span
-      className={classNames(styles.spinner, className)}
-      role="status"
-      {...props}
-    >
+    <span className={classNames(styles.spinner, className)} {...props}>
       <SpinnerIcon className={styles.icon} />
       <VisuallyHidden>Loading…</VisuallyHidden>
     </span>
