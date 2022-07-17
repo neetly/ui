@@ -35,6 +35,12 @@ export const Invalid: ComponentStory<typeof Radio> = {
   },
 };
 
+export const ReadOnly: ComponentStory<typeof Radio> = {
+  args: {
+    readOnly: true,
+  },
+};
+
 export const Disabled: ComponentStory<typeof Radio> = {
   args: {
     disabled: true,
