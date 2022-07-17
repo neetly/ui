@@ -50,7 +50,7 @@ const BaseField = createPolymorphicComponent(
 
     return (
       <span
-        className={classNames(styles.container, className)}
+        className={classNames(styles.field, className)}
         data-invalid={isInvalid ? "" : undefined}
         data-disabled={isDisabled ? "" : undefined}
       >

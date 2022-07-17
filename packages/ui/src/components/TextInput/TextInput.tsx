@@ -45,7 +45,7 @@ const TextInput = forwardRef(
       >
         <input
           ref={forwardedRef}
-          className={styles.textField}
+          className={styles.textInput}
           data-icon-before={IconBefore ? "" : undefined}
           data-icon-after={IconAfter ? "" : undefined}
           aria-invalid={ariaInvalid}
