@@ -67,4 +67,4 @@ const Dialog = ({
 };
 
 export { Dialog };
-export type { DialogProps };
+export type { DialogOwnProps, DialogProps };

@@ -1,4 +1,3 @@
-import { RadioCheckedIcon } from "@neetly/icons";
 import classNames from "classnames";
 import type {
   AriaAttributes,
@@ -8,9 +7,9 @@ import type {
 } from "react";
 import { forwardRef } from "react";
 
-import styles from "./Radio.module.scss";
+import styles from "./Switch.module.scss";
 
-type RadioOwnProps = {
+type SwitchOwnProps = {
   className?: string;
   label?: ReactNode;
   invalid?: boolean;
@@ -18,10 +17,10 @@ type RadioOwnProps = {
   disabled?: boolean;
 };
 
-type RadioProps = RadioOwnProps &
-  Omit<InputHTMLAttributes<HTMLInputElement>, keyof RadioOwnProps>;
+type SwitchProps = SwitchOwnProps &
+  Omit<InputHTMLAttributes<HTMLInputElement>, keyof SwitchOwnProps>;
 
-const Radio = forwardRef(
+const Switch = forwardRef(
   (
     {
       className,
@@ -30,7 +29,7 @@ const Radio = forwardRef(
       "aria-invalid": ariaInvalid = _invalid,
       disabled: isDisabled,
       ...props
-    }: RadioProps,
+    }: SwitchProps,
     forwardedRef: ForwardedRef<HTMLInputElement>,
   ) => {
     const hasLabel = label !== null && label !== undefined;
@@ -44,18 +43,12 @@ const Radio = forwardRef(
       >
         <input
           ref={forwardedRef}
-          className={styles.radio}
-          type="radio"
+          className={styles.switch}
+          type="checkbox"
           aria-invalid={ariaInvalid}
           disabled={isDisabled}
           {...props}
         />
-
-        <span className={styles.content}>
-          <span className={styles.checked}>
-            <RadioCheckedIcon className={styles.checkedIcon} />
-          </span>
-        </span>
 
         {hasLabel && <span className={styles.label}>{label}</span>}
       </label>
@@ -64,8 +57,8 @@ const Radio = forwardRef(
 );
 
 if (process.env.NODE_ENV === "development") {
-  Radio.displayName = "Radio";
+  Switch.displayName = "Switch";
 }
 
-export { Radio };
-export type { RadioOwnProps, RadioProps };
+export { Switch };
+export type { SwitchOwnProps, SwitchProps };

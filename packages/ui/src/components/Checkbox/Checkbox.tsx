@@ -68,4 +68,4 @@ if (process.env.NODE_ENV === "development") {
 }
 
 export { Checkbox };
-export type { CheckboxProps };
+export type { CheckboxOwnProps, CheckboxProps };
