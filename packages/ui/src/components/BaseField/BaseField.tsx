@@ -29,7 +29,7 @@ const BaseField = createPolymorphicComponent(
     label,
     description,
     invalid: _invalid,
-    "aria-invalid": ariaInvalid = _invalid,
+    "aria-invalid": ariaInvalid = _invalid ? true : undefined,
     errorMessage,
     disabled: isDisabled,
     ...props
@@ -39,7 +39,6 @@ const BaseField = createPolymorphicComponent(
     const defaultId = useId();
     id ??= defaultId;
 
-    const labelId = useId();
     const descriptionId = useId();
     const errorMessageId = useId();
 
@@ -55,7 +54,7 @@ const BaseField = createPolymorphicComponent(
         data-disabled={isDisabled ? "" : undefined}
       >
         {hasLabel && (
-          <label id={labelId} className={styles.label} htmlFor={id}>
+          <label className={styles.label} htmlFor={id}>
             {label}
           </label>
         )}
@@ -63,7 +62,6 @@ const BaseField = createPolymorphicComponent(
         <Component
           id={id}
           className={styles.content}
-          aria-labelledby={hasLabel ? labelId : undefined}
           aria-describedby={
             hasDescription && !hasErrorMessage ? descriptionId : undefined
           }

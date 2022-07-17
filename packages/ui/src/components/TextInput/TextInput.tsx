@@ -29,7 +29,7 @@ const TextInput = forwardRef(
       iconBefore: IconBefore,
       iconAfter: IconAfter,
       invalid: _invalid,
-      "aria-invalid": ariaInvalid = _invalid,
+      "aria-invalid": ariaInvalid = _invalid ? true : undefined,
       disabled: isDisabled,
       ...props
     }: TextInputProps,

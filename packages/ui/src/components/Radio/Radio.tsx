@@ -27,7 +27,7 @@ const Radio = forwardRef(
       className,
       label,
       invalid: _invalid,
-      "aria-invalid": ariaInvalid = _invalid,
+      "aria-invalid": ariaInvalid = _invalid ? true : undefined,
       disabled: isDisabled,
       ...props
     }: RadioProps,
