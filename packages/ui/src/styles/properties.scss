@@ -4,7 +4,7 @@
 
 @use "./system.scss" as *;
 
-// Fonts
+// Typography
 $font-ui: define-property(
   font-ui,
   ("Source Sans 3", "Source Han Sans", sans-serif)
@@ -27,7 +27,7 @@ $line-height-ui: define-property(line-height-ui, 1.4);
 $line-height-headline: define-property(line-height-headline, 1.2);
 $line-height-body: define-property(line-height-body, 1.4);
 
-// Colors
+// Color
 $color-background: define-property(
   color-background,
   $neutral--10,
@@ -39,18 +39,29 @@ $color-on-background: define-property(
   $neutral--100
 );
 
+$color-selection: define-property(
+  color-selection,
+  color.change($primary--300, $alpha: 0.5),
+  color.change($primary--600, $alpha: 0.5)
+);
+
 $color-overlay-99: define-property(
   color-overlay-99,
   color.change(#000, $alpha: 0.1),
   color.change(#fff, $alpha: 0.1)
 );
 
-// Colors - Primary
+// Color - Primary
 $color-primary: define-property(color-primary, $primary--600, $primary--300);
 $color-primary-accent: define-property(
   color-primary-accent,
   $primary--800,
   $primary--100
+);
+$color-primary-dim: define-property(
+  color-primary-dim,
+  color.change($primary--600, $alpha: 0.8),
+  color.change($primary--300, $alpha: 0.8)
 );
 $color-on-primary: define-property(
   color-on-primary,
@@ -69,7 +80,7 @@ $color-primary-overlay-02: define-property(
   color.change($primary--300, $alpha: 0.1)
 );
 
-// Colors - Secondary
+// Color - Secondary
 $color-secondary: define-property(
   color-secondary,
   $secondary--600,
@@ -79,6 +90,11 @@ $color-secondary-accent: define-property(
   color-secondary-accent,
   $secondary--800,
   $secondary--100
+);
+$color-secondary-dim: define-property(
+  color-secondary-dim,
+  color.change($secondary--600, $alpha: 0.8),
+  color.change($secondary--300, $alpha: 0.8)
 );
 $color-on-secondary: define-property(
   color-on-secondary,
@@ -97,7 +113,7 @@ $color-secondary-overlay-02: define-property(
   color.change($secondary--300, $alpha: 0.1)
 );
 
-// Colors - Tertiary
+// Color - Tertiary
 $color-tertiary: define-property(
   color-tertiary,
   $tertiary--600,
@@ -107,6 +123,11 @@ $color-tertiary-accent: define-property(
   color-tertiary-accent,
   $tertiary--800,
   $tertiary--100
+);
+$color-tertiary-dim: define-property(
+  color-tertiary-dim,
+  color.change($tertiary--600, $alpha: 0.8),
+  color.change($tertiary--300, $alpha: 0.8)
 );
 $color-on-tertiary: define-property(
   color-on-tertiary,
@@ -125,7 +146,7 @@ $color-tertiary-overlay-02: define-property(
   color.change($tertiary--300, $alpha: 0.1)
 );
 
-// Colors - Neutral
+// Color - Neutral
 $color-neutral: define-property(color-neutral, $neutral--600, $neutral--300);
 $color-neutral-accent: define-property(
   color-neutral-accent,
@@ -137,8 +158,24 @@ $color-neutral-dim: define-property(
   color.change($neutral--600, $alpha: 0.8),
   color.change($neutral--300, $alpha: 0.8)
 );
+$color-on-neutral: define-property(
+  color-on-neutral,
+  $neutral--10,
+  $neutral--800
+);
 
-// Colors - Neutral Variant
+$color-neutral-overlay-01: define-property(
+  color-neutral-overlay-01,
+  color.change($neutral--600, $alpha: 0.05),
+  color.change($neutral--300, $alpha: 0.05)
+);
+$color-neutral-overlay-02: define-property(
+  color-neutral-overlay-02,
+  color.change($neutral--600, $alpha: 0.1),
+  color.change($neutral--300, $alpha: 0.1)
+);
+
+// Color - Neutral Variant
 $color-neutral-variant: define-property(
   color-neutral-variant,
   $neutral-variant--600,
@@ -154,13 +191,34 @@ $color-neutral-variant-dim: define-property(
   color.change($neutral-variant--600, $alpha: 0.8),
   color.change($neutral-variant--300, $alpha: 0.8)
 );
+$color-on-neutral-variant: define-property(
+  color-on-neutral-variant,
+  $neutral-variant--10,
+  $neutral-variant--800
+);
 
-// Colors - Error
+$color-neutral-variant-overlay-01: define-property(
+  color-neutral-variant-overlay-01,
+  color.change($neutral-variant--600, $alpha: 0.05),
+  color.change($neutral-variant--300, $alpha: 0.05)
+);
+$color-neutral-variant-overlay-02: define-property(
+  color-neutral-variant-overlay-02,
+  color.change($neutral-variant--600, $alpha: 0.1),
+  color.change($neutral-variant--300, $alpha: 0.1)
+);
+
+// Color - Error
 $color-error: define-property(color-error, $error--600, $error--300);
 $color-error-accent: define-property(
   color-error-accent,
   $error--800,
   $error--100
+);
+$color-error-dim: define-property(
+  color-error-dim,
+  color.change($error--600, $alpha: 0.8),
+  color.change($error--300, $alpha: 0.8)
 );
 $color-on-error: define-property(color-on-error, $error--10, $error--800);
 
@@ -175,27 +233,18 @@ $color-error-overlay-02: define-property(
   color.change($error--300, $alpha: 0.1)
 );
 
-// Colors - Modal
+// Color - Shadow / Backdrop
+$color-shadow: define-property(
+  color-shadow,
+  color.change($neutral--900, $alpha: 0.1),
+  color.change(#000, $alpha: 0.1)
+);
 $color-backdrop: define-property(
   color-backdrop,
   color.change($neutral--900, $alpha: 0.5),
   color.change(#000, $alpha: 0.5)
 );
 
-// Colors - Tooltip
+// Color - Tooltip
 $color-tooltip: define-property(color-tooltip, $neutral--800);
 $color-on-tooltip: define-property(color-on-tooltip, $neutral--50);
-
-// Colors - Shadow
-$color-shadow: define-property(
-  color-shadow,
-  color.change($neutral--900, $alpha: 0.1),
-  color.change(#000, $alpha: 0.1)
-);
-
-// Colors - Misc
-$color-selection: define-property(
-  color-selection,
-  color.change($primary--300, $alpha: 0.5),
-  color.change($primary--600, $alpha: 0.5)
-);
