@@ -30,12 +30,6 @@ export const ErrorMessage: ComponentStory<typeof SwitchField> = {
   },
 };
 
-export const ReadOnly: ComponentStory<typeof SwitchField> = {
-  args: {
-    readOnly: true,
-  },
-};
-
 export const Disabled: ComponentStory<typeof SwitchField> = {
   args: {
     disabled: true,

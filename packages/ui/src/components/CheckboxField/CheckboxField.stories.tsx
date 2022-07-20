@@ -30,12 +30,6 @@ export const ErrorMessage: ComponentStory<typeof CheckboxField> = {
   },
 };
 
-export const ReadOnly: ComponentStory<typeof CheckboxField> = {
-  args: {
-    readOnly: true,
-  },
-};
-
 export const Disabled: ComponentStory<typeof CheckboxField> = {
   args: {
     disabled: true,

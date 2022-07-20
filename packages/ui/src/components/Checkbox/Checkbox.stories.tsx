@@ -35,12 +35,6 @@ export const Invalid: ComponentStory<typeof Checkbox> = {
   },
 };
 
-export const ReadOnly: ComponentStory<typeof Checkbox> = {
-  args: {
-    readOnly: true,
-  },
-};
-
 export const Disabled: ComponentStory<typeof Checkbox> = {
   args: {
     disabled: true,

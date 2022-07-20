@@ -17,12 +17,6 @@ export const Invalid: ComponentStory<typeof Switch> = {
   },
 };
 
-export const ReadOnly: ComponentStory<typeof Switch> = {
-  args: {
-    readOnly: true,
-  },
-};
-
 export const Disabled: ComponentStory<typeof Switch> = {
   args: {
     disabled: true,

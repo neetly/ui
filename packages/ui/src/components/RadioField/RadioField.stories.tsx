@@ -30,12 +30,6 @@ export const ErrorMessage: ComponentStory<typeof RadioField> = {
   },
 };
 
-export const ReadOnly: ComponentStory<typeof RadioField> = {
-  args: {
-    readOnly: true,
-  },
-};
-
 export const Disabled: ComponentStory<typeof RadioField> = {
   args: {
     disabled: true,
