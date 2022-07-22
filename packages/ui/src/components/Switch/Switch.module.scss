@@ -20,7 +20,95 @@
 }
 
 .content {
+  position: relative;
+  display: grid;
   grid-area: content;
+  width: 2.5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: ui.$color-primary-overlay-01;
+  box-shadow: inset 0 0 0 2px ui.$color-primary-overlay-02;
+  user-select: none;
+  transition: background-color 150ms, transform 150ms;
+}
+
+.checked {
+  position: relative;
+  display: grid;
+  border-radius: inherit;
+  background-color: ui.$color-primary;
+  transition: opacity 150ms;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transition: background-color 150ms;
+  }
+}
+
+.thumb {
+  position: absolute;
+  inset: 0;
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: ui.$color-primary;
+  transition: background-color 150ms, transform 150ms;
+}
+
+.switch {
+  &:not(:checked) + .content .checked {
+    opacity: 0;
+  }
+
+  &:checked + .content .thumb {
+    background-color: ui.$color-on-primary;
+    transform: translateX(1rem);
+  }
+
+  @include ui.hover {
+    + .content {
+      background-color: ui.$color-primary-overlay-02;
+    }
+
+    + .content .checked::before {
+      background-color: ui.$color-overlay-99;
+    }
+  }
+
+  @include ui.active {
+    + .content {
+      transform: scale(0.95);
+      transition: none;
+    }
+  }
+
+  &:focus-visible + .content {
+    @include ui.focus-ring(ui.$color-primary);
+  }
+}
+
+// https://bugs.chromium.org/p/chromium/issues/detail?id=1211182
+.container:not([data-disabled]) {
+  @include ui.hover {
+    .content {
+      background-color: ui.$color-primary-overlay-02;
+    }
+
+    .content .checked::before {
+      background-color: ui.$color-overlay-99;
+    }
+  }
+
+  @include ui.active {
+    .content {
+      transform: scale(0.95);
+      transition: none;
+    }
+  }
 }
 
 .label {

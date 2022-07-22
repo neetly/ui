@@ -51,7 +51,10 @@ const Switch = forwardRef(
           {...props}
         />
 
-        <span className={styles.content}></span>
+        <span className={styles.content}>
+          <span className={styles.checked} />
+          <span className={styles.thumb} />
+        </span>
 
         {hasLabel && <span className={styles.label}>{label}</span>}
       </label>
