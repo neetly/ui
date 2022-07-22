@@ -67,6 +67,10 @@
   &:checked + .content .thumb {
     background-color: ui.$color-on-primary;
     transform: translateX(1rem);
+
+    &:dir(rtl) {
+      transform: translateX(-1rem);
+    }
   }
 
   @include ui.hover {
