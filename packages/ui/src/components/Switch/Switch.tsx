@@ -45,6 +45,7 @@ const Switch = forwardRef(
           ref={forwardedRef}
           className={styles.switch}
           type="checkbox"
+          role="switch"
           aria-invalid={ariaInvalid}
           disabled={isDisabled}
           {...props}
