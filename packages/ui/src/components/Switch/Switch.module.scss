@@ -51,9 +51,9 @@
 .thumb {
   position: absolute;
   inset: 0;
-  width: 1rem;
-  height: 1rem;
-  margin: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0.375rem;
   border-radius: 0.25rem;
   background-color: ui.$color-primary;
   transition: background-color 150ms, transform 150ms;
